@@ -1,14 +1,12 @@
 # LTUC-Prep-Course-Py
 
-## Hello World War III
+## Hello World War III, this is Suhaib Ahmad Abdulla
 
-## This is Suhaib Ahmad Abdulla
+## `const job = "Full-Stack_Web_Developer"`
 
-## `Full-Stack Web Developer`
+**A Graduate of Data Science & Compilation Intelligence Specialty, Computer Science Department, ![International Islamic University Malaysia (2021)](https://www.iium.edu.my/v2/wp-content/uploads/2021/03/IIUM-Logo-Award-Winning-Tagline-Left.png)** 
 
-**A Graduate of Data Science & Compilation Intelligence Specialty, Computer Science Department, International Islamic University Malaysia (2021)**
-
-You may read more about me in [my resume website](https://suhaib.info). You also may also visit my profiles in [Github](makkahwi) & [Linkedin](makkahwi)
+You may read more about me in *[my resume website](https://suhaib.info)*. You also may also visit my profiles in *[Github](https://github.com/makkahwi/)* & *[Linkedin](https://www.linkedin.com/in/makkahwi/)*
 
 ---
 
