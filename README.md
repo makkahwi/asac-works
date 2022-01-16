@@ -8,7 +8,7 @@
 
 You may read more about me in *[my resume website](https://suhaib.info)*. You also may also visit my profiles in *[Github](https://github.com/makkahwi/)* & *[Linkedin](https://www.linkedin.com/in/makkahwi/)*.
 
-*<span style="color: red;">As for the name of my github account, I hope you understand that this is an old github account with a usename that was build to be similar to all other professional accounts like linkedin, so Id rather not to change it, n also don't prefare to create a new github account n link it to my machine's VS code so I won't get confused between my gethub accounts of working  n learning. Hope you understand.</span>*
+*Note to lecturer: As for the username of my github account, I hope you understand that this is an old github account with a usename that was build to be similar to all other professional accounts like linkedin, so I'd rather not to change it, n also don't prefare to create a new github account n link it to my machine's VS code so I won't get confused between my gethub accounts of working  n learning. Hope you understand.*
 
 ---
 
