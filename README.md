@@ -4,9 +4,11 @@
 
 ## `const job = "Full-Stack_Web_Developer"`
 
-**A Graduate of Data Science & Compilation Intelligence Specialty, Computer Science Department, ![International Islamic University Malaysia (2021)](https://www.iium.edu.my/v2/wp-content/uploads/2021/03/IIUM-Logo-Award-Winning-Tagline-Left.png)** 
+**A Graduate of Data Science & Compilation Intelligence Specialty, Computer Science Department of ![International Islamic University Malaysia (2021)](https://upload.wikimedia.org/wikipedia/commons/f/f7/IIUM_Logo_.svg)** 
 
-You may read more about me in *[my resume website](https://suhaib.info)*. You also may also visit my profiles in *[Github](https://github.com/makkahwi/)* & *[Linkedin](https://www.linkedin.com/in/makkahwi/)*
+You may read more about me in *[my resume website](https://suhaib.info)*. You also may also visit my profiles in *[Github](https://github.com/makkahwi/)* & *[Linkedin](https://www.linkedin.com/in/makkahwi/)*.
+
+*<span style="color: red;">As for the name of my github account, I hope you understand that this is an old github account with a usename that was build to be similar to all other professional accounts like linkedin, so Id rather not to change it, n also don't prefare to create a new github account n link it to my machine's VS code so I won't get confused between my gethub accounts of working  n learning. Hope you understand.</span>*
 
 ---
 
