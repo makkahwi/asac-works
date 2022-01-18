@@ -4,7 +4,7 @@
 
 ## Day 3 Assignment of ToDo-Project HTML
 
-![Suhaib To-Do](assets/logoCopy.png)
+![Suhaib To-Do](assets/logoCopy.png) Suhaib Ahmad
 
 Wireframe Photos
 ![Home](assets/home.jpg)
