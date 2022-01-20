@@ -52,13 +52,17 @@
       text-decoration: none;
     }
 
-    thead,
     tbody,
-    tr,
-    th,
-    td {
-      border: 1px solid #333333;
+    tbody tr,
+    tbody th,
+    tbody td {
       padding: 2vh 2vw;
+    }
+
+    table,
+    tbody,
+    tr {
+      width: 100%;
     }
 
     section {
@@ -75,6 +79,14 @@
     textarea {
       width: 100%;
     }
+
+    img {
+      border-radius: 50%;
+    }
+
+    p {
+      text-align: justify;
+    }
   </style>
 </head>
 
@@ -82,7 +94,7 @@
   <Header>
     <ul>
       <li>
-        <img src="assets/logo.png" alt="" height="20px">
+        <img src="assets/logo.png" class="profile" alt="" height="20px">
       </li>
 
       <li>
@@ -104,51 +116,25 @@
       <h2>About Me</h2>
 
       <table>
-        <tbody>
+        <thead>
           <tr>
-            <td colspan="2">
-              <img src="assets/photo.jpg" alt="" width="20%">
-              <br />
-              <h1>
-                This is Suhaib Ahmad
-              </h1>
-            </td>
-          </tr>
-
-          <tr>
-            <td>Job</td>
-            <td>Full-Stack Web Developers</td>
-          </tr>
-
-          <tr>
-            <td>Skills</td>
-            <td>React.Js - Vue.Js - Node.Js - Express.Js - Laravel PHP - Docker Containers - GitHub - HTML - CSS - JS
-            </td>
-          </tr>
-
-          <tr>
-            <td>Links</td>
             <td>
-              <ol>
-                <li>
-                  <a href="https://suhaib.info/" target="_blank">Resume Website</a>
-                </li>
-                <li>
-                  <a href="https://www.linkedin.com/in/makkahwi/" target="_blank">makkahwi@LinkedIn</a>
-                </li>
-                <li>
-                  <a href="https://github.com/makkahwi" target="_blank">makkahwi@GitHub</a>
-                </li>
-                <li>
-                  <a href="https://web.facebook.com/makkahwi" target="_blank">makkahwi@Facebook</a>
-                </li>
-                <li>
-                  <a href="https://www.instagram.com/makkahwi" target="_blank">makkahwi@Instagram</a>
-                </li>
-              </ol>
+              <img src="assets/photo.jpg" alt="" width="100%">
+            </td>
+
+            <td>
+              <h1 style="color: red;">
+                Suhaib Ahmad
+              </h1>
+              <p>
+                This is Suhaib Ahmad, a Full-Stack Web developer & a graduate of Data Science & Computational
+                Intelligence of Computer Science Department. Been in the web dev game for over 6 years after making a
+                career shift from graphic design profession. You could read more about me in my <a
+                  style="color: #333333;" href="https://SUhaib.info"><u>Resume Website</u></a>
+              </p>
             </td>
           </tr>
-        </tbody>
+        </thead>
       </table>
     </section>
 
@@ -156,27 +142,46 @@
       <h2>Contact Me</h2>
 
       <form>
-        <div>
-          <label for="name">Name</label>
-          <br />
-          <input type="text" name="name">
-        </div>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <label for="name">Full Name</label>
+              </td>
+              <td>
+                <input type="text" name="name">
+              </td>
+            </tr>
 
-        <div>
-          <label for="email">Email</label>
-          <br />
-          <input type="email" name="email">
-        </div>
+            <tr>
+              <td>
+                <label for="phone">Phone</label>
+              </td>
+              <td>
+                <input type="number" name="phone">
+              </td>
+            </tr>
 
-        <div>
-          <label for="message">Message</label>
-          <br />
-          <textarea name="message" rows="10"></textarea>
-        </div>
+            <tr>
+              <td>
+                <label for="email">Email</label>
+              </td>
+              <td>
+                <input type="email" name="email">
+              </td>
+            </tr>
 
-        <div>
-          <button type="submit">Submit</button>
-        </div>
+            <tr>
+              <td>
+                <label for="message">Message</label>
+              </td>
+              <td>
+                <textarea name="message" rows="10"></textarea>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
       </form>
     </section>
   </main>
