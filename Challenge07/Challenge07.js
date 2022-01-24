@@ -18,8 +18,10 @@
 
 // ------------------------
 
-const objLat = (obj) => {
-  // write your code here
+const objLat = ({ firstName, lastName, age, hobby }) => {
+  const first = firstName.charAt(0).toUpperCase() + firstName.slice(1)
+  const last = lastName.charAt(0).toUpperCase() + lastName.slice(1)
+  return (`my name is ${first} ${last} I am ${age} YO, and I love ${hobby}.`)
 };
 
 // 2) ---------------------
@@ -82,10 +84,9 @@ const objLat = (obj) => {
 //  2- If one of the names is null dont add it to the full name
 
 // ------------------------
-const cvFormatter = (arr) => {
-
-  // write your code here
-};
+const cvFormatter = (arr) => (
+  arr.filter(cv => cv.yearsOfExperience > 1).map(cv => ({ fullName: `${cv.firstName}${cv.lastName ? ` ${cv.lastName}` : ""}`, tech: cv.tech }))
+);
 
 // 3) ---------------------
 //
@@ -107,9 +108,14 @@ const cvFormatter = (arr) => {
 //  1- rejectedApplicants are applications that has both the names empty or null and whoever have less than one year of Experience
 
 // ------------------------
-const applicationsStatics = (arr) => {
-  // write your code here
-};
+const applicationsStatics = (arr) => ({
+  python_Devs: arr.filter(cv => cv.tech === "Python").length,
+  javaScript_Devs: arr.filter(cv => cv.tech === "JS").length,
+  dotNet_Devs: arr.filter(cv => cv.tech === ".Net").length,
+  java_Devs: arr.filter(cv => cv.tech === "Java").length,
+  totalApplicants: arr.length,
+  rejectedApplicants: arr.filter(cv => cv.yearsOfExperience < 1 || !(cv.firstName && cv.lastName)).length
+});
 
 // 4) ---------------------
 //
@@ -232,8 +238,18 @@ let data = {
 //  1- This is not the exact data you will be getting every time and the solution should be dynamic
 //  2- You need to round the average to the nearest lower number 
 
-const classesAvg = (data) => {
-  // write your code here
-};
+const classesAvg = (data) => ({
+  SchoolName: data.SchoolName,
+  Capacity: data.Capacity,
+  grades: data.grades.map(grade => ({
+    grade: grade.grade,
+    numberOFClasses: grade.numberOFClasses,
+    classes: grade.classes.map(clas => ({
+      avg: Math.floor(clas.classScores.reduce((a, b) => a + b) / clas.classScores.length),
+      classNumber: clas.classNumber,
+      classScores: clas.classScores
+    })),
+  }))
+});
 
 module.exports = { objLat, cvFormatter, applicationsStatics, classesAvg };
