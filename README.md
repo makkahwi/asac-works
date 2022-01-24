@@ -2,7 +2,7 @@
 
 ## Hello World War III, this is Suhaib Ahmad Abdulla
 
-## Day 5 Assignment of ToDo-Project CSS
+## Day 6 Assignment of ToDo-Project CSS
 
 ![Suhaib To-Do](assets/logoCopy.png) Suhaib To-Do
 
