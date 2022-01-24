@@ -10,8 +10,10 @@
 // ------------------------
 
 const findMax = (arr) => {
-  let max;
-  // write your code here
+  let max = 0;
+  arr.forEach(element => {
+    element > max ? max = element : ""
+  })
   return max;
 }
 
@@ -25,8 +27,11 @@ const findMax = (arr) => {
 // ------------------------
 
 const sumNums = (arr) => {
-  let sum;
-  // write your code here
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    typeof (arr[i]) === "number" ?
+      sum += arr[i] : ""
+  }
   return sum;
 }
 
@@ -39,7 +44,12 @@ const sumNums = (arr) => {
 // 
 // ------------------------
 const reverseArray = (arr) => {
-  // write your code here
+  let array = [];
+  let y = 0;
+  for (let i = arr.length - 1; i >= 0; i--) {
+    array[y++] = arr[i];
+  }
+  return array;
 }
 
 module.exports = { findMax, sumNums, reverseArray };
