@@ -1,2 +1,7 @@
-# HR-management-system
-LTUC Day 7 &amp; onward tasks
+# LTUC-Prep-Course-Py
+
+## Hello World War III, this is Suhaib Ahmad Abdulla
+
+---
+
+### Day 7 & Onward Tasks
