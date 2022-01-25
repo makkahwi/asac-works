@@ -2,7 +2,7 @@
 
 ## Hello World War III, this is Suhaib Ahmad Abdulla
 
-## Day 7 Task
+## Day 8 Task
 
 - What observations or questions do you have about what you’ve learned so far?
     None
