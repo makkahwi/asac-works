@@ -27,7 +27,7 @@
 // -------------------------------------------------------------------------------------------------------
 
 const customerAndAge = (obj) => {
-  // write your code here
+  return Object.keys(obj).map(key => `Customer Name :${key} , Age :${obj[key]}`);
 };
 
 // -------------------------------------------------------------------------------------------------------
@@ -54,7 +54,7 @@ const customerAndAge = (obj) => {
 // -------------------------------------------------------------------------------------------------------
 
 const getEntries = (obj) => {
-  // write your code here
+  return Object.keys(obj).map(key => key === "ingredients" ? `${key}: ${obj[key].toString()}` : `${key}: ${obj[key]}`);
 };
 
 // -------------------------------------------------------------------------------------------------------
@@ -95,7 +95,9 @@ const courses = [
 const getInfo = (arr) => {
   let coursesName = [];
   let studentsName = [];
-  // write your code here
+
+  coursesName = arr.map(item => item.course);
+  arr.forEach(item => item.Students.forEach(student => studentsName.push(student)));
 
   return { coursesName, studentsName };
 };
@@ -119,8 +121,15 @@ const getInfo = (arr) => {
 //  ------------------------------------------------------------------------------------------------------
 
 const getStudents = (arr) => {
-  // write your code here
+  let newData = [];
 
+  arr.forEach(student => {
+    courses.forEach(course => {
+      course.Students.find(stu => stu === student) ? newData.push({ Student: student, course: course.course }) : ""
+    })
+  })
+
+  return newData;
 };
 
 module.exports = {
