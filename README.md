@@ -4,4 +4,4 @@
 
 ---
 
-### Day 7 Problem-Solving Task
+### Day 8 Problem-Solving Challenge
