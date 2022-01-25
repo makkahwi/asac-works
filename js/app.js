@@ -116,17 +116,18 @@ const employeesGriding = () => {
   });
 };
 
+let addEmployeeForm = document.getElementById("addEmployeeForm");
+
 const addEmployee = e => {
   e.preventDefault();
   const { name, department, level, img } = e.target;
   employees.push([employeeId(), name.value, department.value, level.value, img.value]);
   employeesGriding();
   employeesListing();
+  addEmployeeForm.reset();
 };
 
-let addEmployeeForm = document.getElementById("addEmployeeForm");
 addEmployeeForm.addEventListener('submit', addEmployee);
-addEmployeeForm.reset();
 
 employeesListing();
 employeesGriding();
