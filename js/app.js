@@ -25,9 +25,10 @@ function Employee([id, n, d, l, i]) {
   this.department = d;
   this.level = l;
   this.salary = netSalary(limits(l));
+  this.image = i;
 };
 
-const employees = [
+let employees = [
   [1000, "Ghazi Samer", "Administration", "Senior"],
   [1001, "Lana Ali", "Finance", "Senior"],
   [1002, "Tamara Ayoub", "Marketing", "Senior"],
@@ -37,28 +38,95 @@ const employees = [
   [1006, "Hadi Ahmad", "Finance", "Mid-Senior"]
 ];
 
-const employeesList = () => {
-  const mytable = document.getElementById("employeeTable");
+const employeesListing = () => {
+  const employeeTable = document.getElementById("employeeTable");
+  employeeTable.innerHTML = "";
+
   employees.forEach(employee => {
     let newRow = document.createElement("tr");
-    Object.values(new Employee(employee)).forEach((value) => {
+
+    Object.keys(new Employee(employee)).forEach(key => {
       let cell = document.createElement("td");
-      cell.innerText = value;
+      let link = document.createElement("a");
+
+      if (key === "image") {
+        if (new Employee(employee)[key]) {
+          link.href = new Employee(employee)[key];
+          link.target = "_blank";
+          link.innerText = "Img Link";
+          cell.appendChild(link);
+        }
+        else {
+          cell.innerText = "No Img";
+        }
+      }
+      else {
+        cell.innerText = new Employee(employee)[key];
+      }
+
       newRow.appendChild(cell);
     })
-    mytable.appendChild(newRow);
+    employeeTable.appendChild(newRow);
   });
-}
+};
 
-const employeeId = () => Math.floor(Math.random() * (9999 - 1000)) + 1000
+const employeeId = () => Math.floor(Math.random() * (9999 - 1000)) + 1000;
+
+const employeesGriding = () => {
+  const employeesGrid = document.getElementById("employeesGrid");
+  employeesGrid.innerHTML = "";
+
+  employees.forEach(employee => {
+    const employ = new Employee(employee);
+
+    let p = document.createElement("p");
+    p.className = "card-text text-light";
+
+    Object.keys(employ).forEach(key => {
+      if (key !== 'image') {
+        let span = document.createElement("span");
+        let br = document.createElement("br");
+        span.innerText = `${key.charAt(0).toUpperCase() + key.slice(1)}: ${employ[key]}`;
+        p.appendChild(span)
+        p.appendChild(br)
+      }
+    });
+
+    let div3 = document.createElement("div");
+    div3.className = "card-body";
+
+    div3.appendChild(p);
+
+    let img = document.createElement("img");
+    img.className = "p-2";
+    img.src = employ.image || "img/placeholder.png";
+
+    let div2 = document.createElement("div");
+    div2.className = "card shadow-sm bg-success";
+
+    div2.appendChild(img);
+    div2.appendChild(div3);
+
+    let div1 = document.createElement("div");
+    div1.className = "col my-4";
+
+    div1.appendChild(div2);
+
+    employeesGrid.appendChild(div1);
+  });
+};
 
 const addEmployee = e => {
   e.preventDefault();
-  const { name, department, level, img } = e.target
-  console.log(name.value, department.value, level.value, img.value)
-}
+  const { name, department, level, img } = e.target;
+  employees.push([employeeId(), name.value, department.value, level.value, img.value]);
+  employeesGriding();
+  employeesListing();
+};
 
-let addEmployeeForm = document.getElementById("addEmployeeForm")
-addEmployeeForm.addEventListener('submit', addEmployee)
+let addEmployeeForm = document.getElementById("addEmployeeForm");
+addEmployeeForm.addEventListener('submit', addEmployee);
+addEmployeeForm.reset();
 
-employeesList();
+employeesListing();
+employeesGriding();
