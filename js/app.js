@@ -37,8 +37,6 @@ const employees = [
   [1006, "Hadi Ahmad", "Finance", "Mid-Senior"]
 ];
 
-
-
 const employeesList = () => {
   const mytable = document.getElementById("employeeTable");
   employees.forEach(employee => {
@@ -51,5 +49,7 @@ const employeesList = () => {
     mytable.appendChild(newRow);
   });
 }
+
+const employeeId = () => Math.floor(Math.random() * (9999 - 1000)) + 1000
 
 employeesList();
