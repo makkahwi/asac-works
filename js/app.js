@@ -52,4 +52,13 @@ const employeesList = () => {
 
 const employeeId = () => Math.floor(Math.random() * (9999 - 1000)) + 1000
 
+const addEmployee = e => {
+  e.preventDefault();
+  const { name, department, level, img } = e.target
+  console.log(name.value, department.value, level.value, img.value)
+}
+
+let addEmployeeForm = document.getElementById("addEmployeeForm")
+addEmployeeForm.addEventListener('submit', addEmployee)
+
 employeesList();
