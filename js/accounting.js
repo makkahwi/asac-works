@@ -65,6 +65,81 @@ const newTableHeaderGen = (table, department) => {
 
 let employees = JSON.parse(localStorage.getItem("data")).map(employee => new Employee(employee));
 
+// All Departments Table
+let table = newTableGen();
+
+//// Table Header
+let tableHeadEL = document.createElement("thead");
+let tableHeadRowEL = document.createElement("tr");
+
+////// Table Title
+let tableTitleRowEL = document.createElement("tr");
+let tableTitleCellEL = document.createElement("th");
+tableTitleCellEL.colSpan = 4;
+tableTitleCellEL.innerText = "All Departments";
+tableTitleRowEL.appendChild(tableTitleCellEL);
+tableHeadEL.appendChild(tableTitleRowEL);
+
+["Department", "No of Employees", "Total Salaries", "Average of Salaries"].forEach(label => {
+  let tableTitleHeadCellEL = document.createElement("th");
+  tableTitleHeadCellEL.innerText = label;
+  tableHeadRowEL.appendChild(tableTitleHeadCellEL);
+});
+
+tableHeadEL.appendChild(tableHeadRowEL);
+table.appendChild(tableHeadEL);
+
+//// Table Body
+let tableBodyEL = document.createElement("tbody");
+departments.forEach(department => {
+  const departmentEmployees = employees.filter(employee => employee.department === department);
+  const departmentEmployeeSalaries = departmentEmployees.map(employee => employee.salary).reduce((a, b) => a + b);
+
+  let tableRowEL = document.createElement("tr");
+
+  let ncell = document.createElement("td");
+  ncell.innerText = department;
+
+  tableRowEL.appendChild(ncell);
+
+  let statistics = [
+    departmentEmployees.length,
+    departmentEmployeeSalaries,
+    (departmentEmployeeSalaries / departmentEmployees.length).toFixed(2)
+  ];
+
+  statistics.forEach(stat => {
+    let statcell = document.createElement("td");
+    statcell.innerText = stat;
+
+    tableRowEL.appendChild(statcell);
+  });
+
+  tableBodyEL.appendChild(tableRowEL);
+});
+
+table.appendChild(tableBodyEL);
+
+//// Table Footer
+let tablefooterEL = document.createElement("tfoot");
+let tablefooterRowEL = document.createElement("tr");
+
+["Total",
+  employees.length,
+  employees.map(employee => employee.salary).reduce((a, b) => a + b),
+  employees.map(employee => employee.salary).reduce((a, b) => a + b) / employees.length
+].forEach(label => {
+  let tableTitlefooterCellEL = document.createElement("td");
+  tableTitlefooterCellEL.innerText = label;
+  tablefooterRowEL.appendChild(tableTitlefooterCellEL);
+});
+
+tablefooterEL.appendChild(tablefooterRowEL);
+table.appendChild(tablefooterEL);
+
+tablesContainer.appendChild(table);
+
+// Table for each department
 departments.forEach(department => {
   let newTable = newTableGen();
   newTableHeaderGen(newTable, department);
