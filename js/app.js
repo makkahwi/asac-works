@@ -99,7 +99,7 @@ const employeesGriding = () => {
 
     let img = document.createElement("img");
     img.className = "p-2";
-    img.src = employ.image || "img/placeholder.png";
+    img.src = employ.image || `img/${employ.name}.jpg`;
 
     let div2 = document.createElement("div");
     div2.className = "card shadow-sm bg-success";
