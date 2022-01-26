@@ -105,7 +105,7 @@ departments.forEach(department => {
   let statistics = [
     departmentEmployees.length,
     departmentEmployeeSalaries,
-    (departmentEmployeeSalaries / departmentEmployees.length).toFixed(2)
+    (departmentEmployeeSalaries / departmentEmployees.length).toFixed(3)
   ];
 
   statistics.forEach(stat => {
@@ -171,8 +171,8 @@ departments.forEach(department => {
 
   const statistics = {
     Number_Of_Employees: departmentEmployees.length,
-    Average_Employee_Salary: (departmentEmployeeSalaries / departmentEmployees.length).toFixed(2),
-    Total_Salaries: departmentEmployeeSalaries.toFixed(2)
+    Average_Employee_Salary: (departmentEmployeeSalaries / departmentEmployees.length).toFixed(3),
+    Total_Salaries: departmentEmployeeSalaries.toFixed(3)
   };
 
   Object.keys(statistics).forEach(key => {
