@@ -28,7 +28,7 @@ function Employee([id, n, d, l, i]) {
   this.image = i;
 };
 
-let employees = [
+let employeesArray = [
   [1000, "Ghazi Samer", "Administration", "Senior"],
   [1001, "Lana Ali", "Finance", "Senior"],
   [1002, "Tamara Ayoub", "Marketing", "Senior"],
@@ -37,6 +37,13 @@ let employees = [
   [1005, "Rana Saleh", "Development", "Junior"],
   [1006, "Hadi Ahmad", "Finance", "Mid-Senior"]
 ];
+
+!localStorage.getItem("data") && localStorage.setItem("data", JSON.stringify(employeesArray.map(employee => (employee))));
+
+let employees;
+
+const callEmployees = () => employees = JSON.parse(localStorage.getItem("data"));
+callEmployees();
 
 const employeesListing = () => {
   const employeeTable = document.getElementById("employeeTable");
@@ -57,7 +64,7 @@ const employeesListing = () => {
           cell.appendChild(link);
         }
         else {
-          cell.innerText = "No Img";
+          cell.innerText = "No Custom Img";
         }
       }
       else {
@@ -121,7 +128,12 @@ let addEmployeeForm = document.getElementById("addEmployeeForm");
 const addEmployee = e => {
   e.preventDefault();
   const { name, department, level, img } = e.target;
+
+  let employees = JSON.parse(localStorage.getItem("data"));
   employees.push([employeeId(), name.value, department.value, level.value, img.value]);
+  localStorage.setItem("data", JSON.stringify(employees))
+  callEmployees();
+
   employeesGriding();
   employeesListing();
   addEmployeeForm.reset();
