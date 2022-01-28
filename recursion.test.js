@@ -20,9 +20,16 @@ pow(2,4) = 16
 
 
 function pow(x, n) {
-  // Write you logic here.
-  return;
-}
+  if (n === 0) {
+    return 1;
+  };
+
+  if (n > 1) {
+    return pow(x * x, n - 1)
+  } else {
+    return x;
+  };
+};
 
 /* The Fibonacci Series is a numeric series starting with the integers 0 and 1. In this series,
 the next integer is determined by summing the previous two. This gives us:
