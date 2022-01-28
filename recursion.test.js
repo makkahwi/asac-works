@@ -41,9 +41,14 @@ Write a function that take n as parameter and return the nth element in the Fibo
 Example: n = 4 ==> 3, n= 0 ==> 0, n = 3 ==> 2 */
 
 function fibonacci(n) {
-  // Write you logic here.
-  return;
-}
+  let result = [0, 1];
+
+  for (let i = 2; i <= n; i++) {
+    result[i] = result[i - 1] + result[i - 2];
+  };
+
+  return result[n];
+};
 
 /* Optional 
 
