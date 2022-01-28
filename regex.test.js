@@ -29,24 +29,24 @@ function imagesSearcher(text) {
 }
 
 
-// describe("Test capitalA", () => {
-//   test("It should return true if the input has uppercase and lowercase characters (no numbers and symbols) and it should end with capital A else return false ", () => {
-//     expect(capitalA("Hello world A")).toStrictEqual(true);
+describe("Test capitalA", () => {
+  test("It should return true if the input has uppercase and lowercase characters (no numbers and symbols) and it should end with capital A else return false ", () => {
+    expect(capitalA("Hello world A")).toStrictEqual(true);
 
-//     expect(capitalA("Hello world")).toStrictEqual(false);
+    expect(capitalA("Hello world")).toStrictEqual(false);
 
-//     expect(capitalA("Hello world a")).toStrictEqual(false);
-//   })
-// });
+    expect(capitalA("Hello world a")).toStrictEqual(false);
+  })
+});
 
-// describe("Test ioEmail", () => {
-//   test("It should return true if the input is in email format that end with .io", () => {
-//     expect(ioEmail("example@example.io")).toStrictEqual(true);
-//     expect(ioEmail("ex@ample@example.io")).toStrictEqual(false);
-//     expect(ioEmail("ex.ample@example.io")).toStrictEqual(false);
-//     expect(ioEmail("example@example.gmail")).toStrictEqual(false);
-//   })
-// });
+describe("Test ioEmail", () => {
+  test("It should return true if the input is in email format that end with .io", () => {
+    expect(ioEmail("example@example.io")).toStrictEqual(true);
+    expect(ioEmail("ex@ample@example.io")).toStrictEqual(false);
+    expect(ioEmail("ex.ample@example.io")).toStrictEqual(false);
+    expect(ioEmail("example@example.gmail")).toStrictEqual(false);
+  })
+});
 
 
 describe("Test imagesSearcher", () => {
