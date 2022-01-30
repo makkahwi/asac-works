@@ -19,12 +19,15 @@ server.get('/', (req, res) => res.status(200).send(new Movie(data)));
 
 server.get('/favorite', (req, res) => res.status(200).send("Welcome to Favorite Page"));
 
-server.get('/500', (req, res) => {
-  return res.status(500).send("Sorry, something went wrong")
-});
+server.use((err, req, res, text) =>
+  res.status(500).type('text/plain').send({
+    "status": 500,
+    "responseText": "Sorry, something went wrong"
+  })
+);
 
 server.get('*', (req, res) => {
-  return res.status(404).send("Rquested page isn't found")
+  return res.status(404).send("Requested page isn't found")
 });
 
 server.listen(port, () => {
