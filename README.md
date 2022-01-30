@@ -4,7 +4,7 @@
 
 ## WRRC
 
-![International Islamic University Malaysia (2021)](assets/imgs/wrrc.jpg)
+![WRRC](assets/imgs/wrrc.jpg)
 
 ## Overview
 
