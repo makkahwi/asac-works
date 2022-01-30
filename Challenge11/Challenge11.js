@@ -15,9 +15,9 @@
 // 
 // -------------
 
-function square(arr) {
-  // write your code here
-}
+const square = (arr) => (
+  arr.map(item => item * item)
+)
 
 // 2) ------------------
 //
@@ -54,9 +54,9 @@ function square(arr) {
 // note: the full names should be combined between student's first and last names.
 //
 
-function fullName(arr) {
-  // write your code here
-}
+const fullName = (arr) => (
+  arr.map(item => `${item.firstName} ${item.lastName}`)
+)
 
 // 3) ---------------------
 // 
@@ -116,9 +116,12 @@ function fullName(arr) {
 //]
 // -------------
 
-function gradesAvg(arr) {
-  // write your code here
-}
+const gradesAvg = (arr) => (
+  arr.map(item => ({
+    ...item,
+    avg: item.gradsList.reduce((x, y) => x + y) / item.gradsList.length
+  }))
+)
 
 
 // 4) ---------------------
@@ -187,8 +190,10 @@ function gradesAvg(arr) {
 //]
 // -------------
 
-function studentsResult(arr) {
-  // write your code here
-}
+const studentsResult = (arr) => (
+  arr.map(item => ({
+    ...item,
+    result: item.avg >= 50 ? "Passed" : "Failed"
+  })))
 
 module.exports = { square, fullName, gradesAvg, studentsResult };
