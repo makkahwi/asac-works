@@ -5,6 +5,8 @@ const server = express();
 
 const port = 5050;
 
+const data = require("./assets/data/data.json");
+
 server.use(cors());
 
 function Movie({ title, poster_path, overview }) {
@@ -13,21 +15,9 @@ function Movie({ title, poster_path, overview }) {
   this.overview = overview;
 };
 
-const haveData = query => (
-  (query.title && query.poster_path && query.overview) ? true : false
-);
+server.get('/', (req, res) => res.status(200).send(new Movie(data)));
 
-server.get('/', (req, res) => (
-  (haveData(req.query)) ? (
-    res.status(200).send(new Movie(req.query))
-  ) : (
-    res.status(400).send("The data format isn't correct")
-  )
-));
-
-server.get('/favorite', (req, res) => {
-  return res.status(200).send("Welcome to Favorite Page")
-});
+server.get('/favorite', (req, res) => res.status(200).send("Welcome to Favorite Page"));
 
 server.get('/500', (req, res) => {
   return res.status(500).send("Sorry, something went wrong")
