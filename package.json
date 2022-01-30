@@ -2,7 +2,7 @@
   "name": "movies-library",
   "version": "1.0.0",
   "description": "LTUC Days 11 &amp; Onward Tasks",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/makkahwi/movies-Library/issues"
   },
-  "homepage": "https://github.com/makkahwi/movies-Library#readme"
+  "homepage": "https://github.com/makkahwi/movies-Library#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2"
+  }
 }
