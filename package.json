@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/makkahwi/movies-Library/issues"
   },
-  "homepage": "https://github.com/makkahwi/movies-Library#readme"
+  "homepage": "https://github.com/makkahwi/movies-Library#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2"
+  }
 }
