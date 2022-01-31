@@ -8,7 +8,7 @@
 
 ## Overview
 
-LTUC Days 11 &amp; Onward Tasks
+LTUC Day 12 Task
 
 ## Getting Started
 
@@ -19,6 +19,6 @@ LTUC Days 11 &amp; Onward Tasks
 
 ## Project Features
 
-* Include serveral endpoints
+* Includes serveral endpoints, including "/", "/favorite", "/trending", "/search", "/changes", "/certification"
 * Handles "page not found" error
 * Handles "internal server" error
