@@ -14,9 +14,7 @@
 // 
 // ------------------------
 
-const oddFiltration = (arr) => {
-  // write your code here
-}
+const oddFiltration = arr => arr.filter(element => element % 2 === 1)
 
 // 2) ---------------------
 // 
@@ -65,9 +63,7 @@ const oddFiltration = (arr) => {
 //  2- If one of the names is null dont add it to the full name
 // ------------------------
 
-const cvsFiltration = (arr) => {
-  // write your code here
-}
+const cvsFiltration = arr => arr.filter(staff => staff.yearsOfExperience > 4 && staff.tech === "JS").map(staff => ({ fullName: `${staff.firstName}${staff.LastName ? ` ${staff.LastName}` : ""}`, tech: staff.tech }))
 
 // 3) ---------------------
 //
@@ -78,9 +74,7 @@ const cvsFiltration = (arr) => {
 // 
 // ------------------------
 
-const vowelsFiltration = (arr) => {
-  // write your code here
-}
+const vowelsFiltration = arr => arr.filter(word => !(word.match(/[aeiou]/g)?.length))
 
 // 4) ---------------------
 //
@@ -96,9 +90,7 @@ const vowelsFiltration = (arr) => {
 // - the 'include' method can help you, read about it.
 // ------------------------
 
-const skillComparison = (arr1, arr2) => {
-  // write your code here
-}
+const skillComparison = (arr1, arr2) => ([...arr1, ...arr2].filter(element => !(arr1.includes(element) && arr2.includes(element))))
 
 
 module.exports = { oddFiltration, cvsFiltration, vowelsFiltration, skillComparison };
