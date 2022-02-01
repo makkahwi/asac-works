@@ -15,6 +15,8 @@ const endpoints = ["/", "/favorite", "/trending", "/search", "/changes", "/certi
 
 server.use(cors());
 
+
+// Constructors ////////////////////////////////////////////////////////
 function Movie({ title, poster_path, overview }) {
   this.title = title;
   this.poster_path = poster_path;
@@ -29,10 +31,14 @@ function TMDBMovie({ id, title, release_date, poster_path, overview }) {
   this.overview = overview;
 };
 
+
+// Internal Routes ////////////////////////////////////////////////////////
 server.get('/', (req, res) => res.status(200).send(new Movie(data)));
 
 server.get('/favorite', (req, res) => res.status(200).send("Welcome to Favorite Page"));
 
+
+// TMDB Routes ////////////////////////////////////////////////////////
 server.get('/trending', (req, res) => {
   axios.get(`${baseURL}trending/all/week?api_key=${APIKey}&language=en-US`, null)
     .then(data => {
@@ -81,6 +87,8 @@ server.get('/certification', (req, res) => {
     })
 });
 
+
+// Error Routes ////////////////////////////////////////////////////////
 server.use((err, req, res) =>
   res.status(500).send({
     "status": 500,
@@ -90,6 +98,8 @@ server.use((err, req, res) =>
 
 server.get('*', (req, res) => res.status(404).send("Requested page isn't found"));
 
+
+// Listener ////////////////////////////////////////////////////////
 server.listen(port, () => {
   console.log(`Hello World War III, this is ${package.author}`)
   console.log(`Listining to server on port ${port}. Here is the list of available endpoints to use...`)
