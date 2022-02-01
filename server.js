@@ -4,6 +4,8 @@ const axios = require('axios');
 let package = require("./package.json");
 require('dotenv').config()
 
+const database = process.env.CONNECTION_STRING;
+
 const server = express();
 
 const port = process.env.PORT || 5050;
@@ -84,6 +86,28 @@ server.get('/certification', (req, res) => {
     .catch(e => {
       console.log(`Certifications Endpoint Error :( | TMBD says: ${e.response.statusText}`)
       res.status(e.response.status).send(`TMBD says: ${e.response.statusText}`)
+    })
+});
+
+
+// PG Routes
+server.post('/addMovie', (req, res) => {
+  axios.post(`${database}`, req.query)
+    .then(res => {
+      res.status(200).json("Movie Was Added, Congrats")
+    })
+    .catch(e => {
+      res.status(e.response.status).send(`Database says: ${e.response.statusText}`)
+    })
+});
+
+server.get('/getMovies', (req, res) => {
+  axios.get(`${database}`, null)
+    .then(res => {
+      res.status(200).json(res.data)
+    })
+    .catch(e => {
+      res.status(e.response.status).send(`Database says: ${e.response.statusText}`)
     })
 });
 
