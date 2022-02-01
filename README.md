@@ -5,10 +5,11 @@
 ## WRRC
 
 ![WRRC](assets/imgs/wrrc.jpg)
+This excludes PG admin Connections
 
 ## Overview
 
-LTUC Day 12 Task
+LTUC Day 13 Task
 
 ## Getting Started
 
@@ -19,6 +20,9 @@ LTUC Day 12 Task
 
 ## Project Features
 
-* Includes serveral endpoints, including "/", "/favorite", "/trending", "/search", "/changes", "/certification"
+* Includes serveral endpoints...
+  * Without-Making-Any-Connection Endpoints ["/", "/favorite"]
+  * TMDB-Connection Endpoints ["/trending", "/search", "/changes", "/certification"]
+  * PG-Connection Endpoints ["/addMovie", "/getMovies"]
 * Handles "page not found" error
 * Handles "internal server" error
