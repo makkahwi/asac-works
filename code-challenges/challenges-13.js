@@ -37,10 +37,7 @@
 
 // ------------------------
 
-const objectCounter = (obj) => {
-    // write your code here
-
-}
+const objectCounter = obj => obj.reduce((acc, _) => acc += 1, 0)
 
 // 2) ---------------------
 // 
@@ -55,10 +52,7 @@ const objectCounter = (obj) => {
 //
 // ------------------------
 
-const stringReverse = (str) => {
-    // write your code here
-
-}
+const stringReverse = str => str.split(" ").reduce((a, b) => [b].concat(a), []).join().replaceAll(",", " ");
 
 // 3) ---------------------
 // 
@@ -98,9 +92,7 @@ const stringReverse = (str) => {
 //
 // ------------------------
 
-const statistics = (obj) => {
-    // write your code here
-}
+const statistics = obj => obj.map(voter => voter.votes_To).reduce((final, nominee) => final[nominee] ? { ...final, [nominee]: final[nominee] += 1 } : { ...final, [nominee]: 1 }, {})
 
 
 
