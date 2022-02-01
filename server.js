@@ -16,7 +16,7 @@ const baseURL = "https://api.themoviedb.org/3/"
 const APIKey = process.env.API_KEY || "d2bf91e013a81d214c0b1ffc0a698119"
 
 const data = require("./assets/data/data.json");
-const endpoints = ["/", "/favorite", "/trending", "/search", "/changes", "/certification"];
+const endpoints = ["/", "/favorite", "/trending", "/search", "/changes", "/certification", "/addMovie", "/getMovies"];
 
 server.use(cors());
 
