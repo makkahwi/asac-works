@@ -2,9 +2,12 @@ const express = require('express');
 const cors = require('cors');
 const axios = require('axios');
 let package = require("./package.json");
+const { Client } = require('pg');
 require('dotenv').config()
 
 const database = process.env.CONNECTION_STRING;
+
+const client = new Client(database);
 
 const server = express();
 
@@ -92,23 +95,21 @@ server.get('/certification', (req, res) => {
 
 // PG Routes
 server.post('/addMovie', (req, res) => {
-  axios.post(`${database}`, req.query)
-    .then(res => {
-      res.status(200).json("Movie Was Added, Congrats")
-    })
-    .catch(e => {
+  client.query(`INSERT INTO movies(${Object.keys(req.query)}) VALUES (${Object.values(req.query)}) RETURNING *`, Object.values(req.query))
+    .then(data => {
+      res.status(200).json(data || "Movie Was Added, Congrats")
+    }).catch(e => {
       res.status(e.response.status).send(`Database says: ${e.response.statusText}`)
-    })
+    });
 });
 
 server.get('/getMovies', (req, res) => {
-  axios.get(`${database}`, null)
-    .then(res => {
-      res.status(200).json(res.data)
-    })
-    .catch(e => {
+  client.query(`SELECT ${req.query || "*"} FROM favRecipes;`, null)
+    .then(data => {
+      res.status(200).json(data || "No movies were found")
+    }).catch(e => {
       res.status(e.response.status).send(`Database says: ${e.response.statusText}`)
-    })
+    });
 });
 
 
@@ -124,8 +125,10 @@ server.get('*', (req, res) => res.status(404).send("Requested page isn't found")
 
 
 // Listener ////////////////////////////////////////////////////////
-server.listen(port, () => {
-  console.log(`Hello World War III, this is ${package.author}`)
-  console.log(`Listining to server on port ${port}. Here is the list of available endpoints to use...`)
-  endpoints.forEach(ep => console.log(`- ${ep}`))
-});
+client.connect()
+  .then(() =>
+    server.listen(port, () => {
+      console.log(`Hello World War III, this is ${package.author}`)
+      console.log(`Listining to server on port ${port}. Here is the list of available endpoints to use...`)
+      endpoints.forEach(ep => console.log(`- ${ep}`))
+    }));
