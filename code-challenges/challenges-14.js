@@ -18,9 +18,10 @@
 //
 // ------------------------
 
-const LastWord = (str) => {
-    // write your code here
-}
+const LastWord = str => {
+    const i = str.lastIndexOf(" ");
+    return str.slice(i + 1, str.length)
+};
 
 // 2) ---------------------
 // 
@@ -30,9 +31,10 @@ const LastWord = (str) => {
 //
 // ------------------------
 
-const LastWord_2 = (str) => {
-    // write your code here
-}
+const LastWord_2 = str => {
+    const arr = str.split(" ");
+    return arr[arr.length - 1]
+};
 
 // 3) ---------------------
 // 
@@ -46,9 +48,21 @@ const LastWord_2 = (str) => {
 //
 // ------------------------
 
-const replaceWords = (str) => {
-    // write your code here
-}
+const replaceWords = str => {
+    let arr = str.split(" ");
+
+    arr.forEach((word, i) => {
+        word === "I" ? (
+            arr.splice(i, 1, "We")
+        ) : word === "am" ? (
+            arr.splice(i, 1, "are")
+        ) : word === "was" && (
+            arr.splice(i, 1, "were")
+        );
+    })
+
+    return arr.join(" ");
+};
 
 // 4) ---------------------
 // 
@@ -57,9 +71,13 @@ const replaceWords = (str) => {
 //
 // ------------------------
 
-const arrToStr = (arr) => {
-    // write your code here
-}
+const arrToStr = arr => {
+    let newArr = [...arr];
+    for (let i = 5; i < newArr.length + 1; i += 5) {
+        newArr.splice(i, 0, ",")
+    }
+    return newArr.join(" ").replaceAll(" ,", ",");
+};
 
 // 5) ---------------------
 // 
@@ -73,9 +91,33 @@ const arrToStr = (arr) => {
 //
 // ------------------------
 
-const letterCounter = (str) => {
-    // write your code here
-}
+const letterCounter = str => {
+    let arr = str.split("");
+    let i = 0;
+
+    while (i < arr.length) {
+        if (i === 0) {
+            arr.splice(i + 1, 0, 1);
+            i += 2;
+        } else {
+            if (arr[i] === " ") {
+                i++;
+            } else {
+                if (arr[i] === arr[i - 2] && typeof (arr[i - 1]) === "number") {
+                    arr.splice(i - 1, 2, arr[i - 1] + 1)
+                } else if (arr[i] === arr[i - 1]) {
+                    arr.splice(i, 1, 2);
+                    i++;
+                } else {
+                    arr.splice(i + 1, 0, 1);
+                    i += 2;
+                }
+            }
+        }
+    };
+
+    return arr.join("");
+};
 
 
 
