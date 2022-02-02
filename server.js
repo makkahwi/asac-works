@@ -3,7 +3,7 @@ const cors = require('cors');
 const axios = require('axios');
 let package = require("./package.json");
 const { Client } = require('pg');
-require('dotenv').config()
+require('dotenv').config();
 
 const database = process.env.CONNECTION_STRING;
 
@@ -113,7 +113,7 @@ server.get('/getMovies', (req, res) => {
 });
 
 server.get('/getMovie/:id', (req, res) => {
-  client.query(`SELECT ${req.query || "*"} FROM movies;`, null)
+  client.query(`SELECT * FROM movies WHERE id=${req.params.id} ;`, null)
     .then(data => {
       res.status(200).json(data || "No movie was found")
     }).catch(e => {
@@ -122,18 +122,18 @@ server.get('/getMovie/:id', (req, res) => {
 });
 
 server.put('/update/:id', (req, res) => {
-  client.query(`SELECT ${req.query || "*"} FROM movies;`, null)
+  client.query(`UPDATE movies SET (${Object.keys(req.body).map(key => `${key} = ${req.body[key]}`)}) WHERE id=${req.params.id} RETURNING *;`, req.body)
     .then(data => {
-      res.status(200).json(`Movie ${req.body.name} was updated successfully`)
+      res.status(200).json(`Movie ${req.body.title} was updated successfully`)
     }).catch(e => {
       res.status(e.response.status).send(`Database says: ${e.response.statusText}`)
     });
 });
 
 server.delete('/delete/:id', (req, res) => {
-  client.query(`SELECT ${req.query || "*"} FROM movies;`, null)
+  client.query(`DELETE FROM movies WHERE id=${req.params.id} RETURNING *;`, req.params)
     .then(data => {
-      res.status(200).json(`Movie ${req.body.name} was deleted successfully`)
+      res.status(200).json(`Movie ${req.body.title} was deleted successfully`)
     }).catch(e => {
       res.status(e.response.status).send(`Database says: ${e.response.statusText}`)
     });
