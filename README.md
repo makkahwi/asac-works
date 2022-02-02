@@ -5,11 +5,11 @@
 ## WRRC
 
 ![WRRC](assets/imgs/wrrc.jpg)
-This excludes PG admin Connections
+This chart excludes PG admin Connections
 
 ## Overview
 
-LTUC Day 13 Task
+LTUC Day 14 Task
 
 ## Getting Started
 
@@ -23,6 +23,6 @@ LTUC Day 13 Task
 * Includes serveral endpoints...
   * Without-Making-Any-Connection Endpoints ["/", "/favorite"]
   * TMDB-Connection Endpoints ["/trending", "/search", "/changes", "/certification"]
-  * PG-Connection Endpoints ["/addMovie", "/getMovies"]
+  * Local-DB-Connection Endpoints ["/addMovie", "/getMovies", "/getMovie/id", "/update/id", "/delete/id"]
 * Handles "page not found" error
 * Handles "internal server" error
