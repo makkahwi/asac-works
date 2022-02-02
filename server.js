@@ -16,7 +16,7 @@ const baseURL = "https://api.themoviedb.org/3/"
 const APIKey = process.env.API_KEY || "d2bf91e013a81d214c0b1ffc0a698119"
 
 const data = require("./assets/data/data.json");
-const endpoints = ["/", "/favorite", "/trending", "/search", "/changes", "/certification", "/addMovie", "/getMovies"];
+const endpoints = ["/", "/favorite", "/trending", "/search", "/changes", "/certification", "/addMovie", "/getMovies", "/getMovie/id", "/update/id", "/delete/id"];
 
 server.use(cors());
 
@@ -107,6 +107,33 @@ server.get('/getMovies', (req, res) => {
   client.query(`SELECT ${req.query || "*"} FROM movies;`, null)
     .then(data => {
       res.status(200).json(data || "No movies were found")
+    }).catch(e => {
+      res.status(e.response.status).send(`Database says: ${e.response.statusText}`)
+    });
+});
+
+server.get('/getMovie/:id', (req, res) => {
+  client.query(`SELECT ${req.query || "*"} FROM movies;`, null)
+    .then(data => {
+      res.status(200).json(data || "No movie was found")
+    }).catch(e => {
+      res.status(e.response.status).send(`Database says: ${e.response.statusText}`)
+    });
+});
+
+server.put('/update/:id', (req, res) => {
+  client.query(`SELECT ${req.query || "*"} FROM movies;`, null)
+    .then(data => {
+      res.status(200).json(`Movie ${req.body.name} was updated successfully`)
+    }).catch(e => {
+      res.status(e.response.status).send(`Database says: ${e.response.statusText}`)
+    });
+});
+
+server.delete('/delete/:id', (req, res) => {
+  client.query(`SELECT ${req.query || "*"} FROM movies;`, null)
+    .then(data => {
+      res.status(200).json(`Movie ${req.body.name} was deleted successfully`)
     }).catch(e => {
       res.status(e.response.status).send(`Database says: ${e.response.statusText}`)
     });
