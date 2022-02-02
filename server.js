@@ -104,7 +104,7 @@ server.post('/addMovie', (req, res) => {
 });
 
 server.get('/getMovies', (req, res) => {
-  client.query(`SELECT ${req.query || "*"} FROM favRecipes;`, null)
+  client.query(`SELECT ${req.query || "*"} FROM movies;`, null)
     .then(data => {
       res.status(200).json(data || "No movies were found")
     }).catch(e => {
