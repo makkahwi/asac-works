@@ -1,0 +1,67 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "## Hacker Rank\n\nFor Thursdays you will be solving some selected challenges on HackerRank, please create an account if you don't have then\nFollow the links below:\nread them carefully and solve them then copy-paste your solution below in Code Block"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Required**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Birthday Cake Candles](https://www.hackerrank.com/challenges/birthday-cake-candles/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let max = candles[0];\n    \ncandles.forEach(candle => candle > max ? max = candle : \"\")\n    \nreturn candles.filter(candle => candle === max).length"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Optional**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Compare The Triplets](https://www.hackerrank.com/challenges/compare-the-triplets/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let x =0;\nlet y =0;\n    \nfor(let i=0; i<a.length && i<b.length; i++){\n  a[i] > b[i] ? x++ : a[i] < b[i] ? y++ : \"\"\n}\n    \nreturn [x,y]"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Migratory Birds](https://www.hackerrank.com/challenges/migratory-birds/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const counts = arr.reduce((final, bird) => final[bird] ? { ...final, [bird]: final[bird] += 1 } : { ...final, [bird]: 1 }, {});\n    \nconst max = Object.values(counts).reduce((max, count) => count > max ? count : max);\n    \nconst filtered = Object.keys(counts).map(key => counts[key] === max ? key : \"\").filter(count => count)\n    \nreturn filtered.reduce((min, num) =>  min < num ? min : num);"
+            ],
+            "outputs": []
+        }
+    ]
+}
