@@ -5,12 +5,11 @@ let package = require("./package.json");
 const { Client } = require('pg');
 require('dotenv').config();
 
-const database = process.env.CONNECTION_STRING;
+// const database = process.env.CONNECTION_STRING;
 
 const client = new Client({
-  API_KEY = process.env.API_KEY,
-  CONNECTION_STRING = process.env.CONNECTION_STRING,
-  ssl = {
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
     rejectUnauthorized: false
   }
 });
