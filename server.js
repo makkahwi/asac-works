@@ -95,20 +95,20 @@ server.get('/certification', (req, res) => {
 
 // PG Routes
 server.post('/addMovie', (req, res) => {
-  client.query(`INSERT INTO movies(${Object.keys(req.query)}) VALUES (${Object.values(req.query)}) RETURNING *`, Object.values(req.query))
+  client.query(`INSERT INTO movies(${Object.keys(req.body).join(",")}) VALUES (${Object.values(req.body)}) RETURNING *`, Object.values(req.body))
     .then(data => {
       res.status(200).json(data || "Movie Was Added, Congrats")
     }).catch(e => {
-      res.status(e.response.status).send(`Database says: ${e.response.statusText}`)
+      res.status(500).send(`Database says: ${{ status: 500, message: e }}`)
     });
 });
 
 server.get('/getMovies', (req, res) => {
-  client.query(`SELECT ${req.query || "*"} FROM movies;`, null)
+  client.query(`SELECT * FROM movies;`, null)
     .then(data => {
       res.status(200).json(data || "No movies were found")
     }).catch(e => {
-      res.status(e.response.status).send(`Database says: ${e.response.statusText}`)
+      res.status(500).send(`Database says: ${{ status: 500, message: e }}`)
     });
 });
 
@@ -117,25 +117,25 @@ server.get('/getMovie/:id', (req, res) => {
     .then(data => {
       res.status(200).json(data || "No movie was found")
     }).catch(e => {
-      res.status(e.response.status).send(`Database says: ${e.response.statusText}`)
+      res.status(500).send(`Database says: ${{ status: 500, message: e }}`)
     });
 });
 
 server.put('/update/:id', (req, res) => {
-  client.query(`UPDATE movies SET (${Object.keys(req.body).map(key => `${key} = ${req.body[key]}`)}) WHERE id=${req.params.id} RETURNING *;`, req.body)
+  client.query(`UPDATE movies SET ${Object.keys(req.body).map((key, i) => `${key} = $${i + 1}`).join(", ")} WHERE id=${req.params.id} RETURNING *;`, Object.values(req.body))
     .then(data => {
       res.status(200).json(`Movie ${req.body.title} was updated successfully`)
     }).catch(e => {
-      res.status(e.response.status).send(`Database says: ${e.response.statusText}`)
+      res.status(500).send(`Database says: ${{ status: 500, message: e }}`)
     });
 });
 
 server.delete('/delete/:id', (req, res) => {
-  client.query(`DELETE FROM movies WHERE id=${req.params.id} RETURNING *;`, req.params)
+  client.query(`DELETE FROM movies WHERE id=${req.params.id};`, null)
     .then(data => {
       res.status(200).json(`Movie ${req.body.title} was deleted successfully`)
     }).catch(e => {
-      res.status(e.response.status).send(`Database says: ${e.response.statusText}`)
+      res.status(500).send(`Database says: ${{ status: 500, message: e }}`)
     });
 });
 
