@@ -7,7 +7,13 @@ require('dotenv').config();
 
 const database = process.env.CONNECTION_STRING;
 
-const client = new Client(database);
+const client = new Client({
+  API_KEY = process.env.API_KEY,
+  CONNECTION_STRING = process.env.CONNECTION_STRING,
+  ssl = {
+    rejectUnauthorized: false
+  }
+});
 
 const server = express();
 
