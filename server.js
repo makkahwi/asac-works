@@ -95,7 +95,7 @@ server.get('/certification', (req, res) => {
 
 // PG Routes
 server.post('/addMovie', (req, res) => {
-  client.query(`INSERT INTO movies(${Object.keys(req.body).join(",")}) VALUES (${Object.values(req.body)}) RETURNING *`, Object.values(req.body))
+  client.query(`INSERT INTO movies(${Object.keys(req.body).join(",")}) VALUES (${Object.values(req.body).map((_, i) => `$${i + 1}`).join(", ")}) RETURNING *`, Object.values(req.body))
     .then(data => {
       res.status(200).json(data || "Movie Was Added, Congrats")
     }).catch(e => {
@@ -106,7 +106,7 @@ server.post('/addMovie', (req, res) => {
 server.get('/getMovies', (req, res) => {
   client.query(`SELECT * FROM movies;`, null)
     .then(data => {
-      res.status(200).json(data || "No movies were found")
+      res.status(200).json(data.rows || "No movies were found")
     }).catch(e => {
       res.status(500).send(`Database says: ${{ status: 500, message: e }}`)
     });
@@ -115,7 +115,7 @@ server.get('/getMovies', (req, res) => {
 server.get('/getMovie/:id', (req, res) => {
   client.query(`SELECT * FROM movies WHERE id=${req.params.id} ;`, null)
     .then(data => {
-      res.status(200).json(data || "No movie was found")
+      res.status(200).json(data.rows || "No movie was found")
     }).catch(e => {
       res.status(500).send(`Database says: ${{ status: 500, message: e }}`)
     });
