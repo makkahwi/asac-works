@@ -12,9 +12,7 @@
 // Input <= "Hello";
 // Output => "olleH";
 
-const reverseString = (string) => {
-    //write your code here ...
-}
+const reverseString = string => string.split("").reverse().join("");
 // -------------------------------------------------------------------------------------------------------
 
 
@@ -28,9 +26,8 @@ const reverseString = (string) => {
 // Ex :-
 // Input <= ["hello ^_^ ","Hi ^_^" ,"What's up ^_-" ,"lol"] , Output => ["hello ^_^ ","Hi ^_^" ] ;
 
-const detectFace = (arr) => {
-    //write your code here ...
-}
+const detectFace = arr => arr.filter(string => string.split(" ").indexOf("^_^") >= 0);
+
 // -------------------------------------------------------------------------------------------------------
 
 
@@ -43,9 +40,7 @@ const detectFace = (arr) => {
 // Ex :-
 // Input <= "coding" output =>"cdn"
 
-const eveCharacter = (str) => {
-    //write your code here ...
-}
+const eveCharacter = str => str.split("").filter((_, i) => i % 2 === 0).join("");
 // -------------------------------------------------------------------------------------------------------
 
 
@@ -64,9 +59,7 @@ const eveCharacter = (str) => {
 // [["grilled chicken"], ["baked chicken"], ["fried chicken"]];
 
 
-const chickenGradients = (arr) => {
-    //write your code here ...
-}
+const chickenGradients = arr => arr.map(ingredients => ingredients.filter(ingredient => ingredient.toLowerCase().split(" ").indexOf("chicken") >= 0))
 // -------------------------------------------------------------------------------------------------------
 
 module.exports = { reverseString, detectFace, eveCharacter, chickenGradients };
