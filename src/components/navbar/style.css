@@ -1,4 +1,4 @@
-ul, footer {
+ul{
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -7,16 +7,13 @@ ul, footer {
   color: white;
   display: block;
   text-align: center;
-  padding: 5vh;
+  padding: 16px;
   text-decoration: none;
 }
 
-footer {
-  width: 94vw;
-}
-
-li {
-  display: inline-block;
+.li {
+  float: left;
+  display: block;
   text-align: center;
   padding: 16px;
   text-decoration: none;
@@ -25,4 +22,13 @@ li {
 a {
   text-decoration: underline;
   color: white;
+}
+
+.logo {
+  width: 50px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
 }

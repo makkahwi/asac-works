@@ -1,28 +1,13 @@
 import React from 'react';
-import logo from '../../logo.svg';
 import './style.css';
 
 export default function Header() {
 
   return (
-    <header>
-      <ul>
-        <li>
-          <img src={logo} alt="" height="20px" />
-        </li>
-
-        <li>
-          Suhaib's Travel Destination
-        </li>
-
-        <li>
-          <a href="#home">Home</a>
-        </li>
-
-        <li>
-          <a href="#tours">Tours</a>
-        </li>
-      </ul>
-    </header>
+    <section className='header'>
+      <h1 className='title'>
+        Welcome to Suhaib's Travel Site
+      </h1>
+    </section>
   );
 }

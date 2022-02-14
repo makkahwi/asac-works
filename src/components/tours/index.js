@@ -1,25 +1,25 @@
 import React from 'react';
 import Data from "../../data/db"
+import Tour from "./tour"
+import { Link } from "react-router-dom";
 import './style.css';
 
 export default function Tours() {
 
   return (
     <section id="tours">
+      <h1>
+        Available Travels
+      </h1>
+
       <div className="gallery">
         {Data.map((destination, i) => {
-          const { name, image } = destination;
+          const { id, name, image } = destination;
 
           return (
-            <div className="destination">
-              <div>
-                <img src={image} alt="" />
-              </div>
-
-              <p className='desc'>
-                {`${i + 1}- ${name}`}
-              </p>
-            </div>
+            <Link to={`/destination/${id}`}>
+              <Tour name={name} image={image} key={i} />
+            </Link>
           )
         }
         )}
