@@ -15,7 +15,20 @@
 //
 
 const recursionPattern = (int1, int2) => {
-    // write your code here
+    const result = [int1];
+    let operation = "deduct";
+
+    do {
+        operation === "deduct" ? (
+            result.push(result[result.length - 1] - int2)
+        ) : (
+            result.push(result[result.length - 1] + int2)
+        );
+
+        result[result.length - 1] < 0 ? operation = "add" : "";
+    } while (result[result.length - 1] < int1)
+
+    return result;
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -33,9 +46,7 @@ const recursionPattern = (int1, int2) => {
 //  Assume that links end with .com, .org or .net
 // 
 
-const filterLinks = (str) => {
-    // write your code here
-}
+const filterLinks = str => new URL(str.split('"')[1]).hostname;
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -52,9 +63,12 @@ const filterLinks = (str) => {
 // as you can see "amanaplanacanalpanama" is a palindrome.
 //
 
-const isPalindrome = (str) => {
-    // write your code here
-}
+const isPalindrome = str => {
+    const newStr = str.replace(/[^A-Za-z0-9]/g, "").replace(" ", "").toLowerCase();
+    const reversedStr = newStr.split("").reverse().join("").toLowerCase();
+
+    return newStr === reversedStr;
+};
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -77,7 +91,17 @@ const isPalindrome = (str) => {
 //
 
 const samePattern = (str, arr) => {
-    // write your code here
+    const string = str.split("");
+    const array = [...arr];
+    let result = true;
+
+    array.forEach(s1 => {
+        const newArr = array.map((e, i) => e === s1 ? i : -1).filter(i => i >= 0);
+        const letter = string[newArr[0]];
+        newArr.forEach(i => string[i] === letter ? "" : result = false)
+    })
+
+    return result;
 }
 // -------------------------------------------------------------------------------------------------------
 
