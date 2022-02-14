@@ -1,20 +1,16 @@
-.gallery {
-  padding: 10vh 0
-};
-
 .destination {
   margin: 5px;
   float: left;
-  width: 180px;
-  border: 10px solid darkgray;
+  width: 15vw;
+  border: 5px solid darkgray;
 }
 
-img {
-  width: 10%;
-  height: auto;
+.image {
+  width: 100%;
 }
 
-.desc {
+.name {
   padding: 15px;
   text-align: center;
+  color: black;
 }

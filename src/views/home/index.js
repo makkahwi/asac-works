@@ -1,8 +1,7 @@
 import React from 'react';
-import Header from '../../components/header';
-import Footer from '../../components/footer';
-import Tours from '../../components/tours';
 import '../../assets/css/style.css';
+import Tours from '../../components/tours';
+import Header from '../../components/header';
 
 export default function Home() {
 
@@ -11,8 +10,6 @@ export default function Home() {
       <Header />
 
       <Tours />
-
-      <Footer />
     </main>
   );
 }

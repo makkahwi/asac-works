@@ -11,7 +11,7 @@ ul{
   text-decoration: none;
 }
 
-li {
+.li {
   float: left;
   display: block;
   text-align: center;
@@ -22,4 +22,13 @@ li {
 a {
   text-decoration: underline;
   color: white;
+}
+
+.logo {
+  width: 50px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
 }
