@@ -12,7 +12,6 @@ export default function MoviesList() {
 
   useEffect(() => {
     setLoading(true);
-
     MoviesApi.getAll()
       .then(res => {
         setMoviesList(res);
