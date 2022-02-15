@@ -24,15 +24,15 @@ export default function Movie({ data, fav, addComment, addToFav, removeFromFav, 
                 {' '}
               </>
             )}
-            {title || "No title included"}
+            {title || "No title"}
           </Title>
 
           <Text>
-            {release_date ? release_date : "No release date included"}
+            {release_date ? release_date : "No release date"}
           </Text>
 
           <Text className="desc">
-            {overview ? overview : "No overview included"}
+            {overview ? overview : "No overview"}
           </Text>
 
           <Button variant={fav ? "danger" : "success"} onClick={fav ? removeFromFav : addToFav} className="p-2 my-2 w-100">
