@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import MoviesApi from "../../api/movies"
-import Movie from "./movie"
+import { Row } from 'react-bootstrap';
+import MoviesApi from "../../api/movies";
+import Movie from "./movie";
 import './style.css';
 
 export default function MoviesList() {
@@ -38,7 +39,7 @@ export default function MoviesList() {
           Fav Movies
         </h1>
 
-        <div className="gallery">
+        <Row>
           {favs.length ? moviesList.filter(movie => favs.indexOf(movie.id) >= 0).map((movie, i) => {
             const { id } = movie;
 
@@ -47,7 +48,7 @@ export default function MoviesList() {
             )
           }
           ) : "No Fav Movies"}
-        </div>
+        </Row>
       </section>
 
       <div style={{ height: "50vh" }} />
@@ -57,7 +58,7 @@ export default function MoviesList() {
           All Movies
         </h1>
 
-        <div className="gallery">
+        <Row>
           {moviesList.map((movie, i) => {
             const { id } = movie;
 
@@ -66,7 +67,7 @@ export default function MoviesList() {
             )
           }
           )}
-        </div>
+        </Row>
       </section>
     </>
   );
