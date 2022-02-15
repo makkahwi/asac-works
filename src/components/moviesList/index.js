@@ -40,7 +40,7 @@ export default function MoviesList() {
 
   const addComment = (id, comment) => {
     let newComments = { ...comments };
-    if (comment.length) { newComments[id] ? newComments[id] = [...newComments[id], comment] : newComments[id] = [comment] };
+    if (comment?.length) { newComments[id] ? newComments[id] = [...newComments[id], comment] : newComments[id] = [comment] };
     setComments(newComments);
   };
 
@@ -65,7 +65,7 @@ export default function MoviesList() {
               <Spinner animation="border" variant="dark" />
             </Col>
           ) : (
-            favs.length ? (
+            favs?.length ? (
               <Listing
                 list={moviesList.filter(movie => favs.indexOf(movie.id) >= 0)}
                 favs={favs}
@@ -90,7 +90,7 @@ export default function MoviesList() {
               <Spinner animation="border" variant="dark" />
             </Col>
           ) : (
-            moviesList.length ? (
+            moviesList?.length ? (
               <Listing
                 list={moviesList}
                 favs={favs}
