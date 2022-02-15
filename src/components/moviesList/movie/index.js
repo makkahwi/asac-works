@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Button, Card, Col, Tooltip } from 'react-bootstrap';
+import { Button, Card, Col } from 'react-bootstrap';
 import star from "../../../assets/images/icons/star.png";
 import Modal from "../../modal";
-import './style.css';
+import "./style.css";
 
 export default function Movie({ data, fav, addToFav, removeFromFav, all }) {
   const { Img, Body, Title, Text } = Card;
@@ -13,24 +13,26 @@ export default function Movie({ data, fav, addToFav, removeFromFav, all }) {
 
   return (
     <Col lg="2" sm="4" xs="6">
-      <Card key={id}  >
+      <Card key={id} className="my-4">
         <Img variant="top" src={poster_path ? `https://image.tmdb.org/t/p/original/${poster_path}` : "https://executionconsulting.com/wp-content/uploads/2016/05/ef3-placeholder-image.jpg"} />
 
         <Body>
           <Title>
-            {(all && fav) && <Tooltip >
-              <img src={star} alt="" width={"15px"} />
-              {' '}
-            </Tooltip>}
-            {title}
+            {(all && fav) && (
+              <>
+                <img src={star} alt="" width={"15px"} />
+                {' '}
+              </>
+            )}
+            {title || "No title included"}
           </Title>
 
           <Text>
-            {release_date ? release_date : "No Release Date"}
+            {release_date ? release_date : "No release date included"}
           </Text>
 
-          <Text>
-            {overview ? overview : "No overview Added"}
+          <Text className="desc">
+            {overview ? overview : "No overview included"}
           </Text>
 
           <Button variant={fav ? "danger" : "success"} onClick={fav ? removeFromFav : addToFav} className="p-2 my-2 w-100">

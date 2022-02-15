@@ -1,15 +1,17 @@
 import React from 'react';
-import './style.css';
-import gh from "../../assets/images/icons/gh.png"
-import hr from "../../assets/images/icons/hr.png"
-import li from "../../assets/images/icons/li.png"
-import fb from "../../assets/images/icons/fb.png"
-import ig from "../../assets/images/icons/ig.png"
-import em from "../../assets/images/icons/em.png"
-import wa from "../../assets/images/icons/wa.png"
-import tg from "../../assets/images/icons/tg.png"
+import { Nav, Navbar, Row } from 'react-bootstrap';
+import em from "../../assets/images/icons/em.png";
+import fb from "../../assets/images/icons/fb.png";
+import gh from "../../assets/images/icons/gh.png";
+import hr from "../../assets/images/icons/hr.png";
+import ig from "../../assets/images/icons/ig.png";
+import li from "../../assets/images/icons/li.png";
+import tg from "../../assets/images/icons/tg.png";
+import wa from "../../assets/images/icons/wa.png";
 
-export default function Footer() {
+export default function Foot() {
+  const { Link } = Nav;
+  const { Brand } = Navbar;
 
   const links = [
     {
@@ -55,18 +57,22 @@ export default function Footer() {
   ]
 
   return (
-    <footer>
-      All Rights Reserved For <a href="https://suhaib.info" target="_blank" rel="noreferrer">Suhaib Ahmad</a> © {(new Date()).getFullYear()}
+    <Navbar bg="dark" variant="dark" className='px-4'>
+      <Row className="w-100">
+        <Brand className='copyright'>
+          All Rights Reserved For <a href="https://suhaib.info" target="_blank" rel="noreferrer">Suhaib Ahmad</a> © {(new Date()).getFullYear()}
+        </Brand>
+      </Row>
 
-      <ul>
-        {links.map((link, i) => (
-          <li stlye={{ width: `${1 / link.length * 100}%` }} key={i}>
-            <a href={link.link} target="_blank" rel="noreferrer" >
+      <Row className="w-100">
+        <Nav className="float-right">
+          {links.map((link, i) => (
+            <Link className='Link' href={link.link} target="_blank">
               <img src={link.icon} alt="" width={"25px"} />
-            </a>
-          </li>
-        ))}
-      </ul>
-    </footer>
+            </Link>
+          ))}
+        </Nav>
+      </Row>
+    </Navbar>
   );
 }

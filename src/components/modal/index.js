@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button, Col, Image, Modal } from 'react-bootstrap/';
-import './style.css';
 
 export default function Modals({ data, show, close, fav, favClick }) {
   const { Header, Title, Body, Footer } = Modal;
