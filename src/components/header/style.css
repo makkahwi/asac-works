@@ -1,0 +1,13 @@
+.header {
+  background-size: cover;
+  background-position: center center;
+  background-color: lightgray;
+  background-image:url("https://wallpaperaccess.com/full/3968016.png") ;
+}
+
+.title {
+  margin-top: 20vh;
+  font-size: xx-large;
+  color: black;
+  padding: 10vh 0;
+}

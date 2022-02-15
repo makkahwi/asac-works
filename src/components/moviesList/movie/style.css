@@ -1,0 +1,40 @@
+.movie {
+  margin: 5px;
+  float: left;
+  width: 15vw;
+  border: 5px solid darkgray;
+}
+
+.image {
+  width: 100%;
+}
+
+.name {
+  padding: 15px;
+  text-align: center;
+  color: black;
+}
+
+.desc {
+  padding: 15px;
+  text-align: justify;
+  color: black;
+}
+
+.favButton{
+  padding: 1vh;
+  background-color: goldenrod;
+  border: 0;
+  color: white;
+  margin: 10px 10%;
+  width: 80%;
+}
+
+.modalButton{
+  padding: 1vh;
+  background-color: blue;
+  border: 0;
+  color: white;
+  margin: 10px 10%;
+  width: 80%;
+}
