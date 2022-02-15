@@ -1,38 +1,39 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-import logo from '../../assets/images/logo.png';
-import './style.css';
+import { Nav, Navbar } from 'react-bootstrap';
 
 export default function NavBar() {
+  const { Brand } = Navbar;
+  const { Link } = Nav;
+
+  const links = [
+    {
+      title: "Home",
+      link: "#header"
+    },
+    {
+      title: "Fav Movies",
+      link: "#favMovies"
+    },
+    {
+      title: "All Movies",
+      link: "#allMovies"
+    },
+  ];
 
   return (
-    <header>
-      <ul>
-        <li className='li'>
-          {/* <img src={logo} alt="" className='logo' /> */}
-          NetenFlix
-        </li>
+    <Navbar fixed="top" bg="dark" variant="dark" className='navbar px-4'>
+      <Brand>
+        {/* <img src={logo} alt="" className='logo' /> */}
+        NetenFlix
+      </Brand>
 
-        <li className='li'>
-          {/* <Link to="/"> */}
-          <a href='#'>
-            Home
-          </a>
-          {/* </Link> */}
-        </li>
-
-        <li className='li'>
-          <a href='#favMovies'>
-            Fav Movies
-          </a>
-        </li>
-
-        <li className='li'>
-          <a href='#allMovies'>
-            All Movies
-          </a>
-        </li>
-      </ul>
-    </header >
+      <Nav>
+        {links.map((link, i) => (
+          <Link className='link' href={link.link} key={i}>
+            {link.title}
+          </Link>
+        ))}
+      </Nav>
+    </Navbar>
   );
 }

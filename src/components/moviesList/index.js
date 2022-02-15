@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import MoviesApi from "../../api/movies"
-import Movie from "./movie"
-import './style.css';
+import { Col, Container, Row, Spinner } from 'react-bootstrap';
+import MoviesApi from "../../api/movies";
+import Listing from "./listing";
 
 export default function MoviesList() {
 
   const [moviesList, setMoviesList] = useState([]);
+  const [comments, setComments] = useState({});
+  const [loading, setLoading] = useState(false);
   const [favs, setFavs] = useState(JSON.parse(localStorage.getItem("favs")) || []);
 
   useEffect(() => {
+    setLoading(true);
     MoviesApi.getAll()
       .then(res => {
         setMoviesList(res);
@@ -16,6 +19,9 @@ export default function MoviesList() {
       .catch(e => {
         setMoviesList([]);
         console.log(e)
+      })
+      .finally(() => {
+        setLoading(false);
       })
   }, [])
 
@@ -28,46 +34,76 @@ export default function MoviesList() {
   const removeFromFav = id => {
     const newFavs = favs.filter(movie => movie !== id);
     setFavs(newFavs);
+    removeComments(id);
     localStorage.setItem("favs", JSON.stringify(newFavs));
   };
 
+  const addComment = (id, comment) => {
+    let newComments = { ...comments };
+    if (comment.length) { newComments[id] ? newComments[id] = [...newComments[id], comment] : newComments[id] = [comment] };
+    setComments(newComments);
+  };
+
+  const removeComments = id => {
+    let newComments = { ...comments };
+    newComments[id] = undefined;
+    setComments(newComments);
+  };
+
+  useEffect(() => console.log(comments), [comments]);
+
   return (
     <>
-      <section id="favMovies">
-        <h1>
+      <Container id="favMovies" className="w-100 justify-content-md-center my-5">
+        <h1 className='py-5 my-5'>
           Fav Movies
         </h1>
 
-        <div className="gallery">
-          {favs.length ? moviesList.filter(movie => favs.indexOf(movie.id) >= 0).map((movie, i) => {
-            const { id } = movie;
+        <Row>
+          {loading ? (
+            <Col className="text-center" xs="12">
+              <Spinner animation="border" variant="dark" />
+            </Col>
+          ) : (
+            favs.length ? (
+              <Listing
+                list={moviesList.filter(movie => favs.indexOf(movie.id) >= 0)}
+                favs={favs}
+                comments={comments}
+                addToFavs={addToFavs}
+                removeFromFav={removeFromFav}
+                addComment={addComment}
+              />
+            ) : <Col className="text-center pb-5 mb-5">{"No Fav Movies"}</Col>
+          )}
+        </Row>
+      </Container>
 
-            return (
-              <Movie data={movie} fav={favs.indexOf(id) >= 0} addToFav={() => addToFavs(id)} removeFromFav={() => removeFromFav(id)} key={i} />
-            )
-          }
-          ) : "No Fav Movies"}
-        </div>
-      </section>
-
-      <div style={{ height: "50vh" }} />
-
-      <section id="allMovies">
-        <h1>
+      <Container id="allMovies" className="w-100 justify-content-md-center my-5">
+        <h1 className='py-5 my-5'>
           All Movies
         </h1>
 
-        <div className="gallery">
-          {moviesList.map((movie, i) => {
-            const { id } = movie;
-
-            return (
-              <Movie data={movie} fav={favs.indexOf(id) >= 0} addToFav={() => addToFavs(id)} removeFromFav={() => removeFromFav(id)} key={i} all />
-            )
-          }
+        <Row>
+          {loading ? (
+            <Col className="text-center" xs="12">
+              <Spinner animation="border" variant="dark" />
+            </Col>
+          ) : (
+            moviesList.length ? (
+              <Listing
+                list={moviesList}
+                favs={favs}
+                comments={comments}
+                addToFavs={addToFavs}
+                removeFromFav={removeFromFav}
+                addComment={addComment}
+                all
+              />
+            ) : <Col className="text-center pb-5 mb-5">{"No Movies Retrieved"}</Col>
           )}
-        </div>
-      </section>
+        </Row>
+      </Container>
     </>
   );
 }

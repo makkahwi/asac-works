@@ -1,5 +1,6 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { lazy } from 'react';
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import Footer from '../src/components/footer';
 import NavBar from "../src/components/navbar";
 import './App.css';
