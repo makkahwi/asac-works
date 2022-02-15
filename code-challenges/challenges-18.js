@@ -14,8 +14,9 @@
 // Output: 1
 //
 
-const wordLength = (str) => {
-    // write your code here
+const wordLength = str => {
+    const arr = str.split(" ");
+    return arr[parseInt(arr.length / 2)].length;
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -40,7 +41,20 @@ const wordLength = (str) => {
 // Output: false
 
 const wordLetters = (str1, str2) => {
-    // write your code here
+    let answer = true;
+
+    const strA = str1.split("").sort();
+    const strB = str2.split("").sort();
+
+    if (strA.length === strB.length) {
+        strA.forEach((letter, i) => {
+            letter === strB[i] ? "" : answer = false;
+        })
+    } else {
+        answer = false;
+    }
+
+    return answer;
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -63,9 +77,8 @@ const wordLetters = (str1, str2) => {
 // Output: 4
 //
 
-const targetIndex = (arr, int) => {
-    // write your code here
-}
+const targetIndex = (arr, int) => arr.indexOf(int) >= 0 ? arr.indexOf(int) : [...arr, int].sort().indexOf(int);
+
 // -------------------------------------------------------------------------------------------------------
 
 module.exports = { wordLength, wordLetters, targetIndex };
