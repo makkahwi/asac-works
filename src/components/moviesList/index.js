@@ -40,7 +40,7 @@ export default function MoviesList() {
 
   const addComment = (id, comment) => {
     let newComments = { ...comments };
-    newComments[id] ? newComments[id] = [...newComments[id], comment] : newComments[id] = [comment];
+    if (comment.length) { newComments[id] ? newComments[id] = [...newComments[id], comment] : newComments[id] = [comment] };
     setComments(newComments);
   };
 
