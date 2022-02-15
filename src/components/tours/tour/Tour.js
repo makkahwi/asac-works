@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css';
+import './Tour.css';
 
 export default function Tour({ name, image }) {
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './style.css';
+import './TourDetails.css';
 import Data from "../../data/db"
 import { useParams } from "react-router-dom";
 
