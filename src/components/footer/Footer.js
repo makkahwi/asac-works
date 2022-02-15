@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css';
+import './Footer.css';
 import gh from "../../assets/images/icons/gh.png"
 import hr from "../../assets/images/icons/hr.png"
 import li from "../../assets/images/icons/li.png"

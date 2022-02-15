@@ -1,11 +1,11 @@
 import React, { lazy } from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
-import Footer from '../src/components/footer';
-import NavBar from "../src/components/navbar";
+import Footer from '../src/components/footer/Footer';
+import NavBar from "../src/components/navbar/Navbar";
 import './App.css';
 
-const Home = lazy(() => import('./views/home'));
-const Destination = lazy(() => import('./views/tourDetails'));
+const Home = lazy(() => import('./components/home/Home'));
+const Destination = lazy(() => import('./components/tourDetails/TourDetails'));
 
 export default function App() {
   return (

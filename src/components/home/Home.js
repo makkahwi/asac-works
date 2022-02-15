@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../assets/css/style.css';
-import Tours from '../../components/tours';
-import Header from '../../components/header';
+import Tours from '../tours/Tours';
+import Header from '../../components/header/Header';
 
 export default function Home() {
 

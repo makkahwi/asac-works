@@ -1,8 +1,8 @@
 import React from 'react';
 import Data from "../../data/db"
-import Tour from "./tour"
+import Tour from "./tour/Tour"
 import { Link } from "react-router-dom";
-import './style.css';
+import './Tours.css';
 
 export default function Tours() {
 
