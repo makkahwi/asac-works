@@ -67,7 +67,7 @@ export default function Foot() {
       <Row className="w-100">
         <Nav className="float-right">
           {links.map((link, i) => (
-            <Link className='Link' href={link.link} target="_blank">
+            <Link className='Link' href={link.link} target="_blank" key={i}>
               <img src={link.icon} alt="" width={"25px"} />
             </Link>
           ))}

@@ -1,8 +1,9 @@
 import React from 'react';
-import { Button, Col, Image, Modal } from 'react-bootstrap/';
+import { Button, Col, Form, Image, Modal, Row } from 'react-bootstrap/';
 
-export default function Modals({ data, show, close, fav, favClick }) {
+export default function Modals({ data, show, close, fav, addComment, favClick, comments }) {
   const { Header, Title, Body, Footer } = Modal;
+  const { Control } = Form;
   const { id, title, release_date, poster_path, overview } = data;
 
   return (
@@ -18,20 +19,38 @@ export default function Modals({ data, show, close, fav, favClick }) {
       </Body>
 
       <Body>
-        {overview}
+        <Col>
+          {overview}
+        </Col>
+
+        <Col className="pt-4">
+          {`Release On ${release_date}`}
+        </Col>
       </Body>
 
       <Footer>
-        <Col>
-          {`Release On ${release_date}`}
-        </Col>
+        <Row className='w-100'>
+          <h5>Comments</h5>
 
-        <Col>
-          <Button variant={fav ? "danger" : "success"} onClick={favClick}>
-            {fav ? "Remove From Favorites" : "Add To Favorites"}
-          </Button>
-        </Col>
+          <Col xs="12" className='my-2'>
+            {comments ? comments.map((comment, i) => (
+              <p key={i}>
+                {comment}
+              </p>
+            )) : <small>{"No Comments Added Yet"}</small>}
+          </Col>
+
+          <Col xs="12" className='my-2'>
+            <Form onSubmit={e => { e.preventDefault(); addComment(id, e.target.comment.value); favClick(); }}>
+              <Control name="comment" type="textarea" placeholder='Add Comment As You Mark The Movie as Fav' />
+
+              <Button variant={fav ? "danger" : "success"} type="submit" className='my-3'>
+                {fav ? "Remove From Favorites" : "Add To Favorites"}
+              </Button>
+            </Form>
+          </Col>
+        </Row>
       </Footer>
-    </Modal>
+    </Modal >
   );
 }

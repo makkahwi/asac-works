@@ -4,7 +4,7 @@ import star from "../../../assets/images/icons/star.png";
 import Modal from "../../modal";
 import "./style.css";
 
-export default function Movie({ data, fav, addToFav, removeFromFav, all }) {
+export default function Movie({ data, fav, addComment, addToFav, removeFromFav, all, comments }) {
   const { Img, Body, Title, Text } = Card;
 
   const { id, title, poster_path, overview, release_date } = data;
@@ -45,7 +45,7 @@ export default function Movie({ data, fav, addToFav, removeFromFav, all }) {
         </Body>
       </Card>
 
-      <Modal data={data} show={modal} close={() => setModal(false)} fav={fav} favClick={fav ? removeFromFav : addToFav} />
+      <Modal data={data} show={modal} close={() => setModal(false)} fav={fav} addComment={addComment} favClick={fav ? removeFromFav : addToFav} comments={comments} />
     </Col>
   );
 }
