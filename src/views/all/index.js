@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from '../../components/header';
+import Movies from '../../components/moviesList/all';
 
 export default function Home() {
 
   return (
     <main>
-      <Header />
+      <Movies />
     </main>
   );
 }
