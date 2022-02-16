@@ -4,7 +4,7 @@ import star from "../../../assets/images/icons/star.png";
 import Modal from "../../modal";
 import "./style.css";
 
-export default function Movie({ data, fav, addComment, addToFav, removeFromFav, all, comments }) {
+export default function Movie({ data, fav, addToFav, updateFav, removeFav, all }) {
   const { Img, Body, Title, Text } = Card;
 
   const { id, title, poster_path, overview, release_date } = data;
@@ -35,17 +35,13 @@ export default function Movie({ data, fav, addComment, addToFav, removeFromFav, 
             {overview ? overview : "No overview"}
           </Text>
 
-          <Button variant={fav ? "danger" : "success"} onClick={fav ? removeFromFav : addToFav} className="p-2 my-2 w-100">
-            {fav ? "Remove From Favorites" : "Add To Favorites"}
-          </Button>
-
           <Button variant="primary" onClick={() => setModal(true)} className="p-2 my-2 w-100">
             {"Show Details"}
           </Button>
         </Body>
       </Card>
 
-      <Modal data={data} show={modal} close={() => setModal(false)} fav={fav} addComment={addComment} favClick={fav ? removeFromFav : addToFav} comments={comments} />
+      <Modal data={data} show={modal} close={() => setModal(false)} fav={fav} addToFav={addToFav} updateFav={updateFav} deleteFav={removeFav} />
     </Col>
   );
 }

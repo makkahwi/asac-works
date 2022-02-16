@@ -1,7 +1,7 @@
 import React from 'react';
 import Movie from "./movie";
 
-export default function Listing({ list, favs, comments, addToFavs, removeFromFav, addComment, all }) {
+export default function Listing({ list, favs, addToFavs, updateFav, removeFav, all }) {
 
   return (
     <>
@@ -9,7 +9,7 @@ export default function Listing({ list, favs, comments, addToFavs, removeFromFav
         const { id } = movie;
 
         return (
-          <Movie data={movie} fav={favs.indexOf(id) >= 0} addToFav={() => addToFavs(id)} removeFromFav={() => removeFromFav(id)} key={i} addComment={addComment} all={all} comments={comments[id]} />
+          <Movie data={movie} fav={favs?.find(movi => movi.id === id)} addToFav={addToFavs} updateFav={updateFav} removeFav={removeFav} key={i} all={all} />
         )
       })}
     </>

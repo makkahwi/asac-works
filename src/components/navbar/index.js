@@ -1,5 +1,6 @@
 import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
+import { Link as RouterLink } from 'react-router-dom';
 
 export default function NavBar() {
   const { Brand } = Navbar;
@@ -8,16 +9,16 @@ export default function NavBar() {
   const links = [
     {
       title: "Home",
-      link: "#header"
-    },
-    {
-      title: "Fav Movies",
-      link: "#favMovies"
+      link: "/"
     },
     {
       title: "All Movies",
-      link: "#allMovies"
+      link: "/all"
     },
+    {
+      title: "Fav Movies",
+      link: "/favs"
+    }
   ];
 
   return (
@@ -29,8 +30,10 @@ export default function NavBar() {
 
       <Nav>
         {links.map((link, i) => (
-          <Link className='link' href={link.link} key={i}>
-            {link.title}
+          <Link className='link' key={i}>
+            <RouterLink to={link.link} >
+              {link.title}
+            </RouterLink>
           </Link>
         ))}
       </Nav>
