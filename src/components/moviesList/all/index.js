@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row, Spinner } from 'react-bootstrap';
-import MoviesApi from "../../../api/movies";
+import MoviesApi from "../../../api/tmdbData";
 import Listing from "../listing";
 
 export default function MoviesList() {
