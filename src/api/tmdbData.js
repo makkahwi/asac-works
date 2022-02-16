@@ -22,10 +22,12 @@ const remove = (id) => {
   return api.delete(`${path}/${id}`);
 };
 
-export default {
+const endpoints = {
   getAll,
   get,
   create,
   update,
   remove,
 };
+
+export default endpoints;
