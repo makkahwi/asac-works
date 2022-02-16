@@ -1,29 +1,27 @@
 import api from "./tmdb";
 
-const path = "/trending";
-
 const getAll = params => {
-  return api.get(`${path}`, { params });
+  return api.get(`/trending`, { params });
 };
 
 const getFavs = params => {
-  return api.get(`${path}/getMovies`, { params });
+  return api.get(`/getMovies`, { params });
 };
 
 const getFav = id => {
-  return api.get(`${path}/getMovie/${id}`);
+  return api.get(`/getMovie/${id}`);
 };
 
 const createFav = data => {
-  return api.post(`${path}/addMovie`, data);
+  return api.post(`/addMovie`, data);
 };
 
 const updateFav = (id, data) => {
-  return api.put(`${path}/update/${id}`, data);
+  return api.put(`/update/${id}`, data);
 };
 
 const removeFav = id => {
-  return api.delete(`${path}/delete/${id}`);
+  return api.delete(`/delete/${id}`);
 };
 
 const endpoints = {
