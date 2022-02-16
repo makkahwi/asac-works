@@ -53,7 +53,7 @@ export default function MoviesList() {
   useEffect(() => console.log(comments), [comments]);
 
   return (
-    <Container id="allMovies" className="w-100 justify-content-md-center my-5">
+    <Container id="allMovies" className="min-vh-100 w-100 justify-content-md-center my-5">
       <h1 className='py-5 my-5'>
         All Movies
       </h1>
