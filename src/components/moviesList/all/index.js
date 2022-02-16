@@ -6,51 +6,54 @@ import Listing from "../listing";
 export default function MoviesList() {
 
   const [moviesList, setMoviesList] = useState([]);
-  const [comments, setComments] = useState({});
   const [loading, setLoading] = useState(false);
-  const [favs, setFavs] = useState(JSON.parse(localStorage.getItem("favs")) || []);
+  const [favsList, setFavsList] = useState([]);
 
-  useEffect(() => {
+  const getFavs = () => {
     setLoading(true);
-    MoviesApi.getAll()
+
+    MoviesApi.getFavs()
       .then(res => {
-        setMoviesList(res);
+        setFavsList(res);
       })
       .catch(e => {
-        setMoviesList([]);
-        console.log(e)
+        console.log("Get Favs Error", e)
       })
       .finally(() => {
         setLoading(false);
+      });
+  };
+
+  useEffect(() => {
+    setLoading(true);
+
+    MoviesApi.getAll()
+      .then(res => {
+        setMoviesList(res);
+        getFavs();
       })
-  }, [])
+      .catch(e => {
+        console.log("Get All Error", e)
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
 
-  const addToFavs = id => {
-    const newFavs = [...favs, id]
-    setFavs(newFavs);
-    localStorage.setItem("favs", JSON.stringify(newFavs));
+  const addToFavs = data => {
+    setLoading(true);
+
+    MoviesApi.createFav(data)
+      .then(res => {
+        getFavs();
+      })
+      .catch(e => {
+        console.log("Add Fav Error", e)
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
-
-  const removeFromFav = id => {
-    const newFavs = favs.filter(movie => movie !== id);
-    setFavs(newFavs);
-    removeComments(id);
-    localStorage.setItem("favs", JSON.stringify(newFavs));
-  };
-
-  const addComment = (id, comment) => {
-    let newComments = { ...comments };
-    if (comment?.length) { newComments[id] ? newComments[id] = [...newComments[id], comment] : newComments[id] = [comment] };
-    setComments(newComments);
-  };
-
-  const removeComments = id => {
-    let newComments = { ...comments };
-    newComments[id] = undefined;
-    setComments(newComments);
-  };
-
-  useEffect(() => console.log(comments), [comments]);
 
   return (
     <Container id="allMovies" className="min-vh-100 w-100 justify-content-md-center my-5">
@@ -67,11 +70,8 @@ export default function MoviesList() {
           moviesList?.length ? (
             <Listing
               list={moviesList}
-              favs={favs}
-              comments={comments}
+              favs={favsList}
               addToFavs={addToFavs}
-              removeFromFav={removeFromFav}
-              addComment={addComment}
               all
             />
           ) : <Col className="text-center pb-5 mb-5">{"No Movies Retrieved"}</Col>

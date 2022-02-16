@@ -6,51 +6,84 @@ import Listing from "../listing";
 export default function MoviesList() {
 
   const [moviesList, setMoviesList] = useState([]);
-  const [comments, setComments] = useState({});
   const [loading, setLoading] = useState(false);
-  const [favs, setFavs] = useState(JSON.parse(localStorage.getItem("favs")) || []);
+  const [favsList, setFavsList] = useState([]);
 
-  useEffect(() => {
+  const getFavs = () => {
     setLoading(true);
-    MoviesApi.getAll()
+
+    MoviesApi.getFavs()
       .then(res => {
-        setMoviesList(res);
+        setFavsList(res);
       })
       .catch(e => {
-        setMoviesList([]);
-        console.log(e)
+        console.log("Get Favs Error", e)
       })
       .finally(() => {
         setLoading(false);
+      });
+  };
+
+  useEffect(() => {
+    setLoading(true);
+
+    MoviesApi.getAll()
+      .then(res => {
+        setMoviesList(res);
+        getFavs();
       })
-  }, [])
+      .catch(e => {
+        console.log("Get All Error", e)
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
 
-  const addToFavs = id => {
-    const newFavs = [...favs, id]
-    setFavs(newFavs);
-    localStorage.setItem("favs", JSON.stringify(newFavs));
+  const addToFavs = data => {
+    setLoading(true);
+
+    MoviesApi.createFav(data)
+      .then(res => {
+        getFavs();
+      })
+      .catch(e => {
+        console.log("Create Favs Error", e)
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
-  const removeFromFav = id => {
-    const newFavs = favs.filter(movie => movie !== id);
-    setFavs(newFavs);
-    removeComments(id);
-    localStorage.setItem("favs", JSON.stringify(newFavs));
+  const updateFav = data => {
+    setLoading(true);
+
+    MoviesApi.updateFav(data.id, data)
+      .then(res => {
+        getFavs();
+      })
+      .catch(e => {
+        console.log("Update Favs Error", e)
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
-  const addComment = (id, comment) => {
-    let newComments = { ...comments };
-    if (comment?.length) { newComments[id] ? newComments[id] = [...newComments[id], comment] : newComments[id] = [comment] };
-    setComments(newComments);
-  };
+  const removeFav = id => {
+    setLoading(true);
 
-  const removeComments = id => {
-    let newComments = { ...comments };
-    newComments[id] = undefined;
-    setComments(newComments);
+    MoviesApi.removeFav(id)
+      .then(res => {
+        getFavs();
+      })
+      .catch(e => {
+        console.log("Delete Favs Error", e)
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
-
-  useEffect(() => console.log(comments), [comments]);
 
   return (
     <Container id="favMovies" className="min-vh-100 w-100 justify-content-md-center my-5">
@@ -64,14 +97,13 @@ export default function MoviesList() {
             <Spinner animation="border" variant="dark" />
           </Col>
         ) : (
-          favs?.length ? (
+          favsList?.length ? (
             <Listing
-              list={moviesList.filter(movie => favs.indexOf(movie.id) >= 0)}
-              favs={favs}
-              comments={comments}
+              list={moviesList.filter(movie => favsList.indexOf(movie.id) >= 0)}
+              favs={favsList}
               addToFavs={addToFavs}
-              removeFromFav={removeFromFav}
-              addComment={addComment}
+              updateFav={updateFav}
+              removeFav={removeFav}
             />
           ) : <Col className="text-center pb-5 mb-5">{"No Fav Movies"}</Col>
         )}
