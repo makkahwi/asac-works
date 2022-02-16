@@ -1,0 +1,67 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "## Hacker Rank\n\nFor Thursdays you will be solving some selected challenges on HackerRank, please create an account if you don't have then\nFollow the links below:\nread them carefully and solve them then copy-paste your solution below in Code Block"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Required**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Append And Delete](https://www.hackerrank.com/challenges/append-and-delete/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "\nlet second = [...s];\nlet count = 0;\nlet op = \"add\";\n\nwhile (second.length > 0 && count < k && second.join(\"\") !== t.substring(0,second.length)){\n    second.pop();\n    count++;\n};\n\nwhile(count < k && second.join(\"\") !== t){\n    second[second.length] = t[second.length];\n    count++;\n};    \n\nreturn (second.join(\"\") === t? \"Yes\" : \"No\");"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Optional**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Encryption](https://www.hackerrank.com/challenges/encryption/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "\nlet string = s;\nconst newString = [];\nconst answer = [];\nconst rows = parseInt(Math.sqrt(s.length));\nconst columns = parseInt(Math.sqrt(s.length)) + 1;\n\nfor(let i=0; i<rows; i++){\n    newString.push(string.substring(i*columns, (i*columns)+columns));\n};\n\nfor(let y=0; y<columns; y++){\n    const str = [];\n    \n    for(let x=0; x<newString.length; x++){\n        const word = newString[x].split(\"\");\n        str.push(word[y]);\n    };\n    \n    answer.push(str.join(\"\"));\n};\n\nreturn answer.join(' ');"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [The Time In Words](https://www.hackerrank.com/challenges/the-time-in-words/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let minute = parseInt(m);\nlet hour = (minute > 30) ? parseInt(h)+1 : parseInt(h);\n\nconst hoursWord = hour => {\n  switch(hour) {\n    case 1: return \"one\";  \n    case 2: return \"two\";\n    case 3: return \"three\";\n    case 4: return \"four\";\n    case 5: return \"five\";\n    case 6: return \"six\";\n    case 7: return \"seven\";\n    case 8: return \"eight\";\n    case 9: return \"nine\";\n    case 10: return \"ten\";\n    case 11: return \"eleven\";\n    case 12: return \"twelve\";\n    default: return \"\";    \n  };\n};\n\nlet hours = hoursWord(hour);\n\nconst minutesInWords = min => {\n  switch(min) {\n    case 15: return \"quarter\";\n    case 30: return \"half\";\n    case 45: return \"quarter\";\n    case 1: return \"one minute\";\n    case 2: return \"two minutes\";\n    case 3: return \"three minutes\";\n    case 4: return \"four minutes\";\n    case 5: return \"five minutes\";\n    case 6: return \"six minutes\";\n    case 7: return \"seven minutes\";\n    case 8: return \"eight minutes\";\n    case 9: return \"nine minutes\";\n    case 10: return \"ten minutes\";\n    case 11: return \"eleven minutes\";\n    case 12: return \"twelve minutes\";\n    case 13: return \"thirteen minutes\";\n    case 14: return \"fourteen minutes\";\n    case 16: return \"sixteen minutes\";\n    case 17: return \"seventeen minutes\";\n    case 18: return \"eighteen minutes\";\n    case 19: return \"nineteen minutes\";\n    case 20: return \"twenty minutes\";\n    case 21: return \"twenty one minutes\";\n    case 22: return \"twenty two minutes\";\n    case 23: return \"twenty three minutes\";\n    case 24: return \"twenty four minutes\";\n    case 25: return \"twenty five minutes\";\n    case 26: return \"twenty six minutes\";\n    case 27: return \"twenty seven minutes\";\n    case 28: return \"twenty eight minutes\";\n    case 29: return \"twenty nine minutes\";\n    case 31: return \"twenty nine minutes\";\n    case 32: return \"twenty eight minutes\";\n    case 33: return \"twenty seven minutes\";\n    case 34: return \"twenty six minutes\";\n    case 35: return \"twenty five minutes\";\n    case 36: return \"twenty four minutes\";\n    case 37: return \"twenty three minutes\";\n    case 38: return \"twenty two minutes\";\n    case 39: return \"twenty one minutes\";\n    case 40: return \"twenty minutes\";\n    case 41: return \"nineteen minutes\";\n    case 42: return \"eighteen minutes\";\n    case 43: return \"seventeen minutes\";\n    case 44: return \"sixteen minutes\";\n    case 46: return \"fourteen minutes\";\n    case 47: return \"thirteen minutes\";\n    case 48: return \"twelve minutes\";\n    case 49: return \"eleven minutes\";\n    case 50: return \"ten minutes\";\n    case 51: return \"nine minutes\";\n    case 52: return \"eight minutes\";\n    case 53: return \"seven minutes\";\n    case 54: return \"six minutes\";\n    case 55: return \"five minutes\";\n    case 56: return \"four minutes\";\n    case 57: return \"three minutes\";\n    case 58: return \"two minutes\";\n    case 59: return \"one minutes\";\n    default: return \"error minutes\";\n  };\n};\n\nlet minutes = minutesInWords(minute);\n\nif(minute === 0) {\n    return `${hours} o' clock`\n};\n\nreturn `${minutes} ${minute > 30 ? \"to\" : \"past\"} ${hours}`;"
+            ],
+            "outputs": []
+        }
+    ]
+}
