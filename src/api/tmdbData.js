@@ -6,28 +6,33 @@ const getAll = params => {
   return api.get(`${path}`, { params });
 };
 
-const get = (id) => {
-  return api.get(`${path}/${id}`);
+const getFavs = params => {
+  return api.get(`${path}/getMovies`, { params });
 };
 
-const create = (data) => {
-  return api.post(`${path}`, data);
+const getFav = id => {
+  return api.get(`${path}/getMovie/${id}`);
 };
 
-const update = (id, data) => {
-  return api.put(`${path}/${id}`, data);
+const createFav = data => {
+  return api.post(`${path}/addMovie`, data);
 };
 
-const remove = (id) => {
-  return api.delete(`${path}/${id}`);
+const updateFav = (id, data) => {
+  return api.put(`${path}/update/${id}`, data);
+};
+
+const removeFav = id => {
+  return api.delete(`${path}/delete/${id}`);
 };
 
 const endpoints = {
   getAll,
-  get,
-  create,
-  update,
-  remove,
+  getFavs,
+  getFav,
+  createFav,
+  updateFav,
+  removeFav,
 };
 
 export default endpoints;
