@@ -4,7 +4,7 @@ To reverse a given array without using built-in methods like reverse().
 
 ## Whiteboard Process
 
- [Whiteboard](/Challenges/1/1-1.jpg)
+ [Whiteboard](/Challenges/1/array-reverse.jpg)
 
 ## Approach & Efficiency
 
