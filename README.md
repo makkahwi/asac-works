@@ -23,3 +23,5 @@ You may read more about me in *[my resume website](https://suhaib.dev)*. You als
 ### *[SQL_Summary](/SQL/README.md)*
 
 ### *[Prep_Mindset](/Prep_Mindset/README.md)*
+
+### *[Command-line](/Command-line/README.md)*
