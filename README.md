@@ -21,3 +21,5 @@ You may read more about me in *[my resume website](https://suhaib.dev)*. You als
 ## Code 401 - Advanced Software Development
 
 ### *[SQL_Summary](/SQL/README.md)*
+
+### *[Prep_Mindset](/Prep_Mindset/README.md)*
