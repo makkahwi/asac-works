@@ -1,52 +1,60 @@
-print("***************************************")
-print("*  Welcome to Suhaib's Fake Resturant *")
-print("***************************************")
-print("* Pleace make your pick of menu below *")
-print("***************************************\n\n")
+print("**************************************")
+print("**  Welcome to the Snakes Cafe    ! **")
+print("**  Please see our menu below       **")
+print("**                                  **")
+print('** To quit at any time, type "quit" **')
+print("**************************************\n\n")
 
 menu = {
-  "Appetizers": {"A1": "Hummus", "A2":"Mutabbal"},
-  "Entrees": {"E1": "Vegan Burger", "E2": "Baked Falafel"},
-  "Desserts": {"D1": "Fruit Salad", "D2": "Row fruits"},
-  "Beverages": {"B1": "Green Tea", "B2": "Black Coffee"}
+  "Appetizers": ["Hummus", "Mutabbal"],
+  "Entrees": ["Vegan Burger", "Baked Falafel"],
+  "Desserts": ["Fruit Salad","Row fruits"],
+  "Beverages": ["Green Tea", "Black Coffee"]
 }
 
 categories = list(map(lambda key: key, menu.keys()))
-items = list(map(lambda key: list(map(lambda item: item, menu[key])), categories))
+items = list(map(lambda key: list(map(lambda item: item.upper(), menu[key])), categories))
 
 def listing (key):
   print("\n",key)
-  print("\n-----")
-  list(map(lambda item: print(item,":",menu[key][item]), menu[key]))
+  print("-----")
+  list(map(lambda item: print(item), menu[key]))
 
 print("Our Menu...")
 list(map(lambda key: listing(key), menu.keys()))
 
 order = []
 
+print("\n\n***********************************")
+print("** What would you like to order? **")
+print("***********************************\n")
+
 def ordering ():
-  print("\n#Please type down the number of your next choice ('A1' or 'D2' or 'B2' ...etc) or type 'Done' to exit")
   newOrder = input().upper()
 
   correctOrder = False
 
-  if newOrder != "DONE":
+  if newOrder != "QUIT":
     for item in items:
       if newOrder in item:
-        add = menu[categories[items.index(item)]][newOrder]
         correctOrder = True
-        order.append(add)
-        print("You just ordered", add)
+        order.append(newOrder)
 
     if not correctOrder:
       print("Your entry is wrong, please try again")
+
+    print()
+
+    uorder = []
+
+    for item in order:
+        if item not in uorder:
+          uorder.append(item)
     
-    print("You have ordered so far", order)
+    list(map(lambda item: print(sum(1 for _ in filter(lambda items: items == item,order)),"order of", item, "have been added to your meal"),uorder))
     ordering()
   else :
-    if len(order):
-      print("You full order is", order)
-    else:
+    if not len(order):
       print("You ordered nothing")
 
 ordering()
