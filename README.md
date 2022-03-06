@@ -19,3 +19,5 @@ You may read more about me in *[my resume website](https://suhaib.dev)*. You als
 ### *[Prep_Mindset](/Prep_Mindset/README.md)*
 
 ### *[Command-line](/Command-line/README.md)*
+
+### *[Learning_Internal_Forces](/Learning_Forces/README.md)*
