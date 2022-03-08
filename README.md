@@ -23,3 +23,5 @@ You may read more about me in *[my resume website](https://suhaib.dev)*. You als
 ### *[Learning_Internal_Forces](/Learning_Forces/README.md)*
 
 ### *[Unexpected_Part](/Unexpected_Part/README.md)*
+
+### *[Class-08](/Class-08/README.md)*
