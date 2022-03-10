@@ -4,7 +4,9 @@ To add a given number to a given array in middle index without using built-in me
 
 ## Whiteboard Process
 
- [Whiteboard](/Challenges/2/array-insert-shift.jpg)
+[Whiteboard](/Challenges/2/array-insert-shift.jpg)
+
+[Resubmission Link](https://github.com/makkahwi/data-structures-and-algorithms/pull/4)
 
 ## Approach & Efficiency
 
