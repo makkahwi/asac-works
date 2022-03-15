@@ -1,0 +1,3 @@
+# Python Scopes
+
+Text
