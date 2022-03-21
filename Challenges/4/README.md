@@ -4,10 +4,8 @@ To create a linked list class which includes a head and the methods of : insert,
 
 ## Approach & Efficiency
 
-I created (Node) class which takes a value of any type as an argument and have a pointer of (None) type as default.
-I also created (LinkedList) class which takes no arguments and create an empty linked list.
-
----
+"Node" class was created to absorb the value of an argument n have a pointer of none type as default.
+"linked_list" class was built to create emply linked lists n then apply the within methods.
 
 ## "LinkedList" Class has following methods
 
