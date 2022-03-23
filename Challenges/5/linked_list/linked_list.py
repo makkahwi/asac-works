@@ -12,7 +12,7 @@ class linked_list:
         node = Node(value, self.header)
         self.header = node
 
-    def insert_at_tail(self, value):
+    def append(self, value):
         if self.header == None:
             self.header = Node(value, None)
         else:
@@ -22,39 +22,11 @@ class linked_list:
             else:
                 current.next = Node(value, None)
 
-    def insert_multi(self, nodes):
+    def append_multi(self, nodes):
         for node in nodes:
-            self.insert_at_tail(node)
+            self.append(node)
 
         return nodes
-
-    def length(self):
-        length = 0
-        current = self.header
-
-        while current != None:
-            length = length + 1
-            current = current.next
-
-        return length
-
-    def remove_node(self, i):
-        if i >= self.length() or i < 0:
-            raise Exception("Invalid Index")
-
-        elif i == 0:
-            self.header = self.header.next
-
-        length = 0
-        current = self.header
-
-        while current != None:
-            if length == i - 1:
-                current.next = current.next.next
-                break
-
-            current = current.next
-            length = length + 1
 
     def insert_at(self, i, value):
         if i >= self.length() or i < 0:
@@ -73,6 +45,54 @@ class linked_list:
                 break
             current = current.next
             length = length + 1
+
+    def insert_before(self, node, new_node):
+        new = Node(new_node)
+
+        if self.includes(node) == False:
+            return "Node to add before doesn't exist"
+
+        elif self.header.value == node:
+            new.next = self.header
+            self.header = new
+
+        else:
+            current = self.header
+
+            while current != None:
+                if current.next.value == node:
+                    new.next = current.next
+                    current.next = new
+                    break
+
+                current = current.next
+
+    def insert_after(self, node, new_node):
+        new = Node(new_node)
+
+        if self.includes(node) == False:
+            return "Node to add before doesn't exist"
+
+        else:
+            current = self.header
+
+            while current != None:
+                if current.value == node:
+                    new.next = current.next
+                    current.next = new
+                    break
+
+                current = current.next
+
+    def length(self):
+        length = 0
+        current = self.header
+
+        while current != None:
+            length = length + 1
+            current = current.next
+
+        return length
 
     def includes(self, value):
         current = self.header
