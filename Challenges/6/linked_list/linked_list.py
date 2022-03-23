@@ -94,6 +94,20 @@ class linked_list:
 
         return length
 
+    def kth(self, k):
+        if k >= self.length() or k < 0:
+            raise Exception("Invalid K Input")
+
+        arr = []
+        current = self.header
+
+        while current != None:
+            arr.append(current.value)
+            current = current.next
+
+        result = arr[len(arr) - 1 - k]
+        return result
+
     def includes(self, value):
         current = self.header
 
