@@ -1,30 +1,20 @@
-# Stacks and Queues
+# Linked List Zip
 
-Basic operations of stack & queue coded as linked lists
-
-## Challenge
-
-Build Stack & Queue classes as linked lists n built the below-listed methods
+Text
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
-## API
+Text
 
-- Stack Methods...
-  1- push: to add new node to the top of the stack
-  2- push_multi: to add new nodes to the top of the stack
-  3- pop: to remove the top node of the stack
-  4- pop_all: to remove all the nodes of the stack
-  5- peek: to return the value of the top of the stack
-  6- is_empty: to check if the given stack is empty or not
-  7- to_string: to convert the stack to a text (for test purposes)
+## "LinkedList" Class has following methods
 
-- Queue Methods...
-  1- enqueue: to add new node to the tail of the queue
-  2- enqueue_multi: to add new nodes to the tail of the queue
-  3- dequeue: to remove the front node of the queue
-  4- dequeue_all: to remove all the nodes of the queue
-  5- peek: to return the value of the front of the queue
-  6- is_empty: to check if the given queue is empty or not
-  7- to_string: to convert the queue to a text (for test purposes)
+- Insert, which do add a node to a linked list.
+- Append, which add a node to the tail of a linked list.
+- Append Multi, which handles the addition of serveral nodes to the tail of a linked list.
+- Insert at, which add a node to the given index of a linked list.
+- Insert Before, which add a node before a given node of a linked list.
+- Insert After, which add a node after a given node of a linked list.
+- Kth, which find an N node from a reversed linked list.
+- Length, which counts the length of a linked list n return the count.
+- Includes, which checks the existence of a node within a linked list.
+- To String, which read n return a linked list as string / text.
