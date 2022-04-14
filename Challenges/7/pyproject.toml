@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "stack-and-queue"
+name = "linked-list"
 version = "0.1.0"
 description = ""
 authors = ["Suhaib <SuhaibAhmadAi@hotmail.com>"]

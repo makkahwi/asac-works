@@ -12,5 +12,6 @@ LTUC Advanced DSA Tasks
 |      4      | Linked List                  | [Challenge Details](/Challenges/4/README.md) |
 |      5      | Linked List Insertion        | [Challenge Details](/Challenges/5/README.md) |
 |      6      | Linked List Kth              | [Challenge Details](/Challenges/6/README.md) |
-|      7      | Stack & Queue                | [Challenge Details](/Challenges/7/README.md) |
-|      8      | Stack & Queue Pseudo         | [Challenge Details](/Challenges/8/README.md) |
+|      7      | Linked List Zip              | [Challenge Details](/Challenges/7/README.md) |
+|      8      | Stack & Queue                | [Challenge Details](/Challenges/8/README.md) |
+|      9      | Stack & Queue Pseudo         | [Challenge Details](/Challenges/8/README.md) |
