@@ -118,6 +118,22 @@ class linked_list:
 
         return False
 
+    @staticmethod
+    def zip_lists(list_1, list_2):
+        first = list_1.header
+        second = list_2.header
+
+        while first and second:
+            list_1.insert_after(first.value, second.value)
+            first = first.next.next
+            second = second.next
+
+        while second:
+            list_1.append(second.value)
+            second = second.next
+
+        return list_1
+
     def to_string(self):
         string = ""
 
