@@ -11,7 +11,7 @@ def test_enqueue(queue):
 # Can successfully dequeue out of a queue the expected value
 def test_dequeue(queue):
     actual = queue.dequeue()
-    expected = "Node C"
+    expected = "Node A"
     assert actual == expected
 
 

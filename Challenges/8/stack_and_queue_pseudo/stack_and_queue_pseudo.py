@@ -6,26 +6,30 @@ class Node:
 
 class Stack:
     def __init__(self):
-        self.list = []
+        self.top = None
 
     def push(self, value):
-        node = Node(value, self.list)
-        self.list.append(node)
+        node = Node(value)
+        node.next = self.top
+        self.top = node
 
     def pop(self):
-        if not self.list:
+        if self.top is None:
             raise Exception("Empty Stack")
-
-        self.list.pop()
+        else:
+            holder = self.top
+            self.top = self.top.next
+            holder.next = None
+            return holder.value
 
     def peek(self):
-        if not self.list:
+        if self.top is None:
             raise Exception("Empty Stack")
 
-        return self.list.value
+        return self.top.value
 
     def is_empty(self):
-        return not self.list
+        return not self.top
 
     def to_string(self):
         string = ""
@@ -54,12 +58,14 @@ class PseudoQueue:
         return value
 
     def dequeue(self):
-        if not self.deq.is_empty():
-            raise Exception("Empty Queue")
+        if self.enq.top == None:
+            return "Pseudo Queue is empty"
 
-        removed = self.deq.push(self.enq.pop())
+        if self.deq.top == None:
+            while self.enq.top != None:
+                self.deq.push(self.enq.pop())
 
-        return removed
+        return self.deq.pop()
 
 
 if __name__ == "__main__":
