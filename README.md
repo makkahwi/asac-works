@@ -20,4 +20,18 @@ You may read more about me in *[my resume website](https://suhaib.dev)*. You als
 
 ### *[Command-line](/Command-line/README.md)*
 
+### *[Lesson 1 Notes](/Lesson-1/README.md)*
+
+### *[Lesson 2 Notes](/Lesson-2/README.md)*
+
 ### *[Lesson 3 Notes](/Lesson-3/README.md)*
+
+### *[Learning_Internal_Forces](/Learning_Forces/README.md)*
+
+### *[Unexpected_Part](/Unexpected_Part/README.md)*
+
+### *[Class-08](/Class-08/README.md)*
+
+### *[Class-10](/Class-10/README.md)*
+
+### *[Class-07](/Class-07/README.md)*
