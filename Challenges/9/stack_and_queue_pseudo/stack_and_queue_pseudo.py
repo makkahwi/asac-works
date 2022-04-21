@@ -61,18 +61,22 @@ class PseudoQueue:
     def enqueue(self, value):
         self.enq.push(value)
 
-        return value
+        if self.deq.top == None:
+            while not self.enq.top == None:
+                self.deq.push(self.enq.pop())
 
     # Dequeue (remove) a node of the queue's front
     def dequeue(self):
-        if self.enq.top == None:
-            return "Pseudo Queue is empty"
+        if self.deq.top == None and self.enq.top == None:
+            raise (Exception("Pseudo Queue is empty!"))
 
-        if self.deq.top == None:
-            while self.enq.top != None:
+        elif self.deq.top == None and not self.enq.top == None:
+            while not self.enq.top == None:
                 self.deq.push(self.enq.pop())
+            return self.deq.pop()
 
-        return self.deq.pop()
+        else:
+            return self.deq.pop()
 
 
 if __name__ == "__main__":
