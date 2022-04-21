@@ -8,11 +8,13 @@ class Stack:
     def __init__(self):
         self.top = None
 
+    # Push (add) a node to the stack's top
     def push(self, value):
         node = Node(value)
         node.next = self.top
         self.top = node
 
+    # Pop (remove) a node of the stack's top
     def pop(self):
         if self.top is None:
             raise Exception("Empty Stack")
@@ -22,15 +24,18 @@ class Stack:
             holder.next = None
             return holder.value
 
+    # Return the node of the stack's top
     def peek(self):
         if self.top is None:
             raise Exception("Empty Stack")
 
         return self.top.value
 
+    # Check if the stack is empty (have no top)
     def is_empty(self):
         return not self.top
 
+    # Convert the stack to text (for testing purposes)
     def to_string(self):
         string = ""
 
@@ -52,11 +57,13 @@ class PseudoQueue:
         self.enq = Stack()
         self.deq = Stack()
 
+    # Enqueue (add) a node to the queue's rear / tail
     def enqueue(self, value):
         self.enq.push(value)
 
         return value
 
+    # Dequeue (remove) a node of the queue's front
     def dequeue(self):
         if self.enq.top == None:
             return "Pseudo Queue is empty"
