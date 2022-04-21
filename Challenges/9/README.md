@@ -2,7 +2,7 @@
 
 Advanced engagement of stack and queue as linked lists
 
-![Whiteboard](/challenges/9/whiteboard.jpg)
+![Whiteboard](/whiteboard.jpg)
 
 ## Challenge
 
