@@ -8,10 +8,12 @@ class linked_list:
     def __init__(self):
         self.header = None
 
+    # Add a node to linked list front / header
     def insert(self, value):
         node = Node(value, self.header)
         self.header = node
 
+    # Add a node to linked list rear / tail
     def append(self, value):
         if self.header == None:
             self.header = Node(value, None)
@@ -22,12 +24,14 @@ class linked_list:
             else:
                 current.next = Node(value, None)
 
+    # Add multiple nodes to linked list rear / tail
     def append_multi(self, nodes):
         for node in nodes:
             self.append(node)
 
         return nodes
 
+    # Add a node to a spacific position of a linked list
     def insert_at(self, i, value):
         if i >= self.length() or i < 0:
             raise Exception("Invalid Index")
@@ -46,6 +50,7 @@ class linked_list:
             current = current.next
             length = length + 1
 
+    # Add a node before a spacific existing node of a linked list
     def insert_before(self, node, new_node):
         new = Node(new_node)
 
@@ -67,6 +72,7 @@ class linked_list:
 
                 current = current.next
 
+    # Add a node after a spacific existing node of a linked list
     def insert_after(self, node, new_node):
         new = Node(new_node)
 
@@ -84,6 +90,7 @@ class linked_list:
 
                 current = current.next
 
+    # Get list length
     def length(self):
         length = 0
         current = self.header
@@ -108,6 +115,7 @@ class linked_list:
         result = arr[len(arr) - 1 - k]
         return result
 
+    # Check if a node is part of a linked list
     def includes(self, value):
         current = self.header
 
@@ -119,21 +127,25 @@ class linked_list:
         return False
 
     @staticmethod
+    # Combine (Zip) two lists
     def zip_lists(list_1, list_2):
         first = list_1.header
         second = list_2.header
 
+        # As long as both lists have nodes case
         while first and second:
             list_1.insert_after(first.value, second.value)
             first = first.next.next
             second = second.next
 
+        # As long as second list have nodes case
         while second:
             list_1.append(second.value)
             second = second.next
 
         return list_1
 
+    # Convert a linked list to text (for checking purposes)
     def to_string(self):
         string = ""
 
