@@ -39,10 +39,10 @@ class Stack:
     def to_string(self):
         string = ""
 
-        if self.list == None:
+        if self.top == None:
             string = "Stack exists but has no nodes"
         else:
-            current = self.list
+            current = self.top
 
             while current != None:
                 string = string + "{ " + str(current.value) + " }" + " -> "
@@ -60,10 +60,7 @@ class PseudoQueue:
     # Enqueue (add) a node to the queue's rear / tail
     def enqueue(self, value):
         self.enq.push(value)
-
-        if self.deq.top == None:
-            while not self.enq.top == None:
-                self.deq.push(self.enq.pop())
+        return self.enq.to_string()
 
     # Dequeue (remove) a node of the queue's front
     def dequeue(self):

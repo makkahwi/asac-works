@@ -4,8 +4,8 @@ from stack_and_queue_pseudo.stack_and_queue_pseudo import PseudoQueue
 
 # Can successfully enqueue into a queue
 def test_enqueue(queue):
-    actual = queue.dequeue()
-    expected = "Node A"
+    actual = queue.enqueue("Node D")
+    expected = "{ Node D } -> { Node C } -> { Node B } -> { Node A } -> None"
     assert actual == expected
 
 
