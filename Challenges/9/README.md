@@ -2,13 +2,15 @@
 
 Advanced engagement of stack and queue as linked lists
 
+![Whiteboard](/challenges/9/whiteboard.jpg)
+
 ## Challenge
 
 Build a linked list as queue, but thourgh stack instances
 
 ## Approach & Efficiency
 
-Engage two stacks within PseudoQueue class. To enqueue, value you will be enqueued by using push instance of the first stack. To dequeue, first stack to be pushed into second stack and follow it by pop instance of second stack.
+Engage two stacks within PseudoQueue class. To enqueue, value you will be enqueued by using push instance of the first stack. To dequeue, first stack nodes to be pushed into second stack and then using pop instance of second stack to dequeue the queue front (stack top).
 
 Enqueue time Big(o): o(1)
 Enqueue space Big(o): o(1)
