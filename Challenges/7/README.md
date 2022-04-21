@@ -1,10 +1,12 @@
 # Linked List Zip
 
-Text
+To modify the previous "linked list" class to add the zip method (joing two linked lists).
+
+*[Whiteboard](/Challenges/7/whiteboard.jpg)*
 
 ## Approach & Efficiency
 
-Text
+"zip_lists" method was built to combine two exisiting lists to be one list using zipping approach (new linked list would include an item from first list, followed by an item of second list).
 
 ## "LinkedList" Class has following methods
 
@@ -17,4 +19,5 @@ Text
 - Kth, which find an N node from a reversed linked list.
 - Length, which counts the length of a linked list n return the count.
 - Includes, which checks the existence of a node within a linked list.
+- Zip Lists, which combine two exisiting lists into one zip list (alternate nodes of both lists).
 - To String, which read n return a linked list as string / text.
