@@ -2,6 +2,8 @@
 
 To modify the previous "linked list" class to add the zip method (joing two linked lists).
 
+[Whiteboard](/Challenges/7/whiteboard.jpg)
+
 ## Approach & Efficiency
 
 "zip_lists" method was built to combine two exisiting lists to be one list using zipping approach (new linked list would include an item from first list, followed by an item of second list).
