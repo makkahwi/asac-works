@@ -10,3 +10,8 @@ LTUC Advanced DSA Tasks
 |      2      | Add a number to An Array     | [Challenge Details](/Challenges/2/README.md) |
 |      3      | Find a key in a sorted array | [Challenge Details](/Challenges/3/README.md) |
 |      4      | Linked List                  | [Challenge Details](/Challenges/4/README.md) |
+|      5      | Linked List Insertion        | [Challenge Details](/Challenges/5/README.md) |
+|      6      | Linked List Kth              | [Challenge Details](/Challenges/6/README.md) |
+|      7      | Linked List Zip              | [Challenge Details](/Challenges/7/README.md) |
+|      8      | Stack & Queue                | [Challenge Details](/Challenges/8/README.md) |
+|      9      | Stack & Queue Pseudo         | [Challenge Details](/Challenges/9/README.md) |
