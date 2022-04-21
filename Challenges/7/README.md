@@ -2,7 +2,7 @@
 
 To modify the previous "linked list" class to add the zip method (joing two linked lists).
 
-[Whiteboard](/Challenges/7/whiteboard.jpg)
+*[Whiteboard](/Challenges/7/whiteboard.jpg)*
 
 ## Approach & Efficiency
 
