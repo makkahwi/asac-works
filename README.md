@@ -16,3 +16,4 @@ LTUC Advanced DSA Tasks
 |      8      | Stack & Queue                | [Challenge Details](/Challenges/8/README.md) |
 |      9      | Stack & Queue Pseudo         | [Challenge Details](/Challenges/9/README.md) |
 |      10     | Stack & Queue Animal Shelter | [Challenge Details](/Challenges/10/README.md)|
+|      11     | Stack & Queue Brackets       | [Challenge Details](/Challenges/11/README.md)|
