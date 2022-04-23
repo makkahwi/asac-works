@@ -210,6 +210,8 @@ class BinaryTree:
         max = self.root.value
 
         def search(current):
+            nonlocal max
+
             if current.value > max:
                 max = current.value
 
