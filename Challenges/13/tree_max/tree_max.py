@@ -199,6 +199,30 @@ class BinaryTree:
             nodes.append(node.value)
         return nodes
 
+    # Get Maximum Value
+    def tree_max(self):
+        if self.root == None:
+            raise Exception("Empty Tree")
+
+        elif self.root.left == None and self.root.right == None:
+            return self.root.value
+
+        max = self.root.value
+
+        def search(current):
+            if current.value > max:
+                max = current.value
+
+            if current.left:
+                search(current.left)
+
+            if current.right:
+                search(current.right)
+
+        search(self.root)
+
+        return max
+
 
 class BinarySearchTree(BinaryTree):
 
