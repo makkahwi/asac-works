@@ -155,5 +155,42 @@ class Queue:
         return string
 
 
+def validate_brackets(input):
+    if input == None:
+        raise Exception("Empty input")
+
+    stack = Stack()
+    new = ""
+
+    for x in input:
+        if x == "(" or x == ")" or x == "[" or x == "]" or x == "{" or x == "}":
+            new += x
+
+    if new != "":
+        for letter in new:
+            if letter == "(" or letter == "[" or letter == "{":
+                stack.push(letter)
+
+            elif letter == ")" or letter == "]" or letter == "}":
+                if stack.is_empty():
+                    return False
+                else:
+                    if (
+                        (letter == ")" and stack.peek() == "(")
+                        or (letter == "]" and stack.peek() == "[")
+                        or (letter == "}" and stack.peek() == "{")
+                    ):
+                        stack.pop()
+                    else:
+                        return False
+    else:
+        raise Exception("No brackets in input")
+
+    if stack.is_empty():
+        return True
+    else:
+        return False
+
+
 if __name__ == "__main__":
     pass
