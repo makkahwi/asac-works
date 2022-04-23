@@ -246,5 +246,26 @@ class BinarySearchTree(BinaryTree):
         return False
 
 
+def breadth_first(tree):
+    if tree.root == None:
+        raise Exception("Empty Tree")
+
+    result = []
+    queue = Queue()
+    queue.enqueue(tree.root)
+
+    while queue.is_empty() == False:
+        if queue.front.value.left:
+            queue.enqueue(queue.front.value.left)
+
+        if queue.front.value.right:
+            queue.enqueue(queue.front.value.right)
+
+        dequeued = queue.dequeue()
+        result.append(dequeued.value)
+
+    return result
+
+
 if __name__ == "__main__":
     pass
