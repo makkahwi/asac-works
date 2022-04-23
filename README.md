@@ -32,6 +32,8 @@ You may read more about me in *[my resume website](https://suhaib.dev)*. You als
 
 ### *[Class-01](/Class-01/README.md)*
 
+### *[Class-02](/Class-02/README.md)*
+
 ### *[Class-07](/Class-07/README.md)*
 
 ### *[Class-08](/Class-08/README.md)*
