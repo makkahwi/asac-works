@@ -4,74 +4,6 @@ class Node:
         self.next = next
 
 
-class Stack:
-    def __init__(self):
-        self.top = None
-
-    # Push (add) a node to the stack's top
-    def push(self, value):
-        node = Node(value, self.top)
-        self.top = node
-
-        return self.to_string()
-
-    # Push (add) multiple nodes to the stack's top
-    def push_multi(self, multi):
-        for value in multi:
-            node = Node(value, self.top)
-            self.top = node
-
-        return self.to_string()
-
-    # Pop (remove) a node of the stack's top
-    def pop(self):
-        if not self.top:
-            raise Exception("Empty Stack")
-
-        removed = self.top.value
-        self.top = self.top.next
-
-        return removed
-
-    # Pop (remove) all nodes of the stack's top
-    def pop_all(self):
-        if not self.top:
-            return self
-
-        current = self.top
-
-        while current:
-            self.top = self.top.next
-            current = self.top
-
-    # Return the node of the stack's top
-    def peek(self):
-        if not self.top:
-            raise Exception("Empty Stack")
-
-        return self.top.value
-
-    # Check if the stack is empty (have no top)
-    def is_empty(self):
-        return not self.top
-
-    # Convert the stack to text (for testing purposes)
-    def to_string(self):
-        string = ""
-
-        if self.top == None:
-            string = "Stack exists but has no nodes"
-        else:
-            current = self.top
-
-            while current != None:
-                string = string + "{ " + str(current.value) + " }" + " -> "
-                current = current.next
-            string = string + "None"
-
-        return string
-
-
 class Queue:
     def __init__(self):
         self.front = None
@@ -153,6 +85,75 @@ class Queue:
             string = string + "None"
 
         return string
+
+
+class Cat:
+    def __init__(self):
+        self.type = "cat"
+
+
+class Dog:
+    def __init__(self):
+        self.type = "dog"
+
+
+class Hamster:
+    def __init__(self):
+        pass
+
+
+class AnimalShelter:
+    def __init__(self):
+        self.shelter = Queue()
+
+    def enqueue(self, animal):
+        if isinstance(animal, Dog) or isinstance(animal, Cat):
+            self.shelter.enqueue(animal)
+        else:
+            raise Exception("Shelter can have cats or dogs only")
+
+        return self.to_string()
+
+    def dequeue(self, pref):
+        if self.shelter == None:
+            raise Exception("Empty Shelter")
+
+        elif pref.lower() != "cat" or pref.lower() != "dog":
+            raise Exception("Shelter only contains cats and cogs")
+
+        else:
+            current = self.shelter.front
+            temp = self.shelter.front
+            tempNext = temp.next
+
+            while temp != None and tempNext != None:
+                if str(temp.value) != pref:
+                    temp = temp.next
+                    tempNext = tempNext.next
+
+                elif str(temp.value) == pref:
+                    currentV = current.value
+                    self.shelter.front.value = temp.value
+                    temp.value = currentV
+                    tempNext = tempNext.next
+                    self.shelter.dequeue()
+                    return str(current.value)
+            else:
+                raise Exception("Animal isn't in the shelter")
+
+        return self.to_string()
+
+    def to_string(self):
+        queue_str = ""
+        if self.shelter.front == None:
+            queue_str = "Shelter is empty"
+        else:
+            current = self.shelter.front
+            while current:
+                queue_str += "{ " + str(current.value) + " }" + " -> "
+                current = current.next
+            queue_str += "None"
+        return queue_str
 
 
 if __name__ == "__main__":
