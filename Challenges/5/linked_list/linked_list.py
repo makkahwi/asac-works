@@ -8,10 +8,12 @@ class linked_list:
     def __init__(self):
         self.header = None
 
+    # Add a node to linked list top
     def insert(self, value):
         node = Node(value, self.header)
         self.header = node
 
+    # Add a node to linked list tail
     def append(self, value):
         if self.header == None:
             self.header = Node(value, None)
@@ -22,12 +24,14 @@ class linked_list:
             else:
                 current.next = Node(value, None)
 
+    # Add nodes to linked list tail
     def append_multi(self, nodes):
         for node in nodes:
             self.append(node)
 
         return nodes
 
+    # Add a node to a specific position of a linked list
     def insert_at(self, i, value):
         if i >= self.length() or i < 0:
             raise Exception("Invalid Index")
@@ -46,6 +50,7 @@ class linked_list:
             current = current.next
             length = length + 1
 
+    # Add a node before a specific existing node of a linked list
     def insert_before(self, node, new_node):
         new = Node(new_node)
 
@@ -67,6 +72,7 @@ class linked_list:
 
                 current = current.next
 
+    # Add a node after a specific existing node of a linked list
     def insert_after(self, node, new_node):
         new = Node(new_node)
 
@@ -84,6 +90,7 @@ class linked_list:
 
                 current = current.next
 
+    # Get list length
     def length(self):
         length = 0
         current = self.header
@@ -94,6 +101,7 @@ class linked_list:
 
         return length
 
+    # Check if a node is part of a linked list
     def includes(self, value):
         current = self.header
 
@@ -104,6 +112,7 @@ class linked_list:
 
         return False
 
+    # Convert a linked list to text (for checking purposes)
     def to_string(self):
         string = ""
 
