@@ -2,6 +2,10 @@
 
 To modify the previous "linked list" class to add the kth methods.
 
+## Whiteboard Process
+
+![Whiteboard](./linked-list-kth.jpg)
+
 ## Approach & Efficiency
 
 "Node" class was created to absorb the value of an argument n have a pointer of none type as default.
