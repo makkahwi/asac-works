@@ -27,5 +27,35 @@ class k_ary_tree:
                 current = current.children[0]
 
 
+# Fizz Buzz Node Check
+def check(node):
+    if int(node.value) % 3 == 0 and int(node.value) % 5 == 0:
+        node.value = "FizzBuzz"
+    elif int(node) % 3 == 0:
+        node.value = "Fizz"
+    elif int(node) % 5 == 0:
+        node.value = "Buzz"
+    else:
+        node.value = str(node.value)
+
+
+# Go Though Children Nodes
+def looping(node):
+    for child in node.children:
+        check(child)
+        if len(child.children):
+            looping(child)
+
+
+# Fizz Buzz Main Function
+def fizz_buzz_tree(tree):
+    node = tree.root
+
+    check(node)
+    looping(node)
+
+    return tree
+
+
 if __name__ == "__main__":
     pass
