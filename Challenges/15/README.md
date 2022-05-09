@@ -2,7 +2,7 @@
 
 Text
 
-## Challenge
+## Whiteboard Process
 
 Text
 
@@ -10,6 +10,6 @@ Text
 
 Text
 
-## API
+## Solution
 
 Text
