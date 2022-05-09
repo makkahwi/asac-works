@@ -26,6 +26,22 @@ class k_ary_tree:
 
                 current = current.children[0]
 
+    # Convert a tree to text (for checking purposes)
+    def to_string(self):
+        string = ""
+
+        if self.root == None:
+            string = "Tree exists but has no nodes"
+        else:
+            current = self.root
+
+            while current != None:
+                string = string + "{ " + str(current.value) + " }" + " -> "
+                current = current.children[0]
+            string = string + "None"
+
+        return string
+
 
 # Fizz Buzz Node Check
 def check(node):
