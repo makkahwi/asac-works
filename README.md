@@ -13,7 +13,7 @@ CLI commands
 - django-admin start project [snacks_project]
 - python manage.py migrate
 - python manage.py createsuperuser
-- python manage.py startapp snacks
+- python manage.py startapp [snacks]
 
 ## How to start
 
