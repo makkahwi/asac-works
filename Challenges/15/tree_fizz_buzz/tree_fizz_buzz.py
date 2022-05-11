@@ -95,7 +95,7 @@ class k_ary_tree:
 
             return self
         else:
-            return Exception("Empty Tree")
+            raise Exception("Empty Tree")
 
     # Breadth First Tree Listing
     def breadth_first(self):
