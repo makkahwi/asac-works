@@ -8,12 +8,8 @@ To go through a k-ary tree nodes n replace the values by strings
 
 ## Approach & Efficiency
 
-Through a recurssive function, the approach is to visit each node n check its value, then check the node children's values.
+Through a recurssive function, the approach is to visit each node n check its value, then check the node children's values if any.
 
 Big O:
-Time: O(1)
+Time: O(n)
 Space: O(1)
-
-## Solution
-
-Text
