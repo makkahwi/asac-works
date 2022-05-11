@@ -1,8 +1,14 @@
+from django.conf import settings
+from django.contrib.auth import get_user_model
 from django.db import models
 
 
 class Snack(models.Model):
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=64)
+    purchaser = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+    )
     desc = models.TextField()
     calories = models.IntegerField()
     vegan = models.BooleanField(default=False)
