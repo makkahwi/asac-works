@@ -24,6 +24,21 @@ def test_fizz_buzz(tree):
     assert actual == expected
 
 
+def test_empty_tree():
+    tree = k_ary_tree()
+    with pytest.raises(Exception):
+        tree.fizz_buzz_tree()
+
+
+def test_no_children_tree():
+    root = tree_node(5)
+    tree = k_ary_tree(root)
+
+    actual = tree.fizz_buzz_tree().breadth_first()
+    expected = ["Buzz"]
+    assert actual == expected
+
+
 @pytest.fixture
 def tree():
     t1 = tree_node(1)
