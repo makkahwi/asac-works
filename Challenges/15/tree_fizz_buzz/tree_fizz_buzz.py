@@ -1,55 +1,73 @@
-class tree_node:
-    def __init__(self, value, children=None):
+class Node:
+    def __init__(self, value=None, next=None):
         self.value = value
-        self.children = []
-
-        if children != None:
-            for child in children:
-                self.children.append(tree_node(child))
+        self.next = next
 
 
-class k_ary_tree:
+class Queue:
     def __init__(self):
-        self.root = None
+        self.front = None
 
-    # Add nodes to the tree
-    def add_node(self, node, children=None):
-        if not self.root or self.root.value == node:
-            self.root = tree_node(node, children)
+    # Enqueue (add) a node to the queue's rear / tail
+    def enqueue(self, value):
+        node = Node(value)
+
+        if self.front:
+            current = self.front
+
+            while current.next:
+                current = current.next
+            else:
+                current.next = node
         else:
-            current = self.root
+            self.front = node
 
-            while current:
-                for child in current.children:
-                    if child.value == node:
-                        child = tree_node(node, children)
+        return self.to_string()
 
-                current = current.children[0]
+    # Dequeue (remove) a node of the queue's front
+    def dequeue(self):
+        if not self.front:
+            raise Exception("Empty Queue")
 
-    # Convert a tree to text (for checking purposes)
+        removed = self.front.value
+        self.front = self.front.next
+
+        return removed
+
+    # Check if the queue is empty (have no front)
+    def is_empty(self):
+        return not self.front
+
+    # Convert the queue to text (for testing purposes)
     def to_string(self):
         string = ""
 
-        if self.root == None:
-            string = "Tree exists but has no nodes"
+        if self.front == None:
+            string = "Queue exists but has no nodes"
         else:
-            current = self.root
+            current = self.front
 
             while current != None:
                 string = string + "{ " + str(current.value) + " }" + " -> "
-                current = current.children[0]
+                current = current.next
             string = string + "None"
 
         return string
 
 
+class tree_node:
+    def __init__(self, value, children=[]):
+        self.value = value
+        self.children = children
+
+
 # Fizz Buzz Node Check
 def check(node):
-    if int(node.value) % 3 == 0 and int(node.value) % 5 == 0:
+    if node.value % 3 == 0 and node.value % 5 == 0:
         node.value = "FizzBuzz"
-    elif int(node) % 3 == 0:
+    elif node.value % 3 == 0:
         node.value = "Fizz"
-    elif int(node) % 5 == 0:
+    elif node.value % 5 == 0:
         node.value = "Buzz"
     else:
         node.value = str(node.value)
@@ -59,18 +77,43 @@ def check(node):
 def looping(node):
     for child in node.children:
         check(child)
-        if len(child.children):
+        if child.children:
             looping(child)
 
 
-# Fizz Buzz Main Function
-def fizz_buzz_tree(tree):
-    node = tree.root
+class k_ary_tree:
+    def __init__(self, root=None):
+        self.root = root
 
-    check(node)
-    looping(node)
+    # Fizz Buzz Main Function
+    def fizz_buzz_tree(self):
+        if self.root:
+            node = self.root
 
-    return tree
+            check(node)
+            looping(node)
+
+            return self
+        else:
+            return Exception("Empty Tree")
+
+    # Breadth First Tree Listing
+    def breadth_first(self):
+        if self.root == None:
+            raise Exception("Empty Tree")
+
+        result = []
+        queue = Queue()
+        queue.enqueue(self.root)
+
+        while queue.is_empty() == False:
+            for child in queue.front.value.children:
+                queue.enqueue(child)
+
+            dequeued = queue.dequeue()
+            result.append(dequeued.value)
+
+        return result
 
 
 if __name__ == "__main__":
