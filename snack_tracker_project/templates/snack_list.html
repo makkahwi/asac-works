@@ -9,31 +9,36 @@ Snacks List
 {% endblock %}
 
 {% block main %}
-<table>
-  <tr>
-    <th>
-      Name
-    </th>
-    <th>
-      Purchaser
-    </th>
-    <th>
-      Description
-    </th>
-  </tr>
+<table class="table table-striped">
+  <thead class="bg-info text-light">
+    <tr>
+      <th>
+        Name
+      </th>
+      <th>
+        Purchaser
+      </th>
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
 
-  {% for snack in object_list %}
-  <tr>
-    <td>
-      {{snack.name}}
-    </td>
-    <td>
-      {{snack.purchaser}}
-    </td>
-    <td>
-      {{snack.desc}}
-    </td>
-  </tr>
-  {% endfor %}
+  <tbody>
+    {% for snack in object_list %}
+
+    <tr>
+      <td>
+        {{snack.name}}
+      </td>
+      <td>
+        {{snack.purchaser}}
+      </td>
+      <td>
+        {{snack.desc}}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
 </table>
 {% endblock %}
