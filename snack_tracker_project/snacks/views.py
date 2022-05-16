@@ -12,3 +12,8 @@ class SnackListView(ListView):
 class SnacksDetailView(DetailView):
     template_name = "snack_detail.html"
     model = Snack
+
+
+class AboutView(TemplateView):
+    template_name = "about.html"
+    model = Snack
