@@ -46,4 +46,6 @@ You may read more about me in *[my resume website](https://suhaib.dev)*. You als
 
 ### *[Class-10](/Class-10/README.md)*
 
+### *[Class-27](/Class-27/README.md)*
+
 ### *[Class-28](/Class-28/README.md)*
