@@ -21,6 +21,9 @@ Snacks List
       <th>
         Description
       </th>
+      <th>
+        Details
+      </th>
     </tr>
   </thead>
 
@@ -36,6 +39,9 @@ Snacks List
       </td>
       <td>
         {{snack.desc}}
+      </td>
+      <td>
+        <a href="{% url 'Details' pk=snack.pk %}">More Details</a>
       </td>
     </tr>
     {% endfor %}
