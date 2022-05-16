@@ -15,14 +15,14 @@ Snacks Update
       <tr>
         <th class="bg-info text-light" style="width: 25%;">Title</th>
         <td>
-          <input type="text" name="title" style="width: 100%;" value={{snack.title}}>
+          <input class="form-control" type="text" name="title">
         </td>
       </tr>
 
       <tr>
         <th class="bg-info text-light">Purchaser</th>
         <td>
-          <select style="width: 100%;" value={{snack.purchaser}}>
+          <select class="form-control">
             <option value="1">Admin</option>
           </select>
         </td>
@@ -30,45 +30,85 @@ Snacks Update
 
       <tr>
         <th class="bg-info text-light">Description</th>
-        <td><textarea type="text" name="desc" style="width: 100%;" value={{snack.desc}}></textarea></td>
+        <td><textarea class="form-control" type="text" name="desc"></textarea></td>
       </tr>
 
       <tr>
         <th class="bg-info text-light">Calories</th>
         <td>
-          <input type="number" name="calories" style="width: 100%;" value={{snack.calories}}>
+          <input class="form-control" type="number" name="calories">
         </td>
       </tr>
 
       <tr>
         <th class="bg-info text-light">Vegan</th>
         <td>
-          <input type="radio" name="vegan" value="1" value={{snack.vegan}}> Yes
-          <input type="radio" name="vegan" value="0" value={{snack.vegan}}> No
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="vegan" value="1">
+            <label class="form-check-label">
+              Yes
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="vegan" value="0" checked>
+            <label class="form-check-label">
+              No
+            </label>
+          </div>
         </td>
       </tr>
 
       <tr>
         <th class="bg-info text-light">Gloten Free</th>
         <td>
-          <input type="radio" name="gloten_free" value="1" value={{snack.gloten_free}}> Yes
-          <input type="radio" name="gloten_free" value="0" value={{snack.gloten_free}}> No
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gloten_free" value="1">
+            <label class="form-check-label">
+              Yes
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gloten_free" value="0" checked>
+            <label class="form-check-label">
+              No
+            </label>
+          </div>
         </td>
       </tr>
 
       <tr>
         <th class="bg-info text-light">Sugar Free</th>
         <td>
-          <input type="radio" name="sugar_free" value="1" value={{snack.sugar_free}}> Yes
-          <input type="radio" name="sugar_free" value="0" value={{snack.sugar_free}}> No
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="sugar_free" value="1">
+            <label class="form-check-label">
+              Yes
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="sugar_free" value="0" checked>
+            <label class="form-check-label">
+              No
+            </label>
+          </div>
         </td>
       </tr>
 
       <tr>
         <th class="bg-info text-light">Lactose Free</th>
         <td>
-          <input type="radio" name="lactose_free" value="1" value={{snack.lactose_free}}> Yes
-          <input type="radio" name="lactose_free" value="0" value={{snack.lactose_free}}> No
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="lactose_free" value="1">
+            <label class="form-check-label">
+              Yes
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="lactose_free" value="0" checked>
+            <label class="form-check-label">
+              No
+            </label>
+          </div>
         </td>
       </tr>
     </tbody>
@@ -79,13 +119,13 @@ Snacks Update
           <div class="btn-group float-right mb-4" role="group" aria-label="update">
             <button type="button" class="btn btn-outline-info">
               <a href="/">
-                Cancel
+                <i class="fa fa-rotate-left"></i> Cancel
               </a>
             </button>
 
             <button type=" submit" class="btn btn-warning">
               <a href="#" class="text-light">
-                Update
+                <i class="fa fa-pencil"></i> Update
               </a>
             </button>
           </div>
