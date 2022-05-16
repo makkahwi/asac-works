@@ -1,6 +1,6 @@
-# Title
+# Web Scraping
 
-## Learning Journal 4
+## Learning Journal 17
 
 ### What did I learn today?
 

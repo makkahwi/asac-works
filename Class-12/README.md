@@ -1,6 +1,6 @@
-# Title
+# Data Analysis with Pandas
 
-## Learning Journal 4
+## Learning Journal 12
 
 ### What did I learn today?
 

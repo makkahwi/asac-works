@@ -1,6 +1,6 @@
-# Title
+# Linear Regressions
 
-## Learning Journal 4
+## Learning Journal 13
 
 ### What did I learn today?
 

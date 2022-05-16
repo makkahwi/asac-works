@@ -1,21 +1,23 @@
-# Random Module
+# Title
 
-*[Source](https://www.pythonforbeginners.com/random/how-to-use-the-random-module-in-python)*
+## Learning Journal 6
 
-Random Module is about returning random value when called. That include random integer, float, random item from a defined list.
+### What did I learn today?
 
----
+Text
 
-# Risk Analysis
+### What went well, that I might forget if I don’t write down?
 
-*[Source](https://www.edureka.co/blog/risk-analysis-in-software-testing/)*
+Text
 
-Risk Analysis is about building test codes to define the risks of a software. It aims to recognize the potential problems of a software as it's bing build to be considered while developing and testing. Those potential risks could be resulted by many developments like including new coding langs and techs, new hardware integration, new automation library / tool and many more.
+### What still puzzles me, or what do I need to learn more about?
 
----
+Text
 
-# Test Coverage
+### What should I do differently next time?
 
-*[Source](https://martinfowler.com/bliki/TestCoverage.html)*
+Text
 
-While building tests for software / system, they are supposed to cover every part of the system code to ensure it's functionality. So while building the tests, "test coverage" is the process of numerically highlighting the untested parts of the code, so the test files would be updated to test those parts.
+### Is the assignment complete? If not, where exactly did you leave off, and what work remains?
+
+Text

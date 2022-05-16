@@ -1,6 +1,6 @@
-# Title
+# Numpy
 
-## Learning Journal 4
+## Learning Journal 11
 
 ### What did I learn today?
 

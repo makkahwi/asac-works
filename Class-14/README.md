@@ -1,6 +1,6 @@
-# Title
+# Data Visualization
 
-## Learning Journal 4
+## Learning Journal 14
 
 ### What did I learn today?
 
