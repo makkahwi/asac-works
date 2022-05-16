@@ -36,10 +36,21 @@
     </div>
   </nav>
 
-  <h1 class="jumbotron">
-    {% block title %}
-    {% endblock %}
-  </h1>
+  <div class="jumbotron">
+    <h2>
+      <u>
+        {% block itemtitle %}
+        {% endblock %}
+      </u>
+      {% block title %}
+      {% endblock %}
+    </h2>
+    <h5>
+      {% block breadcrumbs %}
+      {% endblock %}
+    </h5>
+  </div>
+
 
   <div class="container">
     <div style="min-height: 55vh;">

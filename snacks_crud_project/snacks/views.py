@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.views.generic import DetailView, ListView, TemplateView
+from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
+                                  TemplateView, UpdateView)
 
 from .models import Snack
 
@@ -14,19 +15,22 @@ class SnacksDetailView(DetailView):
     model = Snack
 
 
-class SnackCreateView(TemplateView):
+class SnackCreateView(CreateView):
     template_name = "snack_create.html"
     model = Snack
+    fields = ["title", "purchaser", "desc", "calories", "vegan", "gloten_free", "sugar_free", "lactose_free"]
 
 
-class SnackUpdateView(TemplateView):
+class SnackUpdateView(UpdateView):
     template_name = "snack_update.html"
     model = Snack
+    fields = ["title", "purchaser", "desc", "calories", "vegan", "gloten_free", "sugar_free", "lactose_free"]
 
 
-class SnackDeleteView(TemplateView):
+class SnackDeleteView(DeleteView):
     template_name = "snack_delete.html"
     model = Snack
+    success_url ='/'
 
 
 class AboutView(TemplateView):

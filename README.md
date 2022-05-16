@@ -11,6 +11,7 @@ An LTUC Django Project
 - poetry shell
 - poetry add django
 - django-admin startproject [snacks_crud_project]
+- cd [snacks_crud_project]
 - python manage.py migrate
 - python manage.py createsuperuser
 - python manage.py startapp [snacks]
@@ -29,5 +30,8 @@ An LTUC Django Project
 ## APIs
 
 - "/" | Snacks List (Home Page)
-- "/:id" | Snack Details
+- "snacks/create" | Snack Create
+- "snacks/:id" | Snack Details
+- "snacks/:id/update" | Snack Update
+- "snacks/:id/delete" | Snack Delete
 - "/about" | About Page

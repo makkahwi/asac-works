@@ -5,24 +5,34 @@ Update
 {% endblock %}
 
 {% block title %}
-Snacks Update
+Update
+{% endblock %}
+
+{% block itemtitle %}
+{{snack.title}}
+{% endblock %}
+
+{% block breadcrumbs %}
+{{snack.get_absolute_url}}
 {% endblock %}
 
 {% block main %}
-<from>
+<form action="" method="POST">
+  {% csrf_token %}
+
   <table class="table">
     <tbody>
       <tr>
         <th class="bg-info text-light" style="width: 25%;">Title</th>
         <td>
-          <input class="form-control" type="text" name="title">
+          <input required class="form-control" type="text" name="title" value="{{snack.title}}">
         </td>
       </tr>
 
       <tr>
         <th class="bg-info text-light">Purchaser</th>
         <td>
-          <select class="form-control">
+          <select required class="form-control" name="purchaser" value="{{snack.purchaser}}">
             <option value="1">Admin</option>
           </select>
         </td>
@@ -30,13 +40,13 @@ Snacks Update
 
       <tr>
         <th class="bg-info text-light">Description</th>
-        <td><textarea class="form-control" type="text" name="desc"></textarea></td>
+        <td><textarea required class="form-control" type="text" name="desc">{{snack.desc}}</textarea></td>
       </tr>
 
       <tr>
         <th class="bg-info text-light">Calories</th>
         <td>
-          <input class="form-control" type="number" name="calories">
+          <input required class="form-control" type="number" name="calories" value="{{snack.calories}}">
         </td>
       </tr>
 
@@ -44,15 +54,9 @@ Snacks Update
         <th class="bg-info text-light">Vegan</th>
         <td>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="vegan" value="1">
+            <input class="form-check-input" type="checkbox" name="vegan" checked="{{snack.vegan}}">
             <label class="form-check-label">
               Yes
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="vegan" value="0" checked>
-            <label class="form-check-label">
-              No
             </label>
           </div>
         </td>
@@ -62,15 +66,9 @@ Snacks Update
         <th class="bg-info text-light">Gloten Free</th>
         <td>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="gloten_free" value="1">
+            <input class="form-check-input" type="checkbox" name="gloten_free" checked="{{snack.gloten_free}}">
             <label class="form-check-label">
               Yes
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="gloten_free" value="0" checked>
-            <label class="form-check-label">
-              No
             </label>
           </div>
         </td>
@@ -80,15 +78,9 @@ Snacks Update
         <th class="bg-info text-light">Sugar Free</th>
         <td>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="sugar_free" value="1">
+            <input class="form-check-input" type="checkbox" name="sugar_free" checked="{{snack.sugar_free}}">
             <label class="form-check-label">
               Yes
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="sugar_free" value="0" checked>
-            <label class="form-check-label">
-              No
             </label>
           </div>
         </td>
@@ -98,15 +90,9 @@ Snacks Update
         <th class="bg-info text-light">Lactose Free</th>
         <td>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="lactose_free" value="1">
+            <input class="form-check-input" type="checkbox" name="lactose_free" checked="{{snack.lactose_free}}">
             <label class="form-check-label">
               Yes
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="lactose_free" value="0" checked>
-            <label class="form-check-label">
-              No
             </label>
           </div>
         </td>
@@ -117,21 +103,17 @@ Snacks Update
       <tr>
         <td colspan="2">
           <div class="btn-group float-right mb-4" role="group" aria-label="update">
-            <button type="button" class="btn btn-outline-info">
-              <a href="/">
-                <i class="fa fa-rotate-left"></i> Cancel
-              </a>
-            </button>
+            <a type="button" class="btn btn-outline-info" href="/">
+              <i class="fa fa-rotate-left"></i> Cancel
+            </a>
 
             <button type="submit" class="btn btn-warning">
-              <a href="#" class="text-light">
-                <i class="fa fa-pencil"></i> Update
-              </a>
+              <i class="fa fa-pencil"></i> Update
             </button>
           </div>
         </td>
       </tr>
     </tfoot>
   </table>
-  </form>
-  {% endblock %}
+</form>
+{% endblock %}

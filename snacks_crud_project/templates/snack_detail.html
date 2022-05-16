@@ -1,11 +1,19 @@
 {% extends "_base.html" %}
 
 {% block pagetitle %}
-Snack Details
+View
 {% endblock %}
 
 {% block title %}
-Snack Details
+Details
+{% endblock %}
+
+{% block itemtitle %}
+{{snack.title}}
+{% endblock %}
+
+{% block breadcrumbs %}
+{{snack.get_absolute_url}}
 {% endblock %}
 
 {% block main %}
@@ -19,12 +27,12 @@ Snack Details
 </div>
 
 <div class="btn-group float-right mb-4" role="group" aria-label="actions">
-  <button type="button" class="btn btn-warning">
+  <a type="button" class="btn btn-warning" href="{% url 'Update' pk=snack.pk %}">
     <i class="fa fa-pencil"></i> Update
-  </button>
-  <button type="button" class="btn btn-danger">
+  </a>
+  <a type="button" class="btn btn-danger" href="{% url 'Delete' pk=snack.pk %}">
     <i class="fa fa-trash"></i> Delete
-  </button>
+  </a>
 </div>
 
 <table class="table">
