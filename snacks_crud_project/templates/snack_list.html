@@ -9,11 +9,20 @@ Snacks List
 {% endblock %}
 
 {% block main %}
+
+<div class="btn-group float-right mb-4" role="group" aria-label="creation">
+  <a href="/snacks/create">
+    <button type="button" class="btn btn-success">
+      Create
+    </button>
+  </a>
+</div>
+
 <table class="table table-striped">
   <thead class="bg-info text-light">
     <tr>
       <th>
-        Name
+        Title
       </th>
       <th>
         Purchaser
@@ -32,7 +41,7 @@ Snacks List
 
     <tr>
       <td>
-        {{snack.name}}
+        {{snack.title}}
       </td>
       <td>
         {{snack.purchaser}}

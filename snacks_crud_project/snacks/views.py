@@ -14,6 +14,21 @@ class SnacksDetailView(DetailView):
     model = Snack
 
 
+class SnackCreateView(TemplateView):
+    template_name = "snack_create.html"
+    model = Snack
+
+
+class SnackUpdateView(TemplateView):
+    template_name = "snack_update.html"
+    model = Snack
+
+
+class SnackDeleteView(TemplateView):
+    template_name = "snack_delete.html"
+    model = Snack
+
+
 class AboutView(TemplateView):
     template_name = "about.html"
     model = Snack

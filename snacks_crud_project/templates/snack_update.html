@@ -1,0 +1,97 @@
+{% extends "_base.html" %}
+
+{% block pagetitle %}
+Update
+{% endblock %}
+
+{% block title %}
+Snacks Update
+{% endblock %}
+
+{% block main %}
+<from>
+  <table class="table">
+    <tbody>
+      <tr>
+        <th class="bg-info text-light" style="width: 25%;">Title</th>
+        <td>
+          <input type="text" name="title" style="width: 100%;" value={{snack.title}}>
+        </td>
+      </tr>
+
+      <tr>
+        <th class="bg-info text-light">Purchaser</th>
+        <td>
+          <select style="width: 100%;" value={{snack.purchaser}}>
+            <option value="1">Admin</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <th class="bg-info text-light">Description</th>
+        <td><textarea type="text" name="desc" style="width: 100%;" value={{snack.desc}}></textarea></td>
+      </tr>
+
+      <tr>
+        <th class="bg-info text-light">Calories</th>
+        <td>
+          <input type="number" name="calories" style="width: 100%;" value={{snack.calories}}>
+        </td>
+      </tr>
+
+      <tr>
+        <th class="bg-info text-light">Vegan</th>
+        <td>
+          <input type="radio" name="vegan" value="1" value={{snack.vegan}}> Yes
+          <input type="radio" name="vegan" value="0" value={{snack.vegan}}> No
+        </td>
+      </tr>
+
+      <tr>
+        <th class="bg-info text-light">Gloten Free</th>
+        <td>
+          <input type="radio" name="gloten_free" value="1" value={{snack.gloten_free}}> Yes
+          <input type="radio" name="gloten_free" value="0" value={{snack.gloten_free}}> No
+        </td>
+      </tr>
+
+      <tr>
+        <th class="bg-info text-light">Sugar Free</th>
+        <td>
+          <input type="radio" name="sugar_free" value="1" value={{snack.sugar_free}}> Yes
+          <input type="radio" name="sugar_free" value="0" value={{snack.sugar_free}}> No
+        </td>
+      </tr>
+
+      <tr>
+        <th class="bg-info text-light">Lactose Free</th>
+        <td>
+          <input type="radio" name="lactose_free" value="1" value={{snack.lactose_free}}> Yes
+          <input type="radio" name="lactose_free" value="0" value={{snack.lactose_free}}> No
+        </td>
+      </tr>
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <td colspan="2">
+          <div class="btn-group float-right mb-4" role="group" aria-label="update">
+            <button type="button" class="btn btn-outline-info">
+              <a href="/">
+                Cancel
+              </a>
+            </button>
+
+            <button type=" submit" class="btn btn-warning">
+              <a href="#" class="text-light">
+                Update
+              </a>
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+  </form>
+  {% endblock %}

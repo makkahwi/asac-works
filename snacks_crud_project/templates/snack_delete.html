@@ -1,0 +1,30 @@
+{% extends "_base.html" %}
+
+{% block pagetitle %}
+Delete
+{% endblock %}
+
+{% block title %}
+Snack Delete
+{% endblock %}
+
+{% block main %}
+<h3 class="text-danger">
+  Are you sure you wanna DELETE {{snack.title}}???
+</h3>
+
+<div class="btn-group float-right mb-4" role="group" aria-label="update">
+  <button type="button" class="btn btn-outline-info">
+    <a href="/">
+      Cancel
+    </a>
+  </button>
+
+  <button type=" submit" class="btn btn-danger">
+    <a href="#" class="text-light">
+      Delete
+    </a>
+  </button>
+</div>
+</form>
+{% endblock %}

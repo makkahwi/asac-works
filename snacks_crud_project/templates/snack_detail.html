@@ -1,19 +1,37 @@
 {% extends "_base.html" %}
 
 {% block pagetitle %}
-Snacks Detail
+Snack Details
 {% endblock %}
 
 {% block title %}
-Snacks Details
+Snack Details
 {% endblock %}
 
 {% block main %}
+
+<div class="btn-group float-left mb-4" role="group" aria-label="creation">
+  <a href="/">
+    <button type="button" class="btn btn-primary">
+      Back To List
+    </button>
+  </a>
+</div>
+
+<div class="btn-group float-right mb-4" role="group" aria-label="actions">
+  <button type="button" class="btn btn-warning">
+    Update
+  </button>
+  <button type="button" class="btn btn-danger">
+    Delete
+  </button>
+</div>
+
 <table class="table">
   <tbody>
     <tr>
-      <th class="bg-info text-light">Name</th>
-      <td>{{snack.name}}</td>
+      <th class="bg-info text-light" style="width: 25%;">Title</th>
+      <td>{{snack.title}}</td>
     </tr>
 
     <tr>
