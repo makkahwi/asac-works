@@ -5,4 +5,11 @@ from .models import Snack
 
 @admin.register(Snack)
 class AdminSnack(admin.ModelAdmin):
-    list_display = ["name", "purchaser", "desc"]
+    list_display = [
+        "name",
+        "calories",
+        "vegan",
+        "gloten_free",
+        "sugar_free",
+        "lactose_free",
+    ]

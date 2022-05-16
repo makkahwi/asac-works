@@ -1,0 +1,55 @@
+{% extends "_base.html" %}
+
+{% block pagetitle %}
+Snacks Detail
+{% endblock %}
+
+{% block title %}
+Snacks Details
+{% endblock %}
+
+{% block main %}
+<table class="table">
+  <tbody>
+    <tr>
+      <th class="bg-info text-light">Name</th>
+      <td>{{snack.name}}</td>
+    </tr>
+
+    <tr>
+      <th class="bg-info text-light">Purchaser</th>
+      <td>{{snack.purchaser}}</td>
+    </tr>
+
+    <tr>
+      <th class="bg-info text-light">Description</th>
+      <td>{{snack.desc}}</td>
+    </tr>
+
+    <tr>
+      <th class="bg-info text-light">Calories</th>
+      <td>{{snack.calories}}</td>
+    </tr>
+
+    <tr>
+      <th class="bg-info text-light">Vegan</th>
+      <td>{{snack.vegan}}</td>
+    </tr>
+
+    <tr>
+      <th class="bg-info text-light">Gloten Free</th>
+      <td>{{snack.gloten_free}}</td>
+    </tr>
+
+    <tr>
+      <th class="bg-info text-light">Sugar Free</th>
+      <td>{{snack.sugar_free}}</td>
+    </tr>
+
+    <tr>
+      <th class="bg-info text-light">Lactose Free</th>
+      <td>{{snack.lactose_free}}</td>
+    </tr>
+  </tbody>
+</table>
+{% endblock %}
