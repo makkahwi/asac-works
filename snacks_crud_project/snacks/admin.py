@@ -4,4 +4,4 @@ from .models import Snack
 
 @admin.register(Snack)
 class AdminSnack(admin.ModelAdmin):
-    list_display = ["name", "purchaser", "desc"]
+    list_display = ["title", "purchaser", "desc"]
