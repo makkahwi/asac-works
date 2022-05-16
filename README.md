@@ -29,3 +29,5 @@ An LTUC Django Project
 ## APIs
 
 - "/" | Snacks List (Home Page)
+- "/:id" | Snack Details
+- "/about" | About Page
