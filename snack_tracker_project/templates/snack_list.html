@@ -1,0 +1,50 @@
+{% extends "_base.html" %}
+
+{% block pagetitle %}
+Snacks
+{% endblock %}
+
+{% block title %}
+Snacks List
+{% endblock %}
+
+{% block main %}
+<table class="table table-striped">
+  <thead class="bg-info text-light">
+    <tr>
+      <th>
+        Name
+      </th>
+      <th>
+        Purchaser
+      </th>
+      <th>
+        Description
+      </th>
+      <th>
+        Details
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for snack in object_list %}
+
+    <tr>
+      <td>
+        {{snack.name}}
+      </td>
+      <td>
+        {{snack.purchaser}}
+      </td>
+      <td>
+        {{snack.desc}}
+      </td>
+      <td>
+        <a href="{% url 'Details' pk=snack.pk %}">More Details</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
