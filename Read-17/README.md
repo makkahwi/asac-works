@@ -6,11 +6,15 @@
 
 Text
 
+---
+
 ## What is Web Scraping?
 
 [Source](https://en.wikipedia.org/wiki/Web_scraping)
 
 Text
+
+---
 
 ## How to scrape websites without getting blocked
 

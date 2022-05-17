@@ -1,6 +1,6 @@
-# Serverless Functions
+# Learning Journal 16
 
-## Learning Journal 16
+## Serverless Functions
 
 ### What did I learn today?
 

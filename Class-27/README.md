@@ -1,6 +1,6 @@
-# Django Models
+# Learning Journal 27
 
-## Learning Journal 27
+## Django Models
 
 ### What did I learn today?
 

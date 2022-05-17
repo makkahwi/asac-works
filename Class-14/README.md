@@ -1,6 +1,6 @@
-# Data Visualization
+# Learning Journal 14
 
-## Learning Journal 14
+## Data Visualization
 
 ### What did I learn today?
 

@@ -1,6 +1,6 @@
-# Django
+# Learning Journal 26
 
-## Learning Journal 26
+## Django
 
 ### What did I learn today?
 

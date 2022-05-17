@@ -6,6 +6,8 @@
 
 Text
 
+---
+
 ## DjangoX
 
 [Source](https://github.com/wsvincent/djangox)

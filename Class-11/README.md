@@ -1,6 +1,6 @@
-# Numpy
+# Learning Journal 11
 
-## Learning Journal 11
+## Numpy
 
 ### What did I learn today?
 

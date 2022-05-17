@@ -1,6 +1,6 @@
-# Django CRUD
+# Learning Journal 28
 
-## Learning Journal 28
+## Django CRUD
 
 ### What did I learn today?
 

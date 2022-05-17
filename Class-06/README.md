@@ -1,6 +1,6 @@
-# Title
+# Learning Journal 6
 
-## Learning Journal 6
+## Title
 
 ### What did I learn today?
 

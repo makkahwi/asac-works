@@ -1,6 +1,6 @@
-# Linear Regressions
+# Learning Journal 13
 
-## Learning Journal 13
+## Linear Regressions
 
 ### What did I learn today?
 

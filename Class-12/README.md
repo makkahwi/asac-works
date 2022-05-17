@@ -1,6 +1,6 @@
-# Data Analysis with Pandas
+# Learning Journal 12
 
-## Learning Journal 12
+## Data Analysis with Pandas
 
 ### What did I learn today?
 
