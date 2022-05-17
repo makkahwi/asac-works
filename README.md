@@ -1,6 +1,6 @@
 # Reading Notes
 
-This is to keep track of observations and questions from the reading assignments throughout LTUC Advanced course of Python.
+This is to keep track of observations and questions from the reading assignments throughout LTUC Advanced course of Python, beside the Learning Journals (Lessons Reflections).
 
 ## Hello World War III, this is Suhaib Ahmad
 
@@ -14,52 +14,22 @@ You may read more about me in *[my resume website](https://suhaib.dev)*. You als
 
 ## Code 401 - Advanced Software Development
 
-### *[SQL_Summary](/SQL/README.md)*
-
-### *[Prep_Mindset](/Prep_Mindset/README.md)*
-
-### *[Command-line](/Command-line/README.md)*
-
-### *[Lesson 1 Notes](/Lesson-1/README.md)*
-
-### *[Lesson 2 Notes](/Lesson-2/README.md)*
-
-### *[Lesson 3 Notes](/Lesson-3/README.md)*
-
-### *[Learning_Internal_Forces](/Learning_Forces/README.md)*
-
-### *[Unexpected_Part](/Unexpected_Part/README.md)*
-
-### *[Class-01](/Class-01/README.md)*
-
-### *[Class-02](/Class-02/README.md)*
-
-### *[Class-04](/Class-04/README.md)*
-
-### *[Class-05](/Class-05/README.md)*
-
-### *[Class-06](/Class-06/README.md)*
-
-### *[Class-07](/Class-07/README.md)*
-
-### *[Class-08](/Class-08/README.md)*
-
-### *[Class-10](/Class-10/README.md)*
-
-### *[Class-11](/Class-11/README.md)*
-
-### *[Class-12](/Class-12/README.md)*
-
-### *[Class-13](/Class-13/README.md)*
-
-### *[Class-14](/Class-14/README.md)*
-
-### *[Class-16](/Class-16/README.md)*
-
-### *[Class-17](/Class-17/README.md)*
-
-### *[Class-26](/Class-26/README.md)*
-
-### *[Class-27](/Class-27/README.md)*
-
-### *[Class-28](/Class-28/README.md)*
+| Reads      | Journals   | Others     |
+| ---------- | ---------- | ---------- |
+| [Read-01](/Read-01/README.md) | [Class-01](/Class-01/README.md) | [SQL_Summary](/SQL/README.md) |
+| [Read-02](/Read-02/README.md) | [Class-02](/Class-02/README.md) | [Prep_Mindset](/Prep_Mindset/README.md) |
+| [Read-03](/Read-04/README.md) | [Class-04](/Class-04/README.md) | [Command-line](/Command-line/README.md) |
+| [Read-07](/Read-05/README.md) | [Class-05](/Class-05/README.md) | [Learning_Internal_Forces](/Learning_Forces/README.md) |
+| [Read-08](/Read-06/README.md) | [Class-06](/Class-06/README.md) | [Unexpected_Part](/Unexpected_Part/README.md) |
+| [Read-09](/Read-07/README.md) | [Class-07](/Class-07/README.md) |       ------      |
+| [Read-10](/Read-08/README.md) | [Class-08](/Class-08/README.md) |       ------      |
+| [Read-12](/Read-10/README.md) | [Class-10](/Class-10/README.md) |       ------      |
+| [Read-13](/Read-11/README.md) | [Class-11](/Class-11/README.md) |       ------      |
+| [Read-14](/Read-12/README.md) | [Class-12](/Class-12/README.md) |       ------      |
+| [Read-15](/Read-13/README.md) | [Class-13](/Class-13/README.md) |       ------      |
+| [Read-16](/Read-14/README.md) | [Class-14](/Class-14/README.md) |       ------      |
+| [Read-17](/Read-16/README.md) | [Class-16](/Class-16/README.md) |       ------      |
+| [Read-27](/Read-17/README.md) | [Class-17](/Class-17/README.md) |       ------      |
+| [Read-28](/Read-26/README.md) | [Class-26](/Class-26/README.md) |       ------      |
+| [Read-29](/Read-27/README.md) | [Class-27](/Class-27/README.md) |       ------      |
+|            ------             | [Class-28](/Class-28/README.md) |       ------      |

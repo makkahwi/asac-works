@@ -1,21 +1,23 @@
-# Pain and Suffering
+# Title
 
-*[Source](https://codefellows.github.io/code-401-python-7.16.2-guide/curriculum/class-01/notes/pain_suffering)*
+## Learning Journal 1
 
-The pain is the cost we have to take for the sake of advancment and moving forward, and with every new lesson / skills to learn, there is a good chance to have mental and physical pain as a byproduct for the learning and adptation process. The good outcome at end is not only to learn something new, but the fact that facing difficulty in reaching a result alter the pain feeling with big relief and self-proud. While suffering is a useless pain feeling, mostly comes from irrational reasons n do not lead to a fruitful outcome. So in order to avoid the non-helpful suffer, keep in mind the reasoning for whatever you're going through and keep your eyes on the prize and have a plan to reach it.
+### What did I learn today?
 
----
+Text
 
-# Big O Guide
+### What went well, that I might forget if I don’t write down?
 
-*[Source](https://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/)*
+Text
 
-An approach to signify the complexity of a problem solution for specific criteria like time consumption of space usage.
+### What still puzzles me, or what do I need to learn more about?
 
-- O(1): signifies a static complexity of the used code / algorithm, with no regard to any factors like input type and size.
+Text
 
-- O(N): describes a relative increase of the solution complexity with the input.
+### What should I do differently next time?
 
-- O(N²): shows a relative square value of growth for the solution complexity with input data.
+Text
 
-- O(2^N): represetnts an expoenntional growth of complexity along with input data growth.
+### Is the assignment complete? If not, where exactly did you leave off, and what work remains?
+
+Text
