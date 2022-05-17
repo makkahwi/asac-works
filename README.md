@@ -14,8 +14,8 @@ You may read more about me in *[my resume website](https://suhaib.dev)*. You als
 
 ## Code 401 - Advanced Software Development
 
-| Reads      | Journals   | Others     |
-| ---------- | ---------- | ---------- |
+| Reads     | Journals  | Others                     |
+| --------- | --------- | -------------------------- |
 | [Read-01](/Read-01/README.md) | [Class-01](/Class-01/README.md) | [SQL_Summary](/SQL/README.md) |
 | [Read-02](/Read-02/README.md) | [Class-02](/Class-02/README.md) | [Prep_Mindset](/Prep_Mindset/README.md) |
 | [Read-03](/Read-04/README.md) | [Class-04](/Class-04/README.md) | [Command-line](/Command-line/README.md) |
