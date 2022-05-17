@@ -6,7 +6,7 @@ This is to keep track of observations and questions from the reading assignments
 
 ## `const job = "Full-Stack_Web_Developer"`
 
-**A Graduate of Data Science & Computation Intelligence Specialty, Computer Science Department of ![International Islamic University Malaysia (2021)](https://upload.wikimedia.org/wikipedia/commons/f/f7/IIUM_Logo_.svg)**
+**A Graduate of Data Science & Computation Intelligence Specialty, Computer Science Department of** [![International Islamic University Malaysia (2021)](https://upload.wikimedia.org/wikipedia/commons/f/f7/IIUM_Logo_.svg)](https://iium.edu.my)
 
 You may read more about me in *[my resume website](https://suhaib.dev)*. You also may also visit my profiles in *[Github](https://github.com/makkahwi/)* & *[Linkedin](https://www.linkedin.com/in/makkahwi/)*.
 
