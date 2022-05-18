@@ -1,6 +1,6 @@
-# Insertion Sort
+# Merge Sort
 
-Convert a Pseudocode-based function to Python-based. The function is about ascending sorting an array of integers
+Convert a Pseudocode-based function to Python-based. The function is about ascending sorting an array of integers but using the merge apprach. Which is about splitting the array into nested halfs n compare elements between the splits before merging them back.
 
 ## Whiteboard Process
 
@@ -12,4 +12,4 @@ The approach is basically about using a loop to go through the array elements. F
 
 Big O:
 Time: O(n^2)
-Space: O(x1)
+Space: O(n)
