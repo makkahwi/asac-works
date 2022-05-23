@@ -1,3 +1,6 @@
+import string
+
+
 class Hashtable:
     def __init__(self, size=100):
         self.size = size
@@ -89,6 +92,34 @@ class Hashtable:
         hkey = sum % self.size
 
         return hkey
+
+
+def repeated_word(text):
+    """
+    To find the first word to occur more than once in a string
+
+    Input:
+    given text
+
+    Output:
+    the first repeated word
+    """
+
+    # Turn text into a list of split words without punctuations
+    text = text.translate(str.maketrans("", "", string.punctuation)).lower().split()
+
+    ht = Hashtable()
+
+    for word in text:
+        if ht.get(word):
+            return word
+        else:
+            ht.set(word, 1)
+
+    for word in text:
+        ht.set(word, 1)
+
+    return "No Repeated Words"
 
 
 if __name__ == "__main__":
