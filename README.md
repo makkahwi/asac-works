@@ -22,3 +22,4 @@ LTUC Advanced DSA Tasks
 |      14     | Tree Breadth First           | [Challenge Details](/Challenges/14/README.md)|
 |      15     | Tree Fizz Buzz               | [Challenge Details](/Challenges/15/README.md)|
 |      16     | Inseration Sort              | [Challenge Details](/Challenges/16/README.md)|
+| Mock Inter. | Compare Two Trees            | [Interview Details](./Interviews//Mock//README.md)|
