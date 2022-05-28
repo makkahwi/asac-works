@@ -10,6 +10,8 @@ def QuickSort(arr, left, right):
         # Sort the right
         QuickSort(arr, position + 1, right)
 
+    return arr
+
 
 def Partition(arr, left, right):
     # set a pivot value as a point of reference
