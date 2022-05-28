@@ -19,7 +19,7 @@ def test_sort_reverse():
 def test_sort_uniques():
     arr = [5, 12, 7, 5, 5, 7]
     actual = InsertionSort(arr)
-    expected = [5, 5, 5, 7, 12]
+    expected = [5, 5, 5, 7, 7, 12]
     assert actual == expected
 
 
