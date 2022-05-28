@@ -86,7 +86,7 @@ class Hashtable:
             ascii = ord(char)
             sum += ascii
 
-        hkey = sum % self.size
+        hkey = (sum * 19) % self.size
 
         return hkey
 
