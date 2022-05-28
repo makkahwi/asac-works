@@ -39,17 +39,34 @@ ALGORITHM Swap(arr, i, low)
 
 ## Sorting Trace
 
-Content
+Array: [8, 4, 23, 42, 16, 15]
+
+Step 1: Check if given left is smaller than given right
+
+Step 2: If so, partition the array by setting the position of the pivot value as follows...
+    Step 2-1: set 15 as pivot value
+    Step 2-2: less than 15 values are [8, 4] & larger than 15 vales are [23, 42, 16]
+
+Step 3: Partition the subarray of [8, 4] as follows...
+    Step 3-1: set 4 as pivot value
+    Step 3-2: less than 4 values are [] & larger than 4 vales are [8]
+
+Step 4: Partition the subarray of [23, 42, 16] as follows...
+    Step 4-1: set 16 as pivot value
+    Step 4-2: less than 16 values are [] & larger than 16 vales are [23, 42]
+
+Step 5: Partition the subarray of [23, 42] as follows...
+    Step 5-1: set 42 as pivot value
+    Step 5-2: less than 42 values are [23] & larger than 42 vales are []
+
+Step 6: Put togather the sorted array [4, 8, 15, 16, 23, 42]
 
 ## Approach
 
-- Select any element in the list and call it pivot
-- Partitioning the list (Partition is a proccess where we select the pivot and rearrange the list)
-- Rearrange the list, in which all the elemnts less than the pivot are at the left and all the elements greater than the pivot are at the right of it
-- There will be two sublists, reassign the pivot for each sublist
-- Rearrange the two sublists, in which all the elemnts less than the pivot are at the left and all the elements greater than the pivot are at the right of it
-- When we have only one element in the sublist
-        - Stop the recursive call
+- Set any element of the list as the referance point (pivot).
+- Partition the list based on selected pivot.
+- Reorder the list so elements smaller than pivot are first, then pivot value comes in the middle, then elements bigger than pivot follow at last.
+- Using recusirion, do the partitioning & reorder work for both subarrays (smaller than & bigger than pivot arrays)
 
 ## Efficency
 
