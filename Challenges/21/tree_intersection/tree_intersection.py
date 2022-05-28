@@ -178,5 +178,32 @@ class Hashtable:
         return hkey
 
 
+def tree_intersection(t1, t2):
+    """
+    A function to extract the common values of two binary trees.
+
+    Input:
+    two trees
+
+    Output:
+    arr of common values
+    """
+
+    ht = Hashtable()
+
+    arr1 = t1.pre_order()
+    arr2 = t2.pre_order()
+    common = []
+
+    for node in arr1:
+        ht.set(node, 1)
+
+    for node in arr2:
+        if ht.contains(node):
+            common.append(node)
+
+    return common
+
+
 if __name__ == "__main__":
     pass
