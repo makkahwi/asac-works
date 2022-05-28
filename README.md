@@ -26,11 +26,11 @@ LTUC Django-Based Project
     - python manage.py migrate
 
 4. Create your template & views
-    - Create urls.py in [snacks] directory.
-    - Add & link views to desired URLs in urls.py
-    - Add your view files in [dj_snacks_rest_api]/templates
+    - Create your view files in [dj_snacks_rest_api]/templates
     - Add "BASE_DIR / 'templates'" as value of "DIRS" in TEMPLATES list in [dj_snacks_rest_api]/settings.py
     - Add "STATICFILES_DIRS" list in [dj_snacks_rest_api]/settings.py
+    - Create urls.py in [snacks] directory.
+    - Add & link views to desired URLs in urls.py
     - Link views in [snacks]/views.py to approprate built-in view type & related model
 
 5. Do REST API configs
