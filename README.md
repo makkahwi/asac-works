@@ -24,3 +24,4 @@ LTUC Advanced DSA Tasks
 |      26     | Inseration Sort              | [Challenge Details](/Challenges/16/README.md)|
 |      27     | Merge Sort                   | [Challenge Details](/Challenges/17/README.md)|
 |      30     | Hashtable                    | [Challenge Details](/Challenges/18/README.md)|
+|      31     | Hashmap Repeated Word        | [Challenge Details](/Challenges/19/README.md)|
