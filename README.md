@@ -1,4 +1,4 @@
-# drf-api
+# Django REST API Framework
 
 LTUC Django-Based Project
 
