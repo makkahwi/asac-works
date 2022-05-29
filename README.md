@@ -33,3 +33,26 @@ LTUC Advanced DSA Tasks
 |      32     | Tree Intersection            | [Challenge Details](/Challenges/21/README.md)|
 | Mock Inter. | Compare Two Trees            | [Interview Details](/Interviews/Mock/README.md)|
 |      33     | Hashmap Left Join            | [Challenge Details](/Challenges/22/README.md)|
+
+## New Challenge Building Instructions
+
+- Run following CLI commands
+  - poetry new [challenge-title]
+  - cd [challenge-title]
+  - poetry install
+  - poetry shell
+- Create [challenge-title]/[challenge_title]/[challenge_title].py
+- Create challenge ReadMe file with following initial structure & fill challenge data
+  - H1 Challenge Title
+  - Challenge Into Text
+  - h2 Whiteboard Process
+  - Image Listing Whiteborad
+  - h2 Approach & Efficiency
+  - Approach Steps Text
+  - Big O:
+  - Time: O(x)
+  - Space: O(x)
+- Build challenge whiteboard
+- Build challenge unit-tests file
+- Build challenge code solution
+- Test & finalize code solution
