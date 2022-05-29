@@ -24,6 +24,7 @@ LTUC Advanced DSA Tasks
 |      16     | Tree Max                     | [Challenge Details](/Challenges/13/README.md)|
 |      17     | Tree Breadth First           | [Challenge Details](/Challenges/14/README.md)|
 |      18     | Tree Fizz Buzz               | [Challenge Details](/Challenges/15/README.md)|
+| Mock Inter. | Sum Odd Nums of BST          | [Interview Details](/Interviews/forth/README.md)|
 |      26     | Inseration Sort              | [Challenge Details](/Challenges/16/README.md)|
 |      27     | Merge Sort                   | [Challenge Details](/Challenges/17/README.md)|
 |      28     | Quick Sort                   | [Challenge Details](/Challenges/20/README.md)|
