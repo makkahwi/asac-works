@@ -1,3 +1,9 @@
+class Node:
+    def __init__(self, value=None, next=None):
+        self.value = value
+        self.next = next
+
+
 class Queue:
     def __init__(self):
         self.front = None
@@ -81,30 +87,19 @@ class Queue:
         return string
 
 
-def breadth_first(tree):
-    arr = []
+def DuckDuckGoose(self, string, k):
+    i = 1
+    letters = string.split("")
 
-    q = Queue()
-    q.enqueue(tree.root)
+    for letter in letters:
+        self.enqueue(letter)
 
-    while not q.is_empty():
-        if q.front.left.value:
-            q.enqueue(q.front.left.value)
+    while i != k:
+        front = self.front
+        self.dequeue()
+        self.enqueue(front)
+        i += 1
 
-        if q.front.right.value:
-            q.enqueue(q.front.right.value)
-
-        arr.append(q.front)
-        q.deqeueu()
-
-    return arr
-
-
-def sum_odds(self):
-    result = 0
-
-    for node in breadth_first(self):
-        if node % 2 != 0:
-            result += node
-
-    return result
+    else:
+        self.dequeue()
+        i = 1

@@ -19,7 +19,7 @@ LTUC Advanced DSA Tasks
 |      11     | Stack & Queue Pseudo         | [Challenge Details](/Challenges/9/README.md) |
 |      12     | Stack & Queue Animal Shelter | [Challenge Details](/Challenges/10/README.md)|
 |      13     | Stack & Queue Brackets       | [Challenge Details](/Challenges/11/README.md)|
-| Mock Inter. | Sum Odd Nums of BST          | [Interview Details](/Interviews/third/README.md)|
+| Mock Inter. | Duck Duck Goose              | [Interview Details](/Interviews/third/README.md)|
 |      15     | Trees                        | [Challenge Details](/Challenges/12/README.md)|
 |      16     | Tree Max                     | [Challenge Details](/Challenges/13/README.md)|
 |      17     | Tree Breadth First           | [Challenge Details](/Challenges/14/README.md)|
