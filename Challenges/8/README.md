@@ -2,12 +2,13 @@
 
 Basic operations of stack & queue coded as linked lists
 
+## Whieboard Proccess
+
+[WhiteBoard](./whiteboard.jpg)
+
 ## Challenge
 
 Build Stack & Queue classes as linked lists n built the below-listed methods
-
-## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
 ## API
 

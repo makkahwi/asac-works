@@ -2,10 +2,18 @@
 
 To modify the previous "linked list" class to add several insertion methods.
 
+## Whiteboard Process
+
+![Whiteboard](./linked-list-insertions.jpg)
+
 ## Approach & Efficiency
 
 "Node" class was created to absorb the value of an argument n have a pointer of none type as default.
 "linked_list" class was built to create emply linked lists n then apply the within methods.
+
+Big O:
+Time: O(n)
+Space: O(n)
 
 ## "LinkedList" Class has following methods
 
