@@ -9,6 +9,7 @@ LTUC Advanced DSA Tasks
 |      1      | Reverse An Array             | [Challenge Details](/Challenges/1/README.md) |
 |      2      | Add a number to An Array     | [Challenge Details](/Challenges/2/README.md) |
 |      3      | Find a key in a sorted array | [Challenge Details](/Challenges/3/README.md) |
+| Mock Inter. | Sum a Matrix Rows            | [Interview Details](/Interviews/first/README.md)|
 |      5      | Linked List                  | [Challenge Details](/Challenges/4/README.md) |
 |      6      | Linked List Insertion        | [Challenge Details](/Challenges/5/README.md) |
 |      7      | Linked List Kth              | [Challenge Details](/Challenges/6/README.md) |
@@ -27,4 +28,4 @@ LTUC Advanced DSA Tasks
 |      30     | Hashtable                    | [Challenge Details](/Challenges/18/README.md)|
 |      31     | Hashmap Repeated Word        | [Challenge Details](/Challenges/19/README.md)|
 |      32     | Tree Intersection            | [Challenge Details](/Challenges/21/README.md)|
-| Mock Inter. | Compare Two Trees            | [Interview Details](/Interviews//Mock//README.md)|
+| Mock Inter. | Compare Two Trees            | [Interview Details](/Interviews/Mock/README.md)|
