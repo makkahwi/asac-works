@@ -27,3 +27,4 @@ LTUC Advanced DSA Tasks
 |      30     | Hashtable                    | [Challenge Details](/Challenges/18/README.md)|
 |      31     | Hashmap Repeated Word        | [Challenge Details](/Challenges/19/README.md)|
 |      32     | Tree Intersection            | [Challenge Details](/Challenges/21/README.md)|
+| Mock Inter. | Compare Two Trees            | [Interview Details](/Interviews//Mock//README.md)|
