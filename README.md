@@ -32,3 +32,4 @@ LTUC Advanced DSA Tasks
 |      31     | Hashmap Repeated Word        | [Challenge Details](/Challenges/19/README.md)|
 |      32     | Tree Intersection            | [Challenge Details](/Challenges/21/README.md)|
 | Mock Inter. | Compare Two Trees            | [Interview Details](/Interviews/Mock/README.md)|
+|      33     | Hashmap Left Join            | [Challenge Details](/Challenges/22/README.md)|
