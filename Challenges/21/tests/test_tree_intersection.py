@@ -8,7 +8,15 @@ from tree_intersection.tree_intersection import (
 
 def test_two_trees(bt1, bt2):
     actual = tree_intersection(bt1, bt2)
-    expected = [2, 4, 6, 8]
+    expected = [4, 2, 6, 8]
+    assert actual == expected
+
+
+def test_an_empty_tree(bt1):
+    bt2 = BinaryTree()
+
+    actual = tree_intersection(bt1, bt2)
+    expected = []
     assert actual == expected
 
 
