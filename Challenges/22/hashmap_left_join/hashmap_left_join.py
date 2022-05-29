@@ -91,5 +91,29 @@ class Hashtable:
         return hkey
 
 
+def left_join(ht1, ht2):
+    """
+    Two hash tables joining function (join first table keys with first & second tables' values)
+
+    Input:
+    two hashtables
+
+    Output:
+    a joint hashtable
+    """
+
+    ht3 = Hashtable()
+
+    keys = ht1.keys()
+
+    for key in keys:
+        if ht2.contains(key):
+            ht3.set(key, [ht1.get(key), ht2.get(key)])
+        else:
+            ht3.set(key, [ht1.get(key)])
+
+    return ht3
+
+
 if __name__ == "__main__":
     pass
