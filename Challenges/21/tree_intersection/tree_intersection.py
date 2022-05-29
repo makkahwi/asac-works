@@ -39,52 +39,6 @@ class BinaryTree:
         return result
 
 
-class BinarySearchTree(BinaryTree):
-
-    # Add node according to BST Rule (right child is bigger & left child is smaller than parent)
-    def add_node(self, value):
-        node = BinaryNode(value)
-        root = self.root
-        current = None
-
-        if self.root == None:
-            self.root = node
-
-        while root:
-            current = root
-            if value < root.value:
-                root = root.left
-            else:
-                root = root.right
-
-        if current == None:
-            current = node
-
-        elif value < current.value:
-            current.left = node
-
-        else:
-            current.right = node
-
-    # Check value existance
-    def contains(self, value):
-        if self.root == None:
-            raise Exception("Empty Tree")
-
-        root = self.root
-
-        while root is not None:
-            if value == root.value:
-                return True
-            if root and value > root.value:
-                root = root.right
-
-            if root and value < root.value:
-                root = root.left
-
-        return False
-
-
 class Hashtable:
     def __init__(self, size=100):
         self.size = size
