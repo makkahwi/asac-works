@@ -6,7 +6,7 @@ def test_join(ht1, ht2):
     ht3 = left_join(ht1, ht2)
 
     actual = ht3.get("key2")
-    expected = [("key2", ["value2-1", "value2-2"])]
+    expected = [("key2", [("key2", "value2-1"), ("key2", "value2-2")])]
     assert actual == expected
 
 
@@ -15,7 +15,7 @@ def test_join_empty(ht1):
     ht3 = left_join(ht1, ht2)
 
     actual = ht3.get("key1")
-    expected = [("key1", ["value1-1"])]
+    expected = [("key1", [("key1", "value1-1")])]
     assert actual == expected
 
 

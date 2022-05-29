@@ -108,9 +108,9 @@ def left_join(ht1, ht2):
 
     for key in keys:
         if ht2.contains(key):
-            ht3.set(key, [ht1.get(key), ht2.get(key)])
+            ht3.set(key, [ht1.get(key)[0], ht2.get(key)[0]])
         else:
-            ht3.set(key, [ht1.get(key)])
+            ht3.set(key, [ht1.get(key)[0]])
 
     return ht3
 
