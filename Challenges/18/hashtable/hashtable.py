@@ -82,7 +82,7 @@ class Hashtable:
         """
         sum = 0
 
-        for char in key:
+        for char in str(key):
             ascii = ord(char)
             sum += ascii
 
