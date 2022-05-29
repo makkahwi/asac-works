@@ -14,6 +14,7 @@ LTUC Advanced DSA Tasks
 |      6      | Linked List Insertion        | [Challenge Details](/Challenges/5/README.md) |
 |      7      | Linked List Kth              | [Challenge Details](/Challenges/6/README.md) |
 |      8      | Linked List Zip              | [Challenge Details](/Challenges/7/README.md) |
+| Mock Inter. | Check a linked list reverse  | [Interview Details](/Interviews/second/README.md)|
 |      10     | Stack & Queue                | [Challenge Details](/Challenges/8/README.md) |
 |      11     | Stack & Queue Pseudo         | [Challenge Details](/Challenges/9/README.md) |
 |      12     | Stack & Queue Animal Shelter | [Challenge Details](/Challenges/10/README.md)|
