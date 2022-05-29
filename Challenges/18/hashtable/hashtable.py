@@ -82,11 +82,11 @@ class Hashtable:
         """
         sum = 0
 
-        for char in key:
+        for char in str(key):
             ascii = ord(char)
             sum += ascii
 
-        hkey = sum % self.size
+        hkey = (sum * 19) % self.size
 
         return hkey
 
