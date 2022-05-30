@@ -44,7 +44,7 @@ LTUC Advanced DSA Tasks
 - Create [challenge-title]/[challenge_title]/[challenge_title].py
 - Create challenge ReadMe file with following initial structure & fill challenge data
   - H1 Challenge Title
-  - Challenge Into Text
+  - Challenge Intro Text
   - h2 Whiteboard Process
   - Image Listing Whiteborad
   - h2 Approach & Efficiency

@@ -1,6 +1,6 @@
 # Hashmap Left Join
 
-Task is to build a function for two hash tables left joining (join first table keys with first & second tables' corresponding values).
+Task is to build a function for two hashtables left joining (join first table keys with first & second tables' corresponding values).
 
 ## Whiteboard Process
 
@@ -11,7 +11,7 @@ Task is to build a function for two hash tables left joining (join first table k
 - Get the reference hashtable keys list
 - Go through the list with a loop, n check if the other hashtable have the same key.
 - If so, assign the values from both hashtables to the same key in a new hashtable.
-- If not, retreieve the assoicated value of the key from reference hashtable and assign it to the key of the new hashtable.
+- If not, retrieve the associated value of the key from reference hashtable and assign it to the key of the new hashtable.
 
 Big O:
 Time: O(n)
