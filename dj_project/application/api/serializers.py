@@ -8,7 +8,7 @@ class ItemSerializer(serializers.ModelSerializer):
             "id",
             "title",
             "author",
-            "link",
+            "desc",
             "timestamp",
             "updated",
         )

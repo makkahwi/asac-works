@@ -35,6 +35,10 @@ LTUC Django-Based Project
     - Link created urls.py to [dj_project]/urls.py
     - Add API URLs to [application]/urls.py
 
+5. Add Permissions
+    - Create [application]/api/permissions.py
+    - Link created permissions to views of [application]/api/viewset.py
+
 ## How to start
 
 - python manage.py runserver

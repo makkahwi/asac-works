@@ -23,4 +23,9 @@ urlpatterns = [
         ItemDestroyAPIView.as_view(),
         name="Item API Delete",
     ),
+    re_path(
+        r"^.*$",
+        RedirectView.as_view(url="api/v1/items", permanent=False),
+        name="Redirect",
+    ),
 ]
