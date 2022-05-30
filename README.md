@@ -31,9 +31,15 @@ LTUC Django-Based Project
             REST_FRAMEWORK = {"DEFAULT_PERMISSION_CLASSES": ["rest_framework.permissions.AllowAny"]}
     - Create [instgram]/api/serializers.py & link models
     - Create [instgram]/api/viewset.py & link models & serializers
-    - Create urls.py in [instgram] directory.
-    - Link created urls.py to [dj_instgram]/urls.py.
+    - Create urls.py in [instgram] directory
+    - Link created urls.py to [dj_instgram]/urls.py
     - Add API URLs to [instgram]/urls.py
+
+5. Add Permissions
+    - Adjust REST_FRAMEWORK list of [dj_instgram]/settings.py to...
+            rest_framework.permissions.IsAuthenticated
+    - Create [instgram]/api/permissions.py
+    - Link created permissions to views of [instgram]/api/viewset.py
 
 ## How to start
 
