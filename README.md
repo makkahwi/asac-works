@@ -9,7 +9,7 @@ LTUC Django-Based Project
     - cd [dj-auth]
     - poetry install
     - poetry shell
-    - poetry add django djangorestframework
+    - poetry add django djangorestframework djangorestframework-simplejwt
     - django-admin startproject [dj_project]
     - cd [dj_project]
     - python manage.py migrate
@@ -39,15 +39,18 @@ LTUC Django-Based Project
     - Create [application]/api/permissions.py
     - Link created permissions to views of [application]/api/viewset.py
 
+6. Include JWToken
+    - Adjust REST_FRAMEWORK of [dj_project]/settings.py to include JWTAuthentication
+    - Add the preset views (token generate & token refresh) of simpleJWT library to [application]/urls.py
+
 ## How to start
 
 - python manage.py runserver
 
 ## APIs
 
-| -- | -------------------------- | ------------------- |
-| #  | Link                       | Function            |
-| -- | -------------------------- | ------------------- |
+| #  | Link                      | Function           |
+| -- | ------------------------- | ------------------ |
 | 01 | api/v1/items              | Items API List     |
 | 02 | api/v1/items/create       | Item API Create    |
 | 03 | api/v1/items/:id          | Item API Details   |
