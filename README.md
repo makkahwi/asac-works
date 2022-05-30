@@ -40,6 +40,8 @@ LTUC Django-Based Project
             rest_framework.permissions.IsAuthenticated
     - Create [instgram]/api/permissions.py
     - Link created permissions to views of [instgram]/api/viewset.py
+    - Build permission tests in [instgram]/tests.py
+    - Run CLI command of "python manage.py test" to test permissions functionality
 
 ## How to start
 
