@@ -43,6 +43,8 @@ LTUC Django-Based Project
     - Build permission tests in [instgram]/tests.py
     - Run CLI command of "python manage.py test" to test permissions functionality
 
+6. Build Docker initial files of "docker-compose.yml" & "Dockerfile" & "requirements.txt"
+
 ## How to start
 
 - python manage.py runserver
