@@ -45,6 +45,11 @@ LTUC Django-Based Project
 
 6. Build Docker initial files of "docker-compose.yml" & "Dockerfile" & "requirements.txt"
 
+7. Replace SQLite3 with PG database
+    - Build a Docker container for database
+    - Run CLI command of "poetry add psycopg2-binary" to add PG package
+    - Update DATABASES list in [dj_instgram]/settings.py
+
 ## How to start
 
 - python manage.py runserver
