@@ -31,9 +31,24 @@ LTUC Django-Based Project
             REST_FRAMEWORK = {"DEFAULT_PERMISSION_CLASSES": ["rest_framework.permissions.AllowAny"]}
     - Create [instgram]/api/serializers.py & link models
     - Create [instgram]/api/viewset.py & link models & serializers
-    - Create urls.py in [instgram] directory.
-    - Link created urls.py to [dj_instgram]/urls.py.
+    - Create urls.py in [instgram] directory
+    - Link created urls.py to [dj_instgram]/urls.py
     - Add API URLs to [instgram]/urls.py
+
+5. Add Permissions
+    - Adjust REST_FRAMEWORK list of [dj_instgram]/settings.py to...
+            rest_framework.permissions.IsAuthenticated
+    - Create [instgram]/api/permissions.py
+    - Link created permissions to views of [instgram]/api/viewset.py
+    - Build permission tests in [instgram]/tests.py
+    - Run CLI command of "python manage.py test" to test permissions functionality
+
+6. Build Docker initial files of "docker-compose.yml" & "Dockerfile" & "requirements.txt"
+
+7. Replace SQLite3 with PG database
+    - Build a Docker container for database
+    - Run CLI command of "poetry add psycopg2-binary" to add PG package
+    - Update DATABASES list in [dj_instgram]/settings.py
 
 ## How to start
 
