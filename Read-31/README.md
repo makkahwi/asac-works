@@ -18,4 +18,37 @@ When an image is imported or a container is initiated it needs a first-time setu
 
 [Source](https://djangoforapis.com/library-website-and-api/)
 
-Text
+"DjangoRestFramework" is the library to involve REST API (URL endpoints to exchange data in JSON format) calls in a Django-based project.
+
+Steps to engage REST APIs in Django are as follows...
+
+1. To build a traditional Django project, run following CLI commands
+    - poetry new [dj-project]
+    - cd [dj-project]
+    - poetry install
+    - poetry shell
+    - poetry add django django-filter djangorestframework Markdown
+    - django-admin startproject [dj_project]
+    - cd [dj_project]
+    - python manage.py migrate
+    - python manage.py createsuperuser
+    - python manage.py startapp [application]
+    - Add [application] to INSTALLED_APPS list in [dj_project]/settings.py
+
+2. Build your models
+    - Add models construction in [application]/models.py
+    - Register model in [application]/admin.py
+
+3. Run following CLI commands
+    - python manage.py makemigrations
+    - python manage.py migrate
+
+4. Do REST API configs
+    - Add "rest_framework" to INSTALLED_APPS list in [dj_project]/settings.py
+    - Add default rest configs in tail of [dj_project]/settings.py
+            REST_FRAMEWORK = {"DEFAULT_PERMISSION_CLASSES": ["rest_framework.permissions.AllowAny"]}
+    - Create [application]/api/serializers.py & link models
+    - Create [application]/api/viewset.py & link models & serializers
+    - Create urls.py in [application] directory
+    - Link created urls.py to [dj_project]/urls.py
+    - Add API URLs to [application]/urls.py
