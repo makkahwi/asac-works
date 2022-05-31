@@ -4,7 +4,11 @@
 
 [Source](https://jwt.io/introduction/)
 
-Text
+JWT stands for JSON Web Token, which is a sort of a unique signature that signifies the user identity. It's mostly used for accross-app authentication for access restriction cases, but it also could be used for accross-app ciphered data exchange.
+
+JWT creation formula is: [header].[payload/content].[signature]
+
+For accross-app JWT authentication, the standard use is to attach it to the API header as follows: {Authorization: Bearer [token]}
 
 ---
 
