@@ -16,7 +16,9 @@ For accross-app JWT authentication, the standard use is to attach it to the API 
 
 [Source](https://simpleisbetterthancomplex.com/tutorial/2018/12/19/how-to-use-jwt-authentication-with-django-rest-framework.html)
 
-Text
+"djangorestframework_simplejwt" is the library to involve JWT in Django REST Framework so authentication could be applied to the API calls. Which should be installed into the project packages & added to the project settings & configs.
+
+In DRF-JWT, the basic two operations are to obtain the token & to refresh it on expiry.
 
 ---
 
