@@ -1,15 +1,15 @@
-# Tree Fizz Buzz
+# Trees
 
-To go through a k-ary tree nodes n replace the values by strings
+Text
 
-## Whiteboard Process
+## Challenge
 
-![WhiteBoard](./whiteboard.jpg)
+Text
 
 ## Approach & Efficiency
 
-Through a recurssive function, the approach is to visit each node n check its value, then check the node children's values if any.
+Text
 
-Big O:
-Time: O(n)
-Space: O(1)
+## API
+
+Text

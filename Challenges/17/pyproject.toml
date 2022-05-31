@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "merge_sort"
+name = "tree-breadth-first"
 version = "0.1.0"
 description = ""
-authors = ["makkahwi <suhaibahmadai@hotmail.com>"]
+authors = ["Suhaib <SuhaibAhmadAi@hotmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.9"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
