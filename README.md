@@ -1,6 +1,6 @@
-# api-quick-start
+# Django Cookie Stand API
 
-Template Project for starting up CRUD API with Django Rest Framework
+An LTUC Django-Based Project
 
 ## Customization Steps
 
