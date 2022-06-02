@@ -4,7 +4,7 @@ To find the index of given key in a given array, using the binary-search approac
 
 ## Whiteboard Process
 
-![Whiteboard](/Challenges/3/array-binary-search.jpg)
+![Whiteboard](./whiteboard.jpg)
 
 ## Approach & Efficiency
 
@@ -16,5 +16,5 @@ To find the index of given key in a given array, using the binary-search approac
 - If middle is smaller, the start n middle points will be updated so that the search range will cover the second half only of the previous search range.
 
 Big O:
-Time: O(N²)
-Space: O(N²)
+Time: O(n²)
+Space: O(n²)
