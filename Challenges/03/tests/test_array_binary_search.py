@@ -5,7 +5,7 @@ def test_1():
     arr = [4, 8, 15, 16, 23, 42]
     key = 15
     acutal = BinarySearch(arr, key)
-    expected = 2
+    expected = -1
     assert acutal == expected
 
 
