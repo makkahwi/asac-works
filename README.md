@@ -10,19 +10,19 @@ LTUC Advanced DSA Tasks
 |      2      | Add a number to An Array     | [Challenge Details](/Challenges/02/README.md) |
 |      3      | Find a key in a sorted array | [Challenge Details](/Challenges/03/README.md) |
 | 1st Inter.  | Sum a Matrix Rows            | [Interview Details](/Interviews/first/README.md)|
-|      5      | Linked List                  | [Challenge Details](/Challenges/05/README.md) |
+|      5      | Linked List #                | [Challenge Details](/Challenges/05/README.md) |
 |      6      | Linked List Insertion        | [Challenge Details](/Challenges/06/README.md) |
 |      7      | Linked List Kth              | [Challenge Details](/Challenges/07/README.md) |
 |      8      | Linked List Zip              | [Challenge Details](/Challenges/08/README.md) |
 | 2nd Inter.  | Check a linked list reverse  | [Interview Details](/Interviews/second/README.md)|
-|      10     | Stack & Queue                | [Challenge Details](/Challenges/10/README.md) |
+|      10     | Stack & Queue #              | [Challenge Details](/Challenges/10/README.md) |
 |      11     | Stack & Queue Pseudo         | [Challenge Details](/Challenges/11/README.md) |
 |      12     | Stack & Queue Animal Shelter | [Challenge Details](/Challenges/12/README.md)|
 |      13     | Stack & Queue Brackets       | [Challenge Details](/Challenges/13/README.md)|
 | 3rd Inter.  | Duck Duck Goose              | [Interview Details](/Interviews/third/README.md)|
-|      15     | Trees                        | [Challenge Details](/Challenges/15/README.md)|
-|      16     | Tree Max                     | [Challenge Details](/Challenges/16/README.md)|
-|      17     | Tree Breadth First           | [Challenge Details](/Challenges/17/README.md)|
+|      15     | Trees #                      | [Challenge Details](/Challenges/15/README.md)|
+|      16     | Tree Max #                   | [Challenge Details](/Challenges/16/README.md)|
+|      17     | Tree Breadth First #         | [Challenge Details](/Challenges/17/README.md)|
 |      18     | Tree Fizz Buzz               | [Challenge Details](/Challenges/18/README.md)|
 | 4th Inter.  | Sum Odd Nums of BST          | [Interview Details](/Interviews/forth/README.md)|
 |      26     | Inseration Sort              | [Challenge Details](/Challenges/26/README.md)|
