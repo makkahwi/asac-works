@@ -1,4 +1,14 @@
 def sum_series(n, first=0, second=1):
+    """
+    To sum the series, either as a fibonacci or lucas and return nth value
+
+    Input
+    nth item to return, optional first & second elements of the series
+
+    Output
+    value of the series @ position of n
+    """
+
     if n == 0:
         return first
     elif n == 1:
@@ -10,6 +20,16 @@ def sum_series(n, first=0, second=1):
 
 
 def fibonacci(n):
+    """
+    To return the nth elemnts of fibonacci series (which starts with 0 & 1)
+
+    Input
+    nth item to return
+
+    Output
+    value of the series @ position of n
+    """
+
     if n == 0 or n == 1:
         return n
 
@@ -17,6 +37,16 @@ def fibonacci(n):
 
 
 def lucas(n):
+    """
+    To return the nth elemnts of lucas series (which starts with 2 & 1)
+
+    Input
+    nth item to return
+
+    Output
+    value of the series @ position of n
+    """
+
     if n == 0:
         return 2
     elif n == 1:
