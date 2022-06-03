@@ -1,5 +1,14 @@
 def QuickSort(arr, left, right):
 
+    if len(arr) <= 0:
+        raise Exception("Empty array")
+    elif not arr[0]:
+        raise Exception("Input isn't an array")
+    else:
+        for item in arr:
+            if not isinstance(item, int):
+                raise Exception("Input array includes non integers")
+
     if left < right:
         # Partition the array by setting the position of the pivot value
         position = Partition(arr, left, right)
