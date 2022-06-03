@@ -1,5 +1,4 @@
-from math_series.series import fibonacci, lucas
-
+from math_series.series import __version__
 
 def test_tweleve():
     actual = fibonacci(12)
