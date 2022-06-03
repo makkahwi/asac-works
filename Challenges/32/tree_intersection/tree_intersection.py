@@ -143,11 +143,14 @@ def tree_intersection(t1, t2):
     arr of common values
     """
 
+    if t1.root == None or t2.root == None:
+        raise Exception("Inputs given are either non trees or empty trees")
+
     ht = Hashtable()
+    common = []
 
     arr1 = t1.pre_order()
     arr2 = t2.pre_order()
-    common = []
 
     for node in arr1:
         ht.set(node, 1)
