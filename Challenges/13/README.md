@@ -1,31 +1,20 @@
 # Stacks and Queues Brackets
 
-Text
+To build a function to check given string if each (of the three bracket types of {}, [] & ()) bracket included have an opening & closing in sequence order.
 
-## Challenge
-
-Text
+![Whiteboard](./whiteboard.jpg)
 
 ## Approach & Efficiency
 
-Text
+- Check if input is empty. If so, return an error message.
+- Initial new stack
+- Filter the given text to extract brackets.
+- If no brackets were extracted return an error message.
+- Loop through the characters of the extracted text. Check if the character is an opening or closing one.
+- If opening, push it to initiated stack.
+- If closing, check if the stack top match the bracket opening. If so, pop the stack. Else return false.
+- Once looping is done, check if stack is empty. If so return true, else return false.
 
-## API
-
-- Stack Methods...
-  1- push: to add new node to the top of the stack
-  2- push_multi: to add new nodes to the top of the stack
-  3- pop: to remove the top node of the stack
-  4- pop_all: to remove all the nodes of the stack
-  5- peek: to return the value of the top of the stack
-  6- is_empty: to check if the given stack is empty or not
-  7- to_string: to convert the stack to a text (for test purposes)
-
-- Queue Methods...
-  1- enqueue: to add new node to the tail of the queue
-  2- enqueue_multi: to add new nodes to the tail of the queue
-  3- dequeue: to remove the front node of the queue
-  4- dequeue_all: to remove all the nodes of the queue
-  5- peek: to return the value of the front of the queue
-  6- is_empty: to check if the given queue is empty or not
-  7- to_string: to convert the queue to a text (for test purposes)
+Big O
+Time: O(n)
+Space: O(n)
