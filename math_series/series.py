@@ -19,6 +19,10 @@ def sum_series(n, first=0, second=1):
         )
 
 
+def lucas(n):
+    sum_series(n, 2, 1, "Lucas")
+
+
 def fibonacci(n):
     """
     To return the nth elemnts of fibonacci series (which starts with 0 & 1)
