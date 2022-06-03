@@ -14,14 +14,20 @@ def test_another_valid():
     assert actual == expected
 
 
-def test_an_invalid():
-    actual = validate_brackets("[({}]")
+def test_no_closing():
+    actual = validate_brackets("[{()]")
     expected = False
     assert actual == expected
 
 
-def test_another_invalid():
-    actual = validate_brackets("(](")
+def test_no_opening():
+    actual = validate_brackets("(])")
+    expected = False
+    assert actual == expected
+
+
+def test_opening_dont_match_closing():
+    actual = validate_brackets("({])")
     expected = False
     assert actual == expected
 
@@ -34,3 +40,8 @@ def test_null():
 def test_no_brackets():
     with pytest.raises(Exception):
         validate_brackets("text")
+
+
+def test_empty_string():
+    with pytest.raises(Exception):
+        validate_brackets("")
