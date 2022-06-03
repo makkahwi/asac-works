@@ -1,8 +1,6 @@
-# Hashtable
+# Tree Fizz Buzz
 
-Hashtable is the data structure where the address or the index value of the data item is generated from a hashing method. That makes accessing the data faster as the index value behaves as a key for the data value. In other words hashtable stores key-value pairs but the key is generated through a hashing / encrypting method.
-
-In challenge at hand, it's required to build the basic operations to have & use a hashtable.
+To go through a k-ary tree nodes n replace the values by strings
 
 ## Whiteboard Process
 
@@ -10,16 +8,8 @@ In challenge at hand, it's required to build the basic operations to have & use 
 
 ## Approach & Efficiency
 
-A dedicated class was built with an initiator to have a size and a table to host the data. The class contains following methods.
+Through a recurssive function, the approach is to visit each node n check its value, then check the node children's values if any.
 
 Big O:
-Time: O(1)
+Time: O(n)
 Space: O(1)
-
-## APIs
-
-- set: to hash n insert data into the table.
-- get: to get the value of a given key.
-- contains: to check whether a key does exist in the table.
-- keys: to list down the existing keys of the table.
-- hash: to hash given key.
