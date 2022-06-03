@@ -37,6 +37,10 @@ LTUC's Django First Project
 
 - python manage.py runserver
 
+## How to test
+
+- python manage.py test
+
 ## APIs
 
 - "/" | Snacks List (Home Page)
