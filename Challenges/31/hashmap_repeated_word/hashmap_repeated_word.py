@@ -89,7 +89,7 @@ class Hashtable:
             ascii = ord(char)
             sum += ascii
 
-        hkey = sum % self.size
+        hkey = (sum * 19) % self.size
 
         return hkey
 
@@ -112,11 +112,11 @@ def repeated_word(text):
         raise Exception("Empty String")
 
     # Turn text into a list of split words without punctuations
-    words  = text.translate(str.maketrans("", "", string.punctuation)).lower().split()
+    words = text.translate(str.maketrans("", "", string.punctuation)).lower().split()
 
     ht = Hashtable()
 
-    for word in words :
+    for word in words:
         if ht.get(word):
             return word
         else:
