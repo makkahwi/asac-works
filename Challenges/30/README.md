@@ -12,9 +12,32 @@ In challenge at hand, it's required to build the basic operations to have & use 
 
 A dedicated class was built with an initiator to have a size and a table to host the data. The class contains following methods.
 
-Big O:
+### Big O
+
+#### For Set Method
+
+Time: O(n)
+Space: O(n)
+
+#### For Get Method
+
 Time: O(1)
 Space: O(1)
+
+#### For Contains Method
+
+Time: O(1)
+Space: O(1)
+
+#### For Keys Method
+
+Time: O(1)
+Space: O(1)
+
+#### For Hash Method
+
+Time: O(n)
+Space: O(n)
 
 ## APIs
 
