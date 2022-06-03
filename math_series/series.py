@@ -1,18 +1,25 @@
 def sum_series(n, first=0, second=1):
-    result = [first, second]
-
-    i = 2
-
-    while i < n:
-        result.append(result[i - 1] + result[i - 2])
-        i += 1
-
-    return result[len(result) - 1]
+    if n == 0:
+        return first
+    elif n == 1:
+        return second
+    else:
+        return sum_series(n - 1, first=first, second=second) + sum_series(
+            n - 2, first=first, second=second
+        )
 
 
 def fibonacci(n):
-    return sum_series(n)
+    if n == 0 or n == 1:
+        return n
+
+    return fibonacci(n - 1) + fibonacci(n - 2)
 
 
 def lucas(n):
-    return sum_series(n, 2, 1)
+    if n == 0:
+        return 2
+    elif n == 1:
+        return 1
+    else:
+        return lucas(n - 1) + lucas(n - 2)
