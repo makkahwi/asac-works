@@ -1,4 +1,4 @@
-def sum_series(n, first=0, second=1, type="Fibonacci"):
+def sum_series(n, first=0, second=1):
     result = [first, second]
 
     i = 2
@@ -15,4 +15,4 @@ def fibonacci(n):
 
 
 def lucas(n):
-    return sum_series(n, 2, 1, "Lucas")
+    return sum_series(n, 2, 1)
