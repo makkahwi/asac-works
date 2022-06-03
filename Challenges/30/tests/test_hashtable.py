@@ -9,6 +9,7 @@ def test_initializing():
     assert ht.table == [None] * 100
 
 
+# 7. Successfully hash a key to an in-range value
 def test_key_hash():
     ht = Hashtable()
     actual = ht.hash("key1")
@@ -16,6 +17,7 @@ def test_key_hash():
     assert actual == expected
 
 
+# 1. Setting a key/value to your hashtable results in the value being in the data structure
 def test_value_set(ht):
     ht.set("key4", "value4")
     actual = ht.get("key4")
@@ -23,12 +25,15 @@ def test_value_set(ht):
     assert actual == expected
 
 
+# 2. Retrieving based on a key returns the value stored
 def test_key_based_retrieve(ht):
     actual = ht.get("key1")
     expected = [("key1", "value1")]
     assert actual == expected
 
 
+# 5. Successfully handle a collision within the hashtable
+# 6. Successfully retrieve a value from a bucket within the hashtable that has a collision
 def test_key_based_retrieve_collision(ht):
     ht.set("key3", "value33")
     actual = ht.get("key3")
@@ -36,12 +41,14 @@ def test_key_based_retrieve_collision(ht):
     assert actual == expected
 
 
+# 3. Successfully returns null for a key that does not exist in the hashtable
 def test_wrong_key_get(ht):
     actual = ht.get("key4")
     expected = None
     assert actual == expected
 
 
+# 4. Successfully returns a list of all unique keys that exist in the hashtable
 def test_unique_keys(ht):
     actual = ht.keys()
     expected = ["key2", "key3", "key1"]
