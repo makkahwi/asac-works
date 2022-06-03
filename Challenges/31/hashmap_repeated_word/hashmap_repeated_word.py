@@ -105,19 +105,22 @@ def repeated_word(text):
     the first repeated word
     """
 
+    if not isinstance(text, str):
+        raise Exception("Invalid Input")
+
+    elif len(text) == 0:
+        raise Exception("Empty String")
+
     # Turn text into a list of split words without punctuations
-    text = text.translate(str.maketrans("", "", string.punctuation)).lower().split()
+    words  = text.translate(str.maketrans("", "", string.punctuation)).lower().split()
 
     ht = Hashtable()
 
-    for word in text:
+    for word in words :
         if ht.get(word):
             return word
         else:
             ht.set(word, 1)
-
-    for word in text:
-        ht.set(word, 1)
 
     return "No Repeated Words"
 
