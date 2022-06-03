@@ -12,4 +12,4 @@ Through a recurssive function, the approach is to visit each node n check its va
 
 Big O:
 Time: O(n)
-Space: O(1)
+Space: O(n)

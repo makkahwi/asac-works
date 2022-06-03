@@ -81,21 +81,26 @@ def looping(node):
             looping(child)
 
 
+# Fizz Buzz Main Function
+def fizz_buzz_tree(tree):
+    if tree.root:
+
+        newTree = k_ary_tree()
+        newTree.root = tree.root
+
+        node = newTree.root
+
+        check(node)
+        looping(node)
+
+        return newTree
+    else:
+        raise Exception("Empty Tree")
+
+
 class k_ary_tree:
     def __init__(self, root=None):
         self.root = root
-
-    # Fizz Buzz Main Function
-    def fizz_buzz_tree(self):
-        if self.root:
-            node = self.root
-
-            check(node)
-            looping(node)
-
-            return self
-        else:
-            raise Exception("Empty Tree")
 
     # Breadth First Tree Listing
     def breadth_first(self):

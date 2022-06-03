@@ -1,11 +1,11 @@
 from unittest.case import _AssertRaisesContext
 from attr import asdict
 import pytest
-from tree_fizz_buzz.tree_fizz_buzz import tree_node, k_ary_tree
+from tree_fizz_buzz.tree_fizz_buzz import tree_node, k_ary_tree, fizz_buzz_tree
 
 
 def test_fizz_buzz(tree):
-    actual = tree.fizz_buzz_tree().breadth_first()
+    actual = fizz_buzz_tree(tree).breadth_first()
     expected = [
         "7",
         "Fizz",
@@ -27,14 +27,14 @@ def test_fizz_buzz(tree):
 def test_empty_tree():
     tree = k_ary_tree()
     with pytest.raises(Exception):
-        tree.fizz_buzz_tree()
+        fizz_buzz_tree(tree)
 
 
 def test_no_children_tree():
     root = tree_node(5)
     tree = k_ary_tree(root)
 
-    actual = tree.fizz_buzz_tree().breadth_first()
+    actual = fizz_buzz_tree(tree).breadth_first()
     expected = ["Buzz"]
     assert actual == expected
 
