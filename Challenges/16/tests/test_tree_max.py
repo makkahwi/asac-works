@@ -1,10 +1,19 @@
 import pytest
-from tree_max.tree_max import BinaryNode, BinaryTree, BinarySearchTree
+from tree_max.tree_max import BinaryNode, BinaryTree
 
 
 def test_tree_max(bt):
     acutal = bt.tree_max()
-    expected = 8
+    expected = 14
+    assert acutal == expected
+
+
+def test_ony_root_tree_max():
+    bt = BinaryTree()
+    bt.root = BinaryNode(9)
+
+    acutal = bt.tree_max()
+    expected = 9
     assert acutal == expected
 
 
@@ -20,7 +29,7 @@ def bt():
     bt.root = BinaryNode(1)
     bt.root.right = BinaryNode(2)
     bt.root.left = BinaryNode(3)
-    bt.root.left.right = BinaryNode(4)
+    bt.root.left.right = BinaryNode(14)
     bt.root.left.left = BinaryNode(5)
     bt.root.right.right = BinaryNode(6)
     bt.root.right.left = BinaryNode(7)
