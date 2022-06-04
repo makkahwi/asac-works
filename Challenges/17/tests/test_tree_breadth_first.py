@@ -8,6 +8,13 @@ def test_breadth_first(bst):
     assert actual == expected
 
 
+def test_empty_breadth_first():
+    bst = BinarySearchTree()
+
+    with pytest.raises(Exception):
+        breadth_first(bst)
+
+
 @pytest.fixture
 def bst():
     bst = BinarySearchTree()
