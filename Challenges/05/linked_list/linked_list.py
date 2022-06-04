@@ -8,13 +8,31 @@ class linked_list:
     def __init__(self):
         self.header = None
 
-    # Add a node to linked list
     def insert(self, value):
+        """
+        Add a node to linked list
+
+        Input:
+        Value of node to be created
+
+        Output:
+        None
+
+        """
         node = Node(value, self.header)
         self.header = node
 
-    # Add a node to linked list end / tail / rear
     def insert_at_tail(self, value):
+        """
+        Add a node to linked list end / tail / rear
+
+        Input:
+        Value of node to be created
+
+        Output:
+        None
+
+        """
         if self.header == None:
             self.header = Node(value, None)
         else:
@@ -24,15 +42,33 @@ class linked_list:
             else:
                 current.next = Node(value, None)
 
-    # Add multiple nodes to linked list end / tail / rear
     def insert_multi(self, nodes):
+        """
+        Add multiple nodes to linked list end / tail / rear
+
+        Input:
+        Value of nodes to be created
+
+        Output:
+        List of inserted node values
+
+        """
         for node in nodes:
             self.insert_at_tail(node)
 
         return nodes
 
-    # Get list length
     def length(self):
+        """
+        Get list length
+
+        Input:
+        None
+
+        Output:
+        Intger to point list length
+
+        """
         length = 0
         current = self.header
 
@@ -42,8 +78,17 @@ class linked_list:
 
         return length
 
-    # Remove a node
     def remove_node(self, i):
+        """
+        Remove a node
+
+        Input:
+        Node index
+
+        Output:
+        None
+
+        """
         if i >= self.length() or i < 0:
             raise Exception("Invalid Index")
 
@@ -61,8 +106,17 @@ class linked_list:
             current = current.next
             length = length + 1
 
-    # Add a node to a spacific position of a linked list
     def insert_at(self, i, value):
+        """
+        Add a node to a spacific position of a linked list
+
+        Input:
+        Index of location & value of new node
+
+        Output:
+        None
+
+        """
         if i >= self.length() or i < 0:
             raise Exception("Invalid Index")
 
@@ -80,8 +134,17 @@ class linked_list:
             current = current.next
             length = length + 1
 
-    # Check if a node is part of a linked list
     def includes(self, value):
+        """
+        Check if a node is part of a linked list
+
+        Input:
+        Value of node to check
+
+        Output:
+        Boolean to signify node existance
+
+        """
         current = self.header
 
         while current != None:
@@ -91,8 +154,17 @@ class linked_list:
 
         return False
 
-    # Convert a linked list to text (for checking purposes)
     def to_string(self):
+        """
+        Convert a linked list to text (for checking purposes)
+
+        Input:
+        None
+
+        Output:
+        String of nodes list
+
+        """
         string = ""
 
         if self.header == None:
