@@ -2,6 +2,12 @@
 
 An LTUC Django-Based Project
 
+## How to recreate
+
+1. Create new github repo out of [the template](https://github.com/codefellows/python-401-api-quickstart)
+2. Clone to local machine
+3. Follow required steps as below
+
 ## Customization Steps
 
 - DO NOT migrate yet

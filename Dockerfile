@@ -1,5 +1,5 @@
 # Python version
-FROM python:3
+FROM python:3.10
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
