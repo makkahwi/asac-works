@@ -2,7 +2,7 @@
 
 To build a tree Class & a node class that has properties for the value stored in the node, the left child node, and the right child node (two child node pointers). Binary search class is to have two methods, add new node and find a node by its value.
 
-1[Whiteboard](./whiteboard.jpg)
+![Whiteboard](./whiteboard.jpg)
 
 ## Approach & Efficiency
 
