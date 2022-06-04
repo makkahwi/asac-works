@@ -1,15 +1,14 @@
 # Tree Breadth First
 
-Text
+To build a list function for trees. Listing is to be based on breadth-first concept.
 
-## Challenge
-
-Text
+![Whiteboard](./whiteboard.jpg)
 
 ## Approach & Efficiency
 
-Text
+- Check if the tree has a root. If not, return error msg.
+- Initiate a Queue and enqueue tree root.
+- Using a loop, enqueue both children (if they exist) of the front of the queue, then dequeue it and append the dequeued value to the list to be returned. Keep the loop going so till the queue is empty.
 
-## API
-
-Text
+Time: O(n)
+Space: O(n)
