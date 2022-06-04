@@ -8,23 +8,50 @@ class Stack:
     def __init__(self):
         self.top = None
 
-    # Push (add) a node to the stack's top
     def push(self, value):
+        """
+        Push (add) a node to the stack's top
+
+        Args:
+            a stack & a value for new node
+
+        Returns:
+            the stack with new node at top
+
+        """
         node = Node(value, self.top)
         self.top = node
 
         return self.to_string()
 
-    # Push (add) multiple nodes to the stack's top
     def push_multi(self, multi):
+        """
+        Push (add) multiple nodes to the stack's top
+
+        Args:
+            a stack & values for new nodes
+
+        Returns:
+            the stack with new nodes at top
+
+        """
         for value in multi:
             node = Node(value, self.top)
             self.top = node
 
         return self.to_string()
 
-    # Pop (remove) a node of the stack's top
     def pop(self):
+        """
+        Pop (remove) a node of the stack's top
+
+        Args:
+            a stack
+
+        Returns:
+            the stack without top node
+
+        """
         if not self.top:
             raise Exception("Empty Stack")
 
@@ -33,8 +60,17 @@ class Stack:
 
         return removed
 
-    # Pop (remove) all nodes of the stack's top
     def pop_all(self):
+        """
+        Pop (remove) all nodes of the stack's top
+
+        Args:
+            a stack
+
+        Returns:
+            the stack without nodes
+
+        """
         if not self.top:
             return self
 
@@ -44,19 +80,46 @@ class Stack:
             self.top = self.top.next
             current = self.top
 
-    # Return the node of the stack's top
     def peek(self):
+        """
+        Return the node of the stack's top
+
+        Args:
+            a stack
+
+        Returns:
+            the stack’s top value
+
+        """
         if not self.top:
             raise Exception("Empty Stack")
 
         return self.top.value
 
-    # Check if the stack is empty (have no top)
     def is_empty(self):
+        """
+        Check if the stack is empty (have no top)
+
+        Args:
+            a stack
+
+        Returns:
+            boolean for stack having no top
+
+        """
         return not self.top
 
-    # Convert the stack to text (for testing purposes)
     def to_string(self):
+        """
+        Convert the stack to text (for testing purposes)
+
+        Args:
+            a stack
+
+        Returns:
+            stack's nodes printed in a text string
+
+        """
         string = ""
 
         if self.top == None:
@@ -76,8 +139,17 @@ class Queue:
     def __init__(self):
         self.front = None
 
-    # Enqueue (add) a node to the queue's rear / tail
     def enqueue(self, value):
+        """
+        Enqueue (add) a node to the queue's rear / tail
+
+        Args:
+            a queue & a value for new node
+
+        Returns:
+            the queue with new node at tail
+
+        """
         node = Node(value)
 
         if self.front:
@@ -92,8 +164,17 @@ class Queue:
 
         return self.to_string()
 
-    # Enqueue (add) multiple nodes to the queue's rear / tail
     def enqueue_multi(self, multi):
+        """
+        Enqueue (add) multiple nodes to the queue's rear / tail
+
+        Args:
+            a queue & values for new nodes
+
+        Returns:
+            the queue with new nodes at tail
+
+        """
         for value in multi:
             node = Node(value)
 
@@ -109,8 +190,17 @@ class Queue:
 
         return self.to_string()
 
-    # Dequeue (remove) a node of the queue's front
     def dequeue(self):
+        """
+        Dequeue (remove) a node of the queue's front
+
+        Args:
+            a queue
+
+        Returns:
+            the queue without front node
+
+        """
         if not self.front:
             raise Exception("Empty Queue")
 
@@ -119,27 +209,63 @@ class Queue:
 
         return removed
 
-    # Dequeue (remove) all nodes of the queue's front
     def dequeue_all(self):
+        """
+        Dequeue (remove) all nodes of the queue's front
+
+        Args:
+            a queue
+
+        Returns:
+            the queue without nodes
+
+        """
         if not self.front:
             raise Exception("Empty Queue")
 
         while self.front:
             self.front = self.front.next
 
-    # Return the node of the queue's front
     def peek(self):
+        """
+        Return the node of the queue's front
+
+        Args:
+            a queue
+
+        Returns:
+            the queue front value
+
+        """
         if not self.front:
             raise Exception("Empty Queue")
 
         return self.front.value
 
-    # Check if the queue is empty (have no front)
     def is_empty(self):
+        """
+        Check if the queue is empty (have no front)
+
+        Args:
+            a queue
+
+        Returns:
+            boolean for queue having no front
+
+        """
         return not self.front
 
-    # Convert the queue to text (for testing purposes)
     def to_string(self):
+        """
+        Convert the queue to text (for testing purposes)
+
+        Args:
+            a queue
+
+        Returns:
+            queue's nodes printed in a text string
+
+        """
         string = ""
 
         if self.front == None:
@@ -166,8 +292,17 @@ class BinaryTree:
     def __init__(self):
         self.root = None
 
-    # Check the traversal type
     def type(self, type):
+        """
+        Check the traversal type
+
+        Input:
+        String
+
+        Output:
+        None
+        """
+
         if type == "preorder":
             return self.pre_order(self.root, [])
         elif type == "inorder":
@@ -175,24 +310,48 @@ class BinaryTree:
         elif type == "postorder":
             return self.post_order(self.root, [])
 
-    # Pre-order type
     def pre_order(self, node, nodes=[]):
+        """
+        To do pre-order traversal
+
+        Input:
+        New node, list of nodes
+
+        Output:
+        List of nodes
+        """
         if node:
             nodes.append(node.value)
             nodes = self.pre_order(node.left, nodes)
             nodes = self.pre_order(node.right, nodes)
         return nodes
 
-    # In-order type
     def in_order(self, node, nodes=[]):
+        """
+        To do in-order traversal
+
+        Input:
+        New node, list of nodes
+
+        Output:
+        List of nodes
+        """
         if node:
             nodes = self.in_order(node.left, nodes)
             nodes.append(node.value)
             nodes = self.in_order(node.right, nodes)
         return nodes
 
-    # Post-order type
     def post_order(self, node, nodes=[]):
+        """
+        To do post-order traversal
+
+        Input:
+        New node, list of nodes
+
+        Output:
+        List of nodes
+        """
         if node:
             nodes = self.in_order(node.left, nodes)
             nodes = self.in_order(node.right, nodes)
@@ -201,9 +360,16 @@ class BinaryTree:
 
 
 class BinarySearchTree(BinaryTree):
-
-    # Add node according to BST Rule (right child is bigger & left child is smaller than parent)
     def add_node(self, value):
+        """
+        Add node according to BST Rule (right child is bigger & left child is smaller than parent)
+
+        Input:
+        New node value
+
+        Output:
+        None
+        """
         node = BinaryNode(value)
         root = self.root
         current = None
@@ -227,8 +393,16 @@ class BinarySearchTree(BinaryTree):
         else:
             current.right = node
 
-    # Check value existance
     def contains(self, value):
+        """
+        Check value existance
+
+        Input:
+        Node value to check
+
+        Output:
+        Boolean of node exsitance
+        """
         if self.root == None:
             raise Exception("Empty Tree")
 
