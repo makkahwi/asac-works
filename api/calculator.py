@@ -17,15 +17,16 @@ class handler(BaseHTTPRequestHandler):
         second = dic.get('second')
 
         if operation:
-            message += f'{operation.capitalize()} Operation\n\n'
             if operation == "add":
-                message += f'result of {operation.capitalize()} {first} to {second} is {first + second}'
+                message += 'Add / Sum Operation\n\n'
+                message += f'result of {operation.capitalize()} {first} to {second} is {float(first) + float(second)}'
             elif operation == "minus":
-                message += f'result of {operation.capitalize()} {first} from {second} is {first - second}'
+                message += 'Deduct / Minus Operation\n\n'
+                message += f'result of {operation.capitalize()} {first} from {second} is {float(first) - float(second)}'
             else:
                 message += 'Operation is unrecognized'
         else:
-            message += 'enter in url operation value of add OR minus, and first as integer or float value, second as integer as float value'
+            message += 'To use calculator, enter in url operation value of add OR minus, and first as integer or float value, second as integer or float value'
 
         message += '\n\nYou may find me @ https://Suhaib.dev'
         
