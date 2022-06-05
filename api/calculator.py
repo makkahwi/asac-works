@@ -19,12 +19,13 @@ class handler(BaseHTTPRequestHandler):
         if operation:
             if operation == "add":
                 message += 'Add / Sum Operation\n\n'
-                message += f'result of {operation.capitalize()} {first} to {second} is {float(first) + float(second)}'
+                message += f'result of adding {first} to {second} is {float(first) + float(second)}'
             elif operation == "minus":
                 message += 'Deduct / Minus Operation\n\n'
-                message += f'result of {operation.capitalize()} {first} from {second} is {float(first) - float(second)}'
+                message += f'result of deducting {first} from {second} is {float(second) - float(first)}'
             else:
-                message += 'Operation is unrecognized'
+                message += 'Operation is unrecognized\n'
+                message += 'To use calculator, enter in url "operation" value of add OR minus, and "first" as integer or float value, "second" as integer or float value'
         else:
             message += 'To use calculator, enter in url operation value of add OR minus, and first as integer or float value, second as integer or float value'
 
