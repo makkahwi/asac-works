@@ -11,12 +11,10 @@ class handler(BaseHTTPRequestHandler):
         dic = dict(query_string_list)
 
         name = dic.get('name')
-        if name:
-            message = f'Hello {name}'
-        else:
-            message = 'Hello stranger'
-        
+        message = f'Hello {name | "dear"}'
         message += f'\nHello from {platform.node()}'
+        message += f'\n\nFind me at https://Suhaib.dev'
+
         self.send_response(200)
         self.send_header('Content-type', 'text/plain')
         self.end_headers()
