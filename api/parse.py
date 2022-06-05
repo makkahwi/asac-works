@@ -16,7 +16,8 @@ class handler(BaseHTTPRequestHandler):
         else:
             message = 'Hello dear'
 
-        message += f'\nHello from {platform.node()}'
+        message += f'\nHello from {platform.node()}\n\nYou may find me @ https://Suhaib.dev'
+        
         self.send_response(200)
         self.send_header('Content-type', 'text/plain')
         self.end_headers()
