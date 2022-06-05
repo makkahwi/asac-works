@@ -12,12 +12,11 @@ class handler(BaseHTTPRequestHandler):
 
         name = dic.get('name')
         if name:
-          message = f'Hello {name}'
+            message = f'Hello {name}'
         else:
-          message = f'Hello dear'
-          
-        message += f'\nHello from {platform.node()}'
+            message = 'Hello dear'
 
+        message += f'\nHello from {platform.node()}'
         self.send_response(200)
         self.send_header('Content-type', 'text/plain')
         self.end_headers()
