@@ -12,8 +12,7 @@ class handler(BaseHTTPRequestHandler):
 
         name = dic.get('name')
         message = f'Hello {name | "dear"}'
-        message += f'\nHello from {platform.node()}'
-        message += f'\n\nFind me at https://Suhaib.dev'
+        message += f'\nHello from {platform.node()} \n\nFind me at {"https://Suhaib.dev"}'
 
         self.send_response(200)
         self.send_header('Content-type', 'text/plain')
