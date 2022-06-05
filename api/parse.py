@@ -14,10 +14,10 @@ class handler(BaseHTTPRequestHandler):
         if name:
             message = f'Hello {name}'
         else:
-            message = 'Hello dear\n\n You may include your name in url so we print it here with key of name'
+            message = 'Hello dear\n\nYou may include your name in url so we print it here with key of name'
 
         message += f'\nHello from {platform.node()}'
-        message += '\n\nThis is static page\n\nYou may find me @ https://Suhaib.dev'
+        message += '\n\nYou may find me @ https://Suhaib.dev'
         
         self.send_response(200)
         self.send_header('Content-type', 'text/plain')
