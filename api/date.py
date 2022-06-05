@@ -8,7 +8,9 @@ class handler(BaseHTTPRequestHandler):
     self.send_response(200)
     self.send_header('Content-type', 'text/plain')
     self.end_headers()
-    self.wfile.write(str(datetime.now().strftime('%Y-%m-%d %H:%M:%S')).encode())
+    message = f"{str(datetime.now().strftime('%Y-%m-%d %H:%M:%S'))}"
+    message += '\n\nThis is static page\n\nYou may find me @ https://Suhaib.dev'
+    self.wfile.write(message.encode())
     return
 
 """"

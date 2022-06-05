@@ -8,6 +8,8 @@ An aplication to build web pages with serverless functions
 
 ## APIs
 
+To test the app just click one of below links and you would find instructions in the page
+
 - [Hello Msg](https://serverless-seven-virid.vercel.app/api/hello)
 - [Now DateTime Stamp GMT+00](https://serverless-seven-virid.vercel.app/api/date)
 - [Parsing Name](https://serverless-seven-virid.vercel.app/api/parse?name=Suhaib_Ahmad)

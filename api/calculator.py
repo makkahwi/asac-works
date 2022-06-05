@@ -25,9 +25,9 @@ class handler(BaseHTTPRequestHandler):
                 message += f'result of deducting {first} from {second} is {float(second) - float(first)}'
             else:
                 message += 'Operation is unrecognized\n'
-                message += 'To use calculator, enter in url "operation" value of add OR minus, and "first" as integer or float value, "second" as integer or float value'
+                message += 'To use calculator, enter in url "operation" value of "add" OR "minus", and "first" as integer or float value, "second" as integer or float value'
         else:
-            message += 'To use calculator, enter in url operation value of add OR minus, and first as integer or float value, second as integer or float value'
+            message += 'To use calculator, enter in url "operation" value of "add" OR "minus", and "first" as integer or float value, "second" as integer or float value'
 
         message += '\n\nYou may find me @ https://Suhaib.dev'
         
