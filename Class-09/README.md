@@ -1,23 +1,23 @@
 # Learning Journal 9
 
-## Title
+## Game of Greed IIII
 
 ### What did I learn today?
 
-Text
+A new elevation of the already-built game app.
 
 ### What went well, that I might forget if I don’t write down?
 
-Text
+Except for what was noted below, it was fine.
 
 ### What still puzzles me, or what do I need to learn more about?
 
-Text
+It's still puzzling to have as-many-as classes & apps intercating & calling each other.
 
 ### What should I do differently next time?
 
-Text
+None
 
 ### Is the assignment complete? If not, where exactly did you leave off, and what work remains?
 
-Text
+Yes, was submitted fully on-time.
