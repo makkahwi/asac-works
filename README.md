@@ -2,7 +2,7 @@
 
 An LTUC Project
 
-- CC 01 | [Title](./cc-1/)
+- CC 01 | [Recursive Digit Sum](./cc-1/README.md)
 
   ![Whiteboard](./cc-1/whiteboard.jpg)
   
