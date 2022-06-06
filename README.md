@@ -6,7 +6,7 @@ An LTUC Project
 
   ![Whiteboard](./cc-1/whiteboard.jpg)
   
-- CC 02 | [Title](./cc-2/)
+- CC 02 | [Balanced Brackets](./cc-2/README.md)
 
   ![Whiteboard](./cc-2/whiteboard.jpg)
 
