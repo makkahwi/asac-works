@@ -21,23 +21,26 @@ def get_citations_needed_count():
 
 
 def get_citations_needed_report():
-    output = "The following paragraphs need citation \n \n"
+    output = "The following paragraphs need to be cited\n\n"
 
     for p in paragraphs:
         text = p.text
         count = text.count("[citation needed]")
         check = "[citation needed]" in text
+
         if check:
             if count == 1:
                 index = text.index("[citation needed]")
                 output += text[0 : index - 1]
-                output += "\n \n"
+                output += "\n\n"
+
             if count > 1:
                 multi = text.split("[citation needed]")
                 i = 0
+
                 for _ in range(len(multi) - 1):
                     output += multi[i]
-                    output += "\n \n"
+                    output += "\n\n"
                     i += 1
 
     return output
