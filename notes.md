@@ -1,6 +1,8 @@
-# Late Submission Deductions List
+# Assignments' Notes
 
-## Code Chalenges
+## Late Submission Deductions List
+
+### Late Code Chalenges
 
 - [CC 05](https://canvas.instructure.com/courses/4333667/assignments/28344387/submissions/33677463)
 - [CC 10](https://canvas.instructure.com/courses/4333667/assignments/28344392/submissions/33677463)
@@ -8,9 +10,20 @@
 - [CC 16](https://canvas.instructure.com/courses/4333667/assignments/28344398/submissions/33677463)
 - [CC 17](https://canvas.instructure.com/courses/4333667/assignments/28344399/submissions/33677463)
 
-## Labs
+### Late Labs
 
 - [Lab 04](https://canvas.instructure.com/courses/4333667/assignments/28344303/submissions/33677463)
 - [Lab 11](https://canvas.instructure.com/courses/4333667/assignments/28344309/submissions/33677463)
 - [Lab 13](https://canvas.instructure.com/courses/4333667/assignments/28344312/submissions/33677463)
 - [Lab 31](https://canvas.instructure.com/courses/4333667/assignments/28344325/submissions/33677463)
+
+## To Fix
+
+### To Fix CC
+
+- [CC 05](https://canvas.instructure.com/courses/4333667/assignments/28344387) 4/5
+
+### To Fix Labs
+
+- [Lab 12](https://canvas.instructure.com/courses/4333667/assignments/28344311) 8/10
+- [Lab 33](https://canvas.instructure.com/courses/4333667/assignments/28344327) 8/10
