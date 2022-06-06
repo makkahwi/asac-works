@@ -10,6 +10,6 @@ An LTUC Project
 
   ![Whiteboard](./cc-2/whiteboard.jpg)
 
-- CC 03 | [Title](./cc-3/)
+- CC 03 | [Hashtable Fibonacci](./cc-3/README.md)
 
   ![Whiteboard](./cc-3/whiteboard.jpg)
