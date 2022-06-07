@@ -132,16 +132,22 @@ Given video is unavailable. Returns "Video unavailable This video is private" ms
 
 ## Next.js
 
-### Learn Next.js
-
 [Source](https://nextjs.org/learn/basics/create-nextjs-app)
-
-Text
-
----
-
-### Why to use Next.js
-
 [Source](https://www.youtube.com/watch?v=rtgbaKBhdkk)
 
-Text
+As React.Js is actually a library not a framework, Next.js is the react-based framework which handles many of the react issues of loose ends & over flexibility such as...
+
+- Involvement a bundler like webpack and a compiler like Babel.
+- Production optimizations like code splitting.
+- To pre-render some pages for performance and SEO & some server-side rendering or client-side rendering.
+- To connect React app to  data store.
+
+Next.js offeres following features / uses...
+
+- To build scalable react apps with some react complexity.
+- To pick whether to render on client side or server side or mix of both.
+- Pick data fetching strategy.
+- Hooks to generate static website from dynamic data for users like SEO.
+- Do the split coding work for performance uses.
+- Webpack enhancement.
+- Debugging assistant.
