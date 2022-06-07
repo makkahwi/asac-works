@@ -128,7 +128,7 @@ Text
 
 [Source](https://www.youtube.com/watch?v=6zIuAyLZPH0)
 
-Text
+Given video is unavailable. Returns "Video unavailable This video is private" msg.
 
 ## Next.js
 
