@@ -2,9 +2,30 @@
 
 ## ES6
 
+### ES6 Syntax and Feature Overview
+
 [Source](https://www.taniarascia.com/es6-syntax-and-feature-overview/)
 
-Text
+ES6 is basically the most advanced version of JS coding syntax. Follow table compares ES6 to ES5 in many coding parts & features.
+
+| Coding Part / Function | ES5 Approach | ES6 Approach |
+| ---------------------- | ------------ | ------------ |
+| variable define        | var: to define hoistable, reassignable & redeclarable variable | let: to define reassignable but not redeclarable or hoistable variable |
+| ^^^^^^^^^^^^^^^^^^^^^^ | ^^^^^^^^^^^^ | const: to define a non hoistable, non reassignable & non redeclarable variable |
+| functions define & return      | fucntion name(args) {  | const name = (args) => (content) |
+| ^^^^^^^^^^^^^^^^^^^^^^ |       return (         | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ |
+| ^^^^^^^^^^^^^^^^^^^^^^ |         content        | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ |
+| ^^^^^^^^^^^^^^^^^^^^^^ |       )                | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ |
+| ^^^^^^^^^^^^^^^^^^^^^^ |     }                  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ |
+| Template literals      | var str = "text" + name | let str = `text ${name}` |
+| Multiline strings      | var str = "text1" + "text2" | let str = `Text 1 |
+| ^^^^^^^^^^^^^^^^^^^^^^ | ^^^^^^^^^^^^^^^^^^^^^^^ | text 2' |
+| Object key define | var obj = {a: a, b: b} | const obj = {a, b} |
+| Object of functions | var obj = {a: function (c,d) {},b: function (e,f) {}} | const obj = {a(c,d) {}, b(e,f) ()} |
+| Destructuring Object | var a = obj.a, var b = obj.b, var c = obj.c | let {a,b,c} = obj |
+| Array looping | for (var i = 0; i < arr.length; i++) {console.log(arr[i])} | for (let i of arr) {console.log(i)} |
+| Default Params | to default value @ args | let func = (a, b = 2) => {return a+b} |
+| Spread Syntax | let arr1 = [1, 2, 3], let arr2 = ['a', 'b', 'c'], let arr3 = [...arr1, ...arr2] | let arr1 = [1, 2, 3], let func = (a, b, c) => a + b + c |
 
 ---
 
