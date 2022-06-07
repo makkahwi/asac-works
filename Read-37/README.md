@@ -90,7 +90,7 @@ The above element-oriented render has been reproduced in react using the compone
                 /         \                  /        \
             feature 1   feature 2       service 1   service 2
 
-So each of those parts could be a separate component in react coding. And in case of having to pass data from "service 1" component to "feature 1" component, this data is to be stored in "homepage" component and it's updating function is to be passed through the parent components of "features" & "services" to "feature 1" & "service 1".
+So each of those parts could be a separate component in react coding. And in case of having to pass data from "service 1" component to "feature 1" component, this data is to be stored in "homepage" component and it's updating function is to be passed through the parent components of "features" & "services" to "feature 1" & "service 1". In this structure, in case of updating some data stored in "service 1" component, only this component is to be rerendered instead of rerendering "homepage" and all of its children.
 
 ---
 
