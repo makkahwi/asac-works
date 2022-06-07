@@ -120,7 +120,7 @@ Many HTML & react built-in items / components have what are called as events. Mo
 
 [Source](https://tailwindcss.com/docs/utility-first)
 
-Text
+Tailwind is basically a styling library to be used with React. Like Bootstrap, it's a set of pre-built styling classes which are to be applied to appropriate items / elements / components in React. The so-many options offered by such libraries, it saves the time of building own styling classes or doing inline styling. With time and extensive usage, 70 - 80% of those pre-built classes would be remembered and smoothly called upon need.
 
 ---
 
