@@ -98,7 +98,7 @@ So each of those parts could be a separate component in react coding. And in cas
 
 [Source](https://reactjs.org/docs/state-and-lifecycle.html)
 
-Text
+In case of having JS clases, it's possible to have local states (variables) to pass data between different locations or to make it dynamic data. This state is recommended to have own already-built function to update it instead of using reassigning approach. In react hooks, there is a useState hook which to do the both of having dynamic states & updating them.
 
 ---
 
