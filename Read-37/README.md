@@ -106,7 +106,13 @@ In case of having JS clases, it's possible to have local states (variables) to p
 
 [Source](https://reactjs.org/docs/handling-events.html)
 
-Text
+Many HTML & react built-in items / components have what are called as events. Most common events are onChange and onClick and onSubmit events. This allows to build a whole function to do several steps in case of the occurrence of the event linked to the function.
+
+    const onInputChange = value => console.log(value)
+
+    const func = () => {
+      <input type="text" onChange={e => onInputChange(e.target.value)} />
+    }
 
 ## Tailwind
 
