@@ -82,7 +82,15 @@ The main feature of React is the ability to rerender only what needs a re render
 
 [Source](https://reactjs.org/docs/components-and-props.html)
 
-Text
+The above element-oriented render has been reproduced in react using the component concept. Which is about splitting an app into page components, and each page into smaller components according to their functionality & rerender needs. Those split components are to be linked in a tree-like structure, where a component might have one parent but several children. And so variable and data could be passed between the components according to the tree structure.
+
+                                homepage
+                              /           \
+                  features                    services
+                /         \                  /        \
+            feature 1   feature 2       service 1   service 2
+
+So each of those parts could be a separate component in react coding. And in case of having to pass data from "service 1" component to "feature 1" component, this data is to be stored in "homepage" component and it's updating function is to be passed through the parent components of "features" & "services" to "feature 1" & "service 1".
 
 ---
 
