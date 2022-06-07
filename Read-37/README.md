@@ -13,7 +13,7 @@ ES6 is basically the most advanced version of JS coding syntax. Follow table com
 | variable define        | var: to define hoistable, reassignable & redeclarable variable | let: to define reassignable but not redeclarable or hoistable variable |
 | ^^^^^^^^^^^^^^^^^^^^^^ | ^^^^^^^^^^^^ | const: to define a non hoistable, non reassignable & non redeclarable variable |
 | functions define & return      | fucntion name(args) {return (content)}  | const name = (args) => (content) |
-| Template literals      | var str = "text" + name | let str = `text ${name}` |
+| Template literals      | var str = "text" + name | let str = \`text ${name}\` |
 | Multiline strings      | var str = "text1" + "text2" | let str = `text 1 |
 | ^^^^^^^^^^^^^^^^^^^^^^ | ^^^^^^^^^^^^^^^^^^^^^^^^^^^ |            text 2' |
 | Object key define | var obj = {a: a, b: b} | const obj = {a, b} |
@@ -44,7 +44,14 @@ This required a basic understanding of JS coding to go through.
 
 [Source](https://reactjs.org/docs/introducing-jsx.html)
 
-Text
+    const element = (
+      <div>
+        <h1>Hello, world!</h1>
+        <h2>This is Suhaib</h2>
+      </div>
+    );
+
+JSX the the react extention of JS syntax. Which complies the elments rending with the intercation of dynamic parts of the code.
 
 ---
 
