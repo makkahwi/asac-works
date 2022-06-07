@@ -59,8 +59,23 @@ JSX the the react extention of JS syntax. Which complies the elments rending wit
 
 [Source](https://reactjs.org/docs/rendering-elements.html)
 
-Text
+The main feature of React is the ability to rerender only what needs a re render instead of re rendering a whole page / app. In below example it's to be seen that only element which contains date/time is what would be rerendered on date/time update.
 
+    const root = ReactDOM.createRoot(
+      document.getElementById('root')
+    );
+
+    function tick() {
+      const element = (
+        <div>
+          <h1>Hello, world!</h1>
+          <h2>It is {new Date().toLocaleTimeString()}.</h2>
+        </div>
+      );
+      root.render(element);
+    }
+
+    setInterval(tick, 1000);
 ---
 
 ### React - Components & Props
