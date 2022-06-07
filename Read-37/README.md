@@ -31,7 +31,12 @@ ES6 is basically the most advanced version of JS coding syntax. Follow table com
 
 [Source](https://reactjs.org/docs/hello-world.html)
 
-Text
+Simplist react app code...
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<h1>Hello, world!</h1>);
+
+This required a basic understanding of JS coding to go through.
 
 ---
 
