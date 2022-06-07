@@ -4,23 +4,23 @@ This is to keep track of observations and questions from the reading assignments
 
 ## Hello World War III, this is Suhaib Ahmad
 
-## `const job = "Full-Stack_Web_Developer"`
+`const job = "Full-Stack_Web_Developer"`
 
-**A Graduate of Data Science & Computation Intelligence Specialty, Computer Science Department of** [![International Islamic University Malaysia (2021)](https://upload.wikimedia.org/wikipedia/commons/f/f7/IIUM_Logo_.svg)](https://iium.edu.my)
+**A Graduate of Data Science & Computation Intelligence Specialty, Computer Science Department of [International Islamic University Malaysia](https://iium.edu.my)**
 
-You may read more about me in *[my resume website](https://suhaib.dev)*. You also may also visit my profiles in *[Github](https://github.com/makkahwi/)* & *[Linkedin](https://www.linkedin.com/in/makkahwi/)*.
+You may find out more about me in *[my resume website](https://suhaib.dev)*. You also may also visit my profiles in *[Github](https://github.com/makkahwi/)* & *[Linkedin](https://www.linkedin.com/in/makkahwi/)*.
 
 ---
 
 ## Code 401 - Advanced Software Development
 
-| Reads     | Journals  | Others                     |
-| --------- | --------- | -------------------------- |
+| Reads      | Journals   | Others                     |
+| ---------- | ---------- | -------------------------- |
 | [Read-01](/Read-01/README.md) | [Class-01](/Class-01/README.md) | [SQL_Summary](/SQL/README.md) |
 | [Read-02](/Read-02/README.md) | [Class-02](/Class-02/README.md) | [Prep_Mindset](/Prep_Mindset/README.md) |
-| [Read-03](/Read-03/README.md) | [Class-04](/Class-04/README.md) | [Command-line](/Command-line/README.md) |
-| [Read-04](/Read-04/README.md) | [Class-05](/Class-05/README.md) | [Learning_Internal_Forces](/Learning_Forces/README.md) |
-| [Read-05](/Read-05/README.md) | [Class-06](/Class-06/README.md) | [Unexpected_Part](/Unexpected_Part/README.md) |
+| [Read-03*](/Read-03/README.md) | [Class-04*](/Class-04/README.md) | [Command-line](/Command-line/README.md) |
+| [Read-04](/Read-04/README.md) | [Class-05*](/Class-05/README.md) | [Learning_Internal_Forces](/Learning_Forces/README.md) |
+| [Read-05](/Read-05/README.md) | [Class-06*](/Class-06/README.md) | [Unexpected_Part](/Unexpected_Part/README.md) |
 | [Read-07](/Read-07/README.md) | [Class-07](/Class-07/README.md) |           ------           |
 | [Read-08](/Read-08/README.md) | [Class-08](/Class-08/README.md) |           ------           |
 | [Read-09](/Read-09/README.md) | [Class-10](/Class-10/README.md) |           ------           |
