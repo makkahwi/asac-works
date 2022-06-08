@@ -1,6 +1,7 @@
 # Lesson 31 Reading
 
 Navigation
+
 | [Past Reading](../Read-30/README.md) | [Home Page](../README.md) | [Next Reading](../Read-32/README.md) |
 | ------------ | --------- | ------------ |
 

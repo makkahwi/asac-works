@@ -1,6 +1,7 @@
 # Lesson 17 Reading
 
 Navigation
+
 | [Past Reading](../Read-16/README.md) | [Home Page](../README.md) | [Next Reading](../Read-26/README.md) |
 | ------------ | --------- | ------------ |
 

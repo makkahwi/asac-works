@@ -1,6 +1,7 @@
 # Lesson 8 Reading
 
 Navigation
+
 | [Past Reading](../Read-07/README.md) | [Home Page](../README.md) | [Next Reading](../Read-09/README.md) |
 | ------------ | --------- | ------------ |
 
