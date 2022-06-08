@@ -4,7 +4,20 @@
 
 [Source](https://reactjs.org/docs/conditional-rendering.html)
 
-Text
+It's basically about how to apply the conditional rendering for a component, where the component is to be rendered if the condition applies. So in case a specific data object need to be reflected in a specific view like a table, if condition could be applied to check if data exists so the view would be rendered.
+
+        {data && (
+            <table>
+                <tr>
+                    <th>
+                        {data.key}
+                    </th>
+                    <td>
+                        {data.value}
+                    </td>
+                </tr>
+            </table>
+        )}
 
 ---
 
