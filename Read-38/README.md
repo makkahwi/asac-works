@@ -171,4 +171,10 @@ this is gonna be exactly like coding it this way...
 
 [Source](https://reactjs.org/docs/thinking-in-react.html)
 
-Text
+As a frontend developer, you're supposed to get the UI/UX designs to code. So if a UI of a page is received, React.js developer should...
+
+- start breaking the UI into separate components & a hierarchy of them
+- Then the static version of UI is to be coded with consideration of proposed / planned structure ot components.
+- Identify the uses of states & dynamic data within coded components.
+- Decide & place each state in the hosting component.
+- Build the dynamic controls of place states.
