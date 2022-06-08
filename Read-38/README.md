@@ -92,7 +92,37 @@ Form tags in react are the exact same ones of HTML, but they could have some mor
 
 [Source](https://reactjs.org/docs/lifting-state-up.html)
 
-Text
+As react components are built in a tree form, if there are common states & variables to be used in more than one separate component, this state / variable need to be place in the closest common parent component, and passed through the props of the child components.
+
+                                homepage
+                              /           \
+                  features                    services
+                /         \                  /        \
+            feature 1   feature 2       service 1   service 2
+
+So assuming in the example above that a state need to be used in both components of "service 1" & "service 2", the state need to be initiated inside the common "services" component, and passed through props of both children. So inside parent component of "services", state to be initiated and passed as follows.
+
+        const [state, setState] = useState("")
+
+        <Service1 state={state} setState={setState} />
+        <Service2 state={state} setState={setState} />
+
+And inside each child component, the state and it's setter are to be recieved in the props as follows.
+
+        const Service1 = props => {
+            const {state, setState} = props
+            .
+            .
+            .
+        };
+
+        const Service2 = ({state, setState}) => {
+            .
+            .
+            .
+        };
+
+So when a state is initiated, there should be consideration about the components to use the state, so the hosting component of the state could be decided righty.
 
 ---
 
