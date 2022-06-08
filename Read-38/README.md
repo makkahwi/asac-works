@@ -1,9 +1,6 @@
 # Lesson 38 Reading
 
-Navigation
-
-| [Past Reading](../Read-37/README.md) | [Home Page](../README.md) | Next Reading |
-| ------------ | --------- | ------------ |
+Navigation | [Past Reading](../Read-37/README.md) | [Home Page](../README.md) | Next Reading |
 
 ## React - Conditional Rendering
 

@@ -1,9 +1,6 @@
 # Lesson 10 Reading
 
-Navigation
-
-| [Past Reading](../Read-09/README.md) | [Home Page](../README.md) | [Next Reading](../Read-11/README.md) |
-| ------------ | --------- | ------------ |
+Navigation | [Past Reading](../Read-09/README.md) | [Home Page](../README.md) | [Next Reading](../Read-11/README.md) |
 
 ## Stacks and Queues
 

@@ -1,8 +1,7 @@
 # Lesson 1 Reading
 
 Navigation
-| Past Reading | [Home Page](../README.md) | [Next Reading](../Read-02/README.md) |
-| ------------ | --------- | ------------ |
+| [Home Page](../README.md) | [Next Reading](../Read-02/README.md) |
 
 ## Pain and Suffering
 

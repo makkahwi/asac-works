@@ -1,9 +1,6 @@
 # Lesson 32 Reading
 
-Navigation
-
-| [Past Reading](../Read-31/README.md) | [Home Page](../README.md) | [Next Reading](../Read-33/README.md) |
-| ------------ | --------- | ------------ |
+Navigation | [Past Reading](../Read-31/README.md) | [Home Page](../README.md) | [Next Reading](../Read-33/README.md) |
 
 ## DRF Permissions
 

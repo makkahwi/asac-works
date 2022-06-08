@@ -1,9 +1,6 @@
 # Lesson 30 Reading
 
-Navigation
-
-| [Past Reading](../Read-29/README.md) | [Home Page](../README.md) | [Next Reading](../Read-31/README.md) |
-| ------------ | --------- | ------------ |
+Navigation | [Past Reading](../Read-29/README.md) | [Home Page](../README.md) | [Next Reading](../Read-31/README.md) |
 
 ## Intro to Hash Tables
 

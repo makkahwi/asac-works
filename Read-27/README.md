@@ -1,9 +1,6 @@
 # Lesson 27 Reading
 
-Navigation
-
-| [Past Reading](../Read-26/README.md) | [Home Page](../README.md) | [Next Reading](../Read-28/README.md) |
-| ------------ | --------- | ------------ |
+Navigation | [Past Reading](../Read-26/README.md) | [Home Page](../README.md) | [Next Reading](../Read-28/README.md) |
 
 ## Django Models
 

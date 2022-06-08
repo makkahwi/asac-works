@@ -1,9 +1,6 @@
 # Lesson 11 Reading
 
-Navigation
-
-| [Past Reading](../Read-01/README.md) | [Home Page](../README.md) | [Next Reading](../Read-03/README.md) |
-| ------------ | --------- | ------------ |
+Navigation | [Past Reading](../Read-10/README.md) | [Home Page](../README.md) | [Next Reading](../Read-12/README.md) |
 
 ## Jupyter Lab
 

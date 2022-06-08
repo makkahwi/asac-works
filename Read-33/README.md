@@ -1,9 +1,6 @@
 # Lesson 33 Reading
 
-Navigation
-
-| [Past Reading](../Read-32/README.md) | [Home Page](../README.md) | [Next Reading](../Read-34/README.md) |
-| ------------ | --------- | ------------ |
+Navigation | [Past Reading](../Read-32/README.md) | [Home Page](../README.md) | [Next Reading](../Read-34/README.md) |
 
 ## JSON Web Tokens
 

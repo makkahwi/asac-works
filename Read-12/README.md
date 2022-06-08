@@ -1,9 +1,6 @@
 # Lesson 12 Reading
 
-Navigation
-
-| [Past Reading](../Read-11/README.md) | [Home Page](../README.md) | [Next Reading](../Read-13/README.md) |
-| ------------ | --------- | ------------ |
+Navigation | [Past Reading](../Read-11/README.md) | [Home Page](../README.md) | [Next Reading](../Read-13/README.md) |
 
 ## Pandas in 10
 

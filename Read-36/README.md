@@ -1,9 +1,6 @@
 # Lesson 36 Reading
 
-Navigation
-
-| [Past Reading](../Read-34/README.md) | [Home Page](../README.md) | [Next Reading](../Read-37/README.md) |
-| ------------ | --------- | ------------ |
+Navigation | [Past Reading](../Read-34/README.md) | [Home Page](../README.md) | [Next Reading](../Read-37/README.md) |
 
 ## Whiteboard Advice
 
