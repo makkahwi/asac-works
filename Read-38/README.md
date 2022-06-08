@@ -25,8 +25,41 @@ It's basically about how to apply the conditional rendering for a component, whe
 
 [Source](https://reactjs.org/docs/lists-and-keys.html)
 
-Text
+This is about using dynamic lists renderednig in the views. So if a list of objects are to be rendered, .map() function could be used so a loop would go through the list and rendered it using the same source code.
 
+        const employees = [{
+            name: "Suhaib"
+            position: "React Developer"
+        }, {
+            name: "Hadi"
+            position: "Django Developer"
+        }];
+
+        <table>
+            <theader>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Position
+                    </th>
+                </tr>
+            </theader>
+            <tbody>
+                {employees.map(employee => (
+                    <tr>
+                        <th>
+                            {employee.name}
+                        </th>
+                        <td>
+                            {employee.position}
+                        </td>
+                    </tr>
+                ))}
+            </tbody>
+        </table>
+        
 ---
 
 ## React - Forms
