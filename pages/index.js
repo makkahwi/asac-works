@@ -8,7 +8,7 @@ import List from "../components/List";
 export default function Home() {
   const [list, setList] = useState([
     {
-      location: "Test 1",
+      location: "Amman",
       minCustomers: 1,
       maxCustomers: 2,
       avgCookies: 3
@@ -20,19 +20,23 @@ export default function Home() {
   const [data, setData] = useState({})
 
   const onAction = (id, action) => {
-    action === "duplicate" ? (() => {
-      setData(list[id])
-      setAction("duplicate")
-    }) : action === "view" ? (() => {
-      setData(list[id])
-      setAction("view")
-    }) : action === "update" ? (() => {
-      setData(list[id])
-      setAction("update")
-    }) : action === "delete" && (() => {
-      setData(list[id])
-      setAction("delete")
-    })
+    action === "duplicate" ? (
+      setData(list[id]),
+      setAction("duplicate"),
+      console.log("duplicate")
+    ) : action === "view" ? (
+      setData(list[id]),
+      setAction("view"),
+      console.log("view")
+    ) : action === "update" ? (
+      setData(list[id]),
+      setAction("update"),
+      console.log("update")
+    ) : action === "delete" && (
+      setData(list[id]),
+      setAction("delete"),
+      console.log("delete")
+    )
   };
 
   const addToList = data => setList(current => [...current, data]);
