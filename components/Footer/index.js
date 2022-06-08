@@ -1,5 +1,4 @@
-
-function Footer() {
+export default function Footer() {
   return (
     <footer className="bg-orange-500">
       <div className="py-6 lg:mx-4 xl:mx-12 text-white">
@@ -16,5 +15,3 @@ function Footer() {
     </footer>
   )
 }
-
-export default Footer
