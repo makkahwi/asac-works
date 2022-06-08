@@ -59,14 +59,32 @@ This is about using dynamic lists renderednig in the views. So if a list of obje
                 ))}
             </tbody>
         </table>
-        
+
 ---
 
 ## React - Forms
 
 [Source](https://reactjs.org/docs/forms.html)
 
-Text
+Form tags in react are the exact same ones of HTML, but they could have some more properties to define their function & ease their build work.
+
+        <form>
+            <input name="title" type="text" required />
+
+            <select name="job">
+                <option value="FE dev">
+                    Frontend Developer
+                </option>
+
+                <option value="BE dev">
+                    Backend Developer
+                </option>
+            </select>
+
+            <select name="department" value=["IT", "Finance", "HR"]/>
+
+            <input name="profilePhoto" type="file" />
+        </form>
 
 ---
 
