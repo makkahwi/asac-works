@@ -1,9 +1,19 @@
 import Head from "next/head";
-import Header from "../components/Header";
-import Form from "../components/Form";
+import { useState } from "react";
 import Footer from "../components/Footer";
+import Form from "../components/Form";
+import Header from "../components/Header";
+import List from "../components/List";
 
 export default function Home() {
+  const [list, setList] = useState([
+    {
+      location: "Amman",
+      minCustomers: 5,
+      maxCustomers: 6,
+      avgCookies: 7
+    }
+  ]);
 
   return (
     <>
@@ -15,6 +25,7 @@ export default function Home() {
 
       <main className="py-10 px-10">
         <Form />
+        <List data={list} />
       </main>
 
       <Footer />
