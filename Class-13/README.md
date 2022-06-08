@@ -1,5 +1,7 @@
 # Learning Journal 13
 
+Navigation | [Past Journal](../Class-12/README.md) | [Home Page](../README.md) | [Next Journal](../Class-14/README.md) |
+
 ## Linear Regressions
 
 ### What did I learn today?

@@ -1,5 +1,7 @@
 # Learning Journal 14
 
+Navigation | [Past Journal](../Class-13/README.md) | [Home Page](../README.md) | [Next Journal](../Class-15/README.md) |
+
 ## Data Visualization
 
 ### What did I learn today?

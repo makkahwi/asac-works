@@ -1,5 +1,7 @@
 # Learning Journal 11
 
+Navigation | [Past Journal](../Class-10/README.md) | [Home Page](../README.md) | [Next Journal](../Class-12/README.md) |
+
 ## Numpy
 
 ### What did I learn today?

@@ -1,5 +1,7 @@
 # Learning Journal 12
 
+Navigation | [Past Journal](../Class-11/README.md) | [Home Page](../README.md) | [Next Journal](../Class-13/README.md) |
+
 ## Data Analysis with Pandas
 
 ### What did I learn today?

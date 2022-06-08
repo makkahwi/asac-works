@@ -1,5 +1,7 @@
 # Learning Journal 16
 
+Navigation | [Past Journal](../Class-15/README.md) | [Home Page](../README.md) | [Next Journal](../Class-17/README.md) |
+
 ## Serverless Functions
 
 ### What did I learn today?

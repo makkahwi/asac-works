@@ -1,5 +1,7 @@
 # Learning Journal 10
 
+Navigation | [Past Journal](../Class-09/README.md) | [Home Page](../README.md) | [Next Journal](../Class-11/README.md) |
+
 ## Retrospective
 
 ### What did I learn today?

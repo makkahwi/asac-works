@@ -1,5 +1,7 @@
 # Learning Journal 17
 
+Navigation | [Past Journal](../Class-16/README.md) | [Home Page](../README.md) | [Next Journal](../Class-26/README.md) |
+
 ## Web Scraping
 
 ### What did I learn today?

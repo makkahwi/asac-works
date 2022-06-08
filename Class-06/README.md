@@ -1,5 +1,7 @@
 # Learning Journal 6
 
+Navigation | [Past Journal](../Class-05/README.md) | [Home Page](../README.md) | [Next Journal](../Class-07/README.md) |
+
 ## Game of Greed
 
 ### What did I learn today?

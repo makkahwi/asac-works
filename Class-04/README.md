@@ -1,5 +1,7 @@
 # Learning Journal 4
 
+Navigation | [Past Journal](../Class-02/README.md) | [Home Page](../README.md) | [Next Journal](../Class-05/README.md) |
+
 ## OOP in Python (Classes) & Fixtures
 
 ### What did I learn today?
