@@ -1,5 +1,9 @@
 # Lesson 10 Reading
 
+Navigation
+| [Past Reading](../Read-09/README.md) | [Home Page](../README.md) | [Next Reading](../Read-11/README.md) |
+| ------------ | --------- | ------------ |
+
 ## Stacks and Queues
 
 [Source](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-10/resources/stacks_and_queues.html)

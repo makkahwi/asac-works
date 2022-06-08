@@ -1,5 +1,9 @@
 # Lesson 8 Reading
 
+Navigation
+| [Past Reading](../Read-07/README.md) | [Home Page](../README.md) | [Next Reading](../Read-09/README.md) |
+| ------------ | --------- | ------------ |
+
 ## List Comprehensions
 
 [Source](https://www.pythonforbeginners.com/basics/list-comprehensions-in-python)

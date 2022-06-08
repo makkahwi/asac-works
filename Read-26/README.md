@@ -1,5 +1,9 @@
 # Lesson 26 Reading
 
+Navigation
+| [Past Reading](../Read-17/README.md) | [Home Page](../README.md) | [Next Reading](../Read-27/README.md) |
+| ------------ | --------- | ------------ |
+
 ## Intro to Django
 
 [Source](https://www.djangoproject.com/start/)
