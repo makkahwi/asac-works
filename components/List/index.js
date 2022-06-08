@@ -25,20 +25,20 @@ export default function List({ data, onAction }) {
               <td>{item.maxCustomers}</td>
               <td>{item.avgCookies}</td>
               <td>
-                <div class="inline-flex rounded-md shadow-sm" role="group">
-                  <button type="button" onClick={() => onAction(item.id || i, "duplicate")} class="py-2 px-4 text-xs font-medium text-white bg-green-500 rounded-l-lg border border-green-200 hover:bg-green-700 focus:z-10 focus:ring-2 focus:ring-green-700 focus:bg-green-700 dark:bg-green-700 dark:border-green-600 dark:text-white dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-500 dark:focus:text-white">
+                <div className="inline-flex rounded-md shadow-sm" role="group">
+                  <button type="button" onClick={() => onAction(item.id || i, "duplicate")} className="py-2 px-4 text-xs font-medium text-white bg-green-500 rounded-l-lg border border-green-200 hover:bg-green-700 focus:z-10 focus:ring-2 focus:ring-green-700 focus:bg-green-700 dark:bg-green-700 dark:border-green-600 dark:text-white dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-500 dark:focus:text-white">
                     <FontAwesomeIcon icon={faCopy} />
                   </button>
 
-                  <button type="button" onClick={() => onAction(item.id || i, "view")} class="py-2 px-4 text-xs font-medium text-white bg-blue-500 border-t border-b border-blue-200 hover:bg-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:bg-blue-700 dark:bg-blue-700 dark:border-blue-600 dark:text-white dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-green-500 dark:focus:text-white">
+                  <button type="button" onClick={() => onAction(item.id || i, "view")} className="py-2 px-4 text-xs font-medium text-white bg-blue-500 border-t border-b border-blue-200 hover:bg-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:bg-blue-700 dark:bg-blue-700 dark:border-blue-600 dark:text-white dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-green-500 dark:focus:text-white">
                     <FontAwesomeIcon icon={faEye} />
                   </button>
 
-                  <button type="button" onClick={() => onAction(item.id || i, "update")} class="py-2 px-4 text-xs font-medium text-dark bg-yellow-500 border-t border-b border-yellow-200 hover:bg-yellow-700 focus:z-10 focus:ring-2 focus:ring-yellow-700 focus:bg-yellow-700 dark:bg-yellow-700 dark:border-yellow-600 dark:text-white dark:hover:text-white dark:hover:bg-yellow-600 dark:focus:ring-yellow-500 dark:focus:text-white">
+                  <button type="button" onClick={() => onAction(item.id || i, "update")} className="py-2 px-4 text-xs font-medium text-dark bg-yellow-500 border-t border-b border-yellow-200 hover:bg-yellow-700 focus:z-10 focus:ring-2 focus:ring-yellow-700 focus:bg-yellow-700 dark:bg-yellow-700 dark:border-yellow-600 dark:text-white dark:hover:text-white dark:hover:bg-yellow-600 dark:focus:ring-yellow-500 dark:focus:text-white">
                     <FontAwesomeIcon icon={faEdit} />
                   </button>
 
-                  <button type="button" onClick={() => onAction(item.id || i, "delete")} class="py-2 px-4 text-xs font-medium text-white bg-red-500 rounded-r-md border border-red-200 hover:bg-red-700 focus:z-10 focus:ring-2 focus:ring-red-700 focus:bg-red-700 dark:bg-red-700 dark:border-red-600 dark:text-white dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-500 dark:focus:text-white">
+                  <button type="button" onClick={() => onAction(item.id || i, "delete")} className="py-2 px-4 text-xs font-medium text-white bg-red-500 rounded-r-md border border-red-200 hover:bg-red-700 focus:z-10 focus:ring-2 focus:ring-red-700 focus:bg-red-700 dark:bg-red-700 dark:border-red-600 dark:text-white dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-500 dark:focus:text-white">
                     <FontAwesomeIcon icon={faTrash} />
                   </button>
                 </div>
