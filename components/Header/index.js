@@ -18,8 +18,8 @@ export default function Header() {
 
           <div id="main-nav" className="w-full flex-grow lg:flex items-center lg:w-auto hidden">
             <div className="text-sm lg:flex-grow mt-2 animated jackinthebox xl:mx-8">
-              {links.map(link => (
-                <a href={link.link} className="block lg:inline-block text-md font-bold  text-white-500  sm:hover:border-white-400  mx-2 focus:text-blue-500  p-1 hover:bg-gray-300 sm:hover:bg-transparent rounded-lg">
+              {links.map((link, i) => (
+                <a href={link.link} className="block lg:inline-block text-md font-bold  text-white-500  sm:hover:border-white-400  mx-2 focus:text-blue-500  p-1 hover:bg-gray-300 sm:hover:bg-transparent rounded-lg" key={i}>
                   {link.title}
                 </a>
               ))}

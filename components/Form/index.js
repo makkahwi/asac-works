@@ -29,8 +29,8 @@ export default function Form({ onSubmit }) {
                 <div>
                   <label className="block text-sm font-medium text-gray-700">Location</label>
                   <select name="country" className="mt-1 py-3 px-2 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm">
-                    {locations.map(location => (
-                      <option value={location.value}>{location.title}</option>
+                    {locations.map((location, i) => (
+                      <option value={location.value} key={i}>{location.title}</option>
                     ))}
                   </select>
                 </div>

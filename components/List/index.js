@@ -14,7 +14,7 @@ export default function List({ data }) {
 
         <tbody>
           {data?.map((item, i) => (
-            <tr className={`h-20 ${i % 2 === 0 ? "bg-gray-100 hover:bg-white" : "hover:bg-gray-100"}`}>
+            <tr className={`h-20 ${i % 2 === 0 ? "bg-gray-100 hover:bg-white" : "hover:bg-gray-100"}`} key={i}>
               <td>{i + 1}</td>
               <td>{item.location}</td>
               <td>{item.minCustomers}</td>
