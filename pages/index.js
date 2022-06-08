@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Header from "../components/Header";
 
 export default function Home() {
 
@@ -7,6 +8,8 @@ export default function Home() {
       <Head>
         <title>Cookie Stand Admin - Suhaib Ahmad</title>
       </Head>
+
+      <Header />
     </>
 
 
