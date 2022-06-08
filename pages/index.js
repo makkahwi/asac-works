@@ -15,6 +15,8 @@ export default function Home() {
     }
   ]);
 
+  const addToList = data => setList(current => [...current, data]);
+
   return (
     <>
       <Head>
@@ -24,7 +26,7 @@ export default function Home() {
       <Header />
 
       <main className="py-10 px-10">
-        <Form />
+        <Form onSubmit={addToList} />
         <List data={list} />
       </main>
 

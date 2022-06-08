@@ -1,17 +1,29 @@
-export default function Form() {
+export default function Form({ onSubmit }) {
   const locations = [
     { title: "Please Pick One..." },
-    { title: "Amman", value: "amman" },
-    { title: "Irbid", value: "irbid" },
-    { title: "Aqaba", value: "aqaba" },
-    { title: "Ma'an", value: "maan" }
+    { title: "Amman", value: "Amman" },
+    { title: "Irbid", value: "Irbid" },
+    { title: "Aqaba", value: "Aqaba" },
+    { title: "Ma'an", value: "Ma'an" }
   ];
+
+  const onFormSubmit = e => {
+    e.preventDefault();
+
+    const data = {
+      location: e.target.country.value,
+      minCustomers: e.target.minCustomers.value,
+      maxCustomers: e.target.maxCustomers.value,
+      avgCookies: e.target.avgCookies.value,
+    };
+    onSubmit(data);
+  }
 
   return (
     <div>
       <div className="md:grid md:grid-cols-2 md:gap-6">
         <div className="mt-5 md:mt-0 md:col-span-2">
-          <form onSubmit={""}>
+          <form onSubmit={onFormSubmit}>
             <div className="shadow sm:rounded-md sm:overflow-hidden">
               <div className="px-4 py-5 bg-orange-500 space-y-6 sm:p-6">
                 <div>
