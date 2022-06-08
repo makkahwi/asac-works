@@ -48,7 +48,7 @@ export default function Form({ onSubmit }) {
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700">Average Cookies Count per Sale</label>
-                    <input type="number" min={0} name="avgCookies" className="mt-1 py-3 px-2 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
+                    <input type="number" min={0} step={0.01} name="avgCookies" className="mt-1 py-3 px-2 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
                   </div>
                 </div>
 

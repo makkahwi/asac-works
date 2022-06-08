@@ -8,10 +8,10 @@ import List from "../components/List";
 export default function Home() {
   const [list, setList] = useState([
     {
-      location: "Amman",
-      minCustomers: 5,
-      maxCustomers: 6,
-      avgCookies: 7
+      location: "Test 1",
+      minCustomers: 1,
+      maxCustomers: 2,
+      avgCookies: 3
     }
   ]);
 
