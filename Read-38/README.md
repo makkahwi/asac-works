@@ -130,7 +130,40 @@ So when a state is initiated, there should be consideration about the components
 
 [Source](https://reactjs.org/docs/composition-vs-inheritance.html)
 
-Text
+In above example, it was shown how anything (data, state, function or even component) could be passed from a parent component to a child using the props approach. In that example, the passed values were defined with specific titles / keys, and using those keys in the child, the passed arguments are received and processed or showed.
+
+Another way to pass arguments to children components is using child prop. This is useful in case of wanting to avoid using specific keys, which properly is needed in case of having unknown / various arguments to pass to child component. It's to be passed as follows...
+
+        <Service1>
+            # Elements to pass
+            <h2>This is the begining of</h2>
+            <h3>World War III</h3>
+        </Service1>
+
+and recieved as follows...
+
+        const Service1 = props => {
+            const {children} = props
+            return (
+                <div>
+                    <h1>Hello</h1>
+                    # Passed Elements
+                    {children}
+                </div>
+            )
+        };
+
+this is gonna be exactly like coding it this way...
+
+        const Service1 = () => {
+            return (
+                <div>
+                    <h1>Hello</h1>
+                    <h2>This is the begining of</h2>
+                    <h3>World War III</h3>
+                </div>
+            )
+        };
 
 ---
 
