@@ -15,6 +15,26 @@ export default function Home() {
     }
   ]);
 
+  const [action, setAction] = useState("create")
+
+  const [data, setData] = useState({})
+
+  const onAction = (id, action) => {
+    action === "duplicate" ? (() => {
+      setData(list[id])
+      setAction("duplicate")
+    }) : action === "view" ? (() => {
+      setData(list[id])
+      setAction("view")
+    }) : action === "update" ? (() => {
+      setData(list[id])
+      setAction("update")
+    }) : action === "delete" && (() => {
+      setData(list[id])
+      setAction("delete")
+    })
+  };
+
   const addToList = data => setList(current => [...current, data]);
 
   return (
@@ -26,8 +46,8 @@ export default function Home() {
       <Header />
 
       <main className="py-10 px-10">
-        <Form onSubmit={addToList} />
-        <List data={list} />
+        <Form onSubmit={addToList} action={action} data={data} />
+        <List data={list} onAction={onAction} />
       </main>
 
       <Footer />
