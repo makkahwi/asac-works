@@ -43,4 +43,4 @@ You may find out more about me in *[my resume website](https://suhaib.dev)*. You
 | [Read-34@](/Read-34/README.md) |  ------   |           ------           |
 | [Read-36](/Read-36/README.md) |  ------   |           ------           |
 | [Read-37](/Read-37/README.md) |  ------   |           ------           |
-| [Read-38@](/Read-38/README.md) |  ------   |           ------           |
+| [Read-38](/Read-38/README.md) |  ------   |           ------           |
