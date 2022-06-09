@@ -1,5 +1,7 @@
 # Learning Journal 27
 
+Navigation | [Past Journal](../Class-26/README.md) | [Home Page](../README.md) | [Next Journal](../Class-28/README.md) |
+
 ## Django Models
 
 ### What did I learn today?

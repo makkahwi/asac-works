@@ -1,5 +1,7 @@
 # Learning Journal 28
 
+Navigation | [Past Journal](../Class-27/README.md) | [Home Page](../README.md) |
+
 ## Django CRUD
 
 ### What did I learn today?

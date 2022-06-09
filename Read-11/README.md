@@ -1,5 +1,7 @@
 # Lesson 11 Reading
 
+Navigation | [Past Reading](../Read-10/README.md) | [Home Page](../README.md) | [Next Reading](../Read-12/README.md) |
+
 ## Jupyter Lab
 
 [Source](https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html)

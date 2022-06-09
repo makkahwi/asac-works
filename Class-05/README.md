@@ -1,5 +1,7 @@
 # Learning Journal 5
 
+Navigation | [Past Journal](../Class-04/README.md) | [Home Page](../README.md) | [Next Journal](../Class-06/README.md) |
+
 ## Linked Lists
 
 ### What did I learn today?

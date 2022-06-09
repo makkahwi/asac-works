@@ -1,5 +1,7 @@
 # Lesson 7 Reading
 
+Navigation | [Past Reading](../Read-05/README.md) | [Home Page](../README.md) | [Next Reading](../Read-08/README.md) |
+
 ## Python Scopes
 
 [Source](https://realpython.com/python-scope-legb-rule/)

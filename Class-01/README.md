@@ -1,5 +1,7 @@
 # Learning Journal 1
 
+Navigation | [Home Page](../README.md) | [Next Journal](../Class-02/README.md) |
+
 ## Title
 
 ### What did I learn today?

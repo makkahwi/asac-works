@@ -1,5 +1,7 @@
 # Lesson 5 Reading
 
+Navigation | [Past Reading](../Read-04/README.md) | [Home Page](../README.md) | [Next Reading](../Read-07/README.md) |
+
 ## Big O
 
 *[Source](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-05/resources/big_oh.html)*

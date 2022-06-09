@@ -1,5 +1,7 @@
 # Lesson 36 Reading
 
+Navigation | [Past Reading](../Read-34/README.md) | [Home Page](../README.md) | [Next Reading](../Read-37/README.md) |
+
 ## Whiteboard Advice
 
 [Source](https://hackernoon.com/the-best-whiteboard-interview-advice-i-ever-received-3ebbfa72e4a)

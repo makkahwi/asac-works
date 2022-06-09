@@ -1,5 +1,7 @@
 # Lesson 2 Reading
 
+Navigation | [Past Reading](../Read-01/README.md) | [Home Page](../README.md) | [Next Reading](../Read-03/README.md) |
+
 ## Test Driven Development (TDD)
 
 *[Source](https://code.likeagirl.io/in-tests-we-trust-tdd-with-python-af69f47e6932)*

@@ -1,5 +1,7 @@
 # Lesson 1 Reading
 
+Navigation | [Home Page](../README.md) | [Next Reading](../Read-02/README.md) |
+
 ## Pain and Suffering
 
 *[Source](https://codefellows.github.io/code-401-python-7.16.2-guide/curriculum/class-01/notes/pain_suffering)*

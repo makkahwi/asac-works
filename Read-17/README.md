@@ -1,5 +1,7 @@
 # Lesson 17 Reading
 
+Navigation | [Past Reading](../Read-16/README.md) | [Home Page](../README.md) | [Next Reading](../Read-26/README.md) |
+
 ## Web Scrape with Python in 4 minutes
 
 [Source](https://towardsdatascience.com/how-to-web-scrape-with-python-in-4-minutes-bc49186a8460)
