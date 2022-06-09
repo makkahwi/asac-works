@@ -20,6 +20,24 @@ In python, there are built-in functions to deal with external files like...
 
 ## Exceptions in Python
 
-[Source](https://realpython.com/python-exceptions//)
+[Source](https://realpython.com/python-exceptions/)
 
-Text
+Exceptions are what handles an error occurrence in Python code. There are several built-in exceptions which are to be triggered when specific errors happen. But it's also available for coder to build own and customized exceptions to handle errors resulted by using their codes. Those exceptions could contain specific message so end-user would recognize the error occurred. The simplest form of exceptions usage is as follows...
+
+    def division(divisor, dividend):
+      if divisor == 0:
+        raise Exception("Divisor can by any number but 0")
+
+In above-case, exception was built to handle 1 very spaicifc error using if condition. But it also could be generalized to cover cases like function or whole process occurrence, just like below code...
+
+    def remainder(divisor, dividend):
+      try:
+        result = int(dividend / divisor)
+        multiply = result * divisor
+        remainder = dividend - multiplied
+      except:   // To be returned when error occurs in above function
+        return "Something is wrong with your inputs for division operation."
+      else:     // To be returned when no error occurs in above function
+        return f'Division was successful and result is {remainder}'
+      finally:  // To be always returned after any of "except" or "else" was triggered
+        return "Thank you for using our app, you may refresh your page to use it again."
