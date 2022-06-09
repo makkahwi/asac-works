@@ -4,7 +4,7 @@ Navigation | [Past Reading](../Read-33/README.md) | [Home Page](../README.md) | 
 
 ## Django Settings Best Practices
 
-[Source](https://jwt.io/introduction/)
+[Source](https://djangostars.com/blog/configuring-django-settings-best-practices/)
 
 Text
 
@@ -12,6 +12,6 @@ Text
 
 ## SSH Tutorial
 
-[Source](https://simpleisbetterthancomplex.com/tutorial/2018/12/19/how-to-use-jwt-authentication-with-django-rest-framework.html)
+[Source](https://www.hostinger.com/tutorials/ssh-tutorial-how-does-ssh-work)
 
 Text
