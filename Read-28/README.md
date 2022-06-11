@@ -6,4 +6,4 @@ Navigation | [Past Reading](../Read-27/README.md) | [Home Page](../README.md) | 
 
 [Source](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms)
 
-Text
+Texts
