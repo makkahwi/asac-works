@@ -34,7 +34,7 @@ You may find out more about me in *[my resume website](https://suhaib.dev)*. You
 | [Read-17@](/Read-17/README.md) | [Class-17@](/Class-17/README.md) |           ------           |
 | [Read-26](/Read-27/README.md) | [Class-26](/Class-26/README.md) |           ------           |
 | [Read-27@](/Read-28/README.md) | [Class-27](/Class-27/README.md) |           ------           |
-| [Read-28@](/Read-29/README.md) | [Class-28](/Class-28/README.md) |           ------           |
+| [Read-28](/Read-29/README.md) | [Class-28](/Class-28/README.md) |           ------           |
 | [Read-29@](/Read-29/README.md) |  ------   |           ------           |
 | [Read-30@](/Read-30/README.md) |  ------   |           ------           |
 | [Read-31](/Read-31/README.md) |  ------   |           ------           |
