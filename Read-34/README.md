@@ -22,4 +22,10 @@ The very best solution to overcome those issues is to involve *django-environ*. 
 
 [Source](https://www.hostinger.com/tutorials/ssh-tutorial-how-does-ssh-work)
 
-Text
+SSH (Secure Shell Protocol) is a cryptographic network protocol for operating network services securely over an unsecured network. Its most notable uses are remote login and command-line execution. SSH applications are based on a client–server architecture, connecting an SSH client instance with an SSH server.
+
+Ass SSH is a client-server based protocol, the protocol allows a device requesting information or services (the client) to connect to another device (the server). So, when a client connects to a server over SSH, the machine can be controlled like a local computer. The server has a designated TCP port over which it monitors the network, waiting for clients to initialize the connection. Before a client connects and starts issuing SSH commands, it needs to pass the authentication process.
+
+A complete understanding of the basic behavior of SSH will help users understand the security aspects of this technology. Most people find this process very complicated and incomprehensible, but it's much easier than most people think.
+
+If it's questioned how lengthy it takes for a pc to calculate a hash and authenticate a user, well, it occurs in much less than a second. In fact, the most quantity of time is spent in moving statistics throughout the Internet.
