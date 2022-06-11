@@ -35,4 +35,16 @@ from django.urls import reverse
 
 [Source](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Admin_site)
 
-Text
+Django admin is a built-in feature that provides a pre-built admin panel (panel for system admin with full access to all models data and more). But in order to enlist the built models in the admin panel, they need to be registered in admin.py as follows...
+
+    from .models import Model1, Model2, Model3
+
+    admin.site.register(Model1)
+    admin.site.register(Model2)
+    admin.site.register(Model3)
+
+Now once the django app is initiazetd, a super user / root user / admin user need to be created so they would have access to the admin panel. It's to be built using the below CLI command and to follow instructions to create a username, email address n password for the super user.
+
+    python3 manage.py createsuperuser
+
+Once the models are registered, admin user is created and server is running, it's possible now to login to admin panel through the default URL of <http://127.0.0.1:8000/admin> using created user credentials. At the point, the registered models would appear following the relevant app, and it's possible to CRUD data from that admin panel. Beside the CRUD of built, migrated & registered models, there are other features a super admin is allowed to do like customizing the outlook of the model controllers like adding filters to model data view, customizing the data detail listing and many more features.
