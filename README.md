@@ -27,8 +27,8 @@ You may find out more about me in *[my resume website](https://suhaib.dev)*. You
 | [Read-10](/Read-10/README.md) | [Class-10](/Class-10/README.md) |           ------           |
 | [Read-11](/Read-11/README.md) | [Class-11](/Class-11/README.md) |           ------           |
 | [Read-12](/Read-12/README.md) | [Class-12](/Class-12/README.md) |           ------           |
-| [Read-13](/Read-13/README.md) | [Class-13@](/Class-13/README.md) |           ------           |
-| [Read-14@](/Read-14/README.md) | [Class-14@](/Class-14/README.md) |           ------           |
+| [Read-13](/Read-13/README.md) | [Class-13](/Class-13/README.md) |           ------           |
+| [Read-14](/Read-14/README.md) | [Class-14@](/Class-14/README.md) |           ------           |
 | [Read-15@](/Read-15/README.md) | [Class-15@](/Class-15/README.md) |           ------           |
 | [Read-16@](/Read-16/README.md) | [Class-16@](/Class-16/README.md) |           ------           |
 | [Read-17@](/Read-17/README.md) | [Class-17@](/Class-17/README.md) |           ------           |
