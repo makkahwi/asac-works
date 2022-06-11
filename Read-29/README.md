@@ -50,11 +50,3 @@ Django allows to build customized users model to replace the default pre-bulit o
         list_display = ["email", "username",]
 
     admin.site.register(CustomUser, CustomUserAdmin)
-
----
-
-## DjangoX
-
-[Source](https://github.com/wsvincent/djangox)
-
-Text
