@@ -6,20 +6,20 @@ Navigation | [Past Journal](../Class-13/README.md) | [Home Page](../README.md) |
 
 ### What did I learn today?
 
-Text
+How to use Matplotlib library in Kaggle to represent data.
 
 ### What went well, that I might forget if I don’t write down?
 
-Text
+It's quite clear that it's basically about visualizing the data.
 
 ### What still puzzles me, or what do I need to learn more about?
 
-Text
+Nothing
 
 ### What should I do differently next time?
 
-Text
+Seems the library have endless options of data visualization, so I'd dive more into those options for some of the expected uses for the library in future projects.
 
 ### Is the assignment complete? If not, where exactly did you leave off, and what work remains?
 
-Text
+Submitted & got full mark
