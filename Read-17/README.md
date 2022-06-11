@@ -6,7 +6,7 @@ Navigation | [Past Reading](../Read-16/README.md) | [Home Page](../README.md) | 
 
 [Source](https://towardsdatascience.com/how-to-web-scrape-with-python-in-4-minutes-bc49186a8460)
 
-Text
+Web scraping is a method of automatically accessing and extracting a large amount of information from a website, which saves a lot of time and effort. This article provides a simple example of how to automate the process of downloading hundreds of files from the New York MTA. This is a great exercise for web scraping beginners who want to understand how to do web scraping. Web scraping can be a bit intimidating, so this tutorial will walk you through the process of how to do it.
 
 ---
 
