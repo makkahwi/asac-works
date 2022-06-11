@@ -33,6 +33,7 @@ LTUC Advanced DSA Tasks
 |      32     | Tree Intersection            | [Challenge Details](/Challenges/32/README.md)|
 | TA Inter.   | Compare Two Trees            | [Interview Details](/Interviews/Mock/README.md)|
 |      33     | Hashmap Left Join            | [Challenge Details](/Challenges/33/README.md)|
+|      35     | Graph Implementation         | [Challenge Details](/Challenges/35/README.md)|
 
 ## New Challenge Building Instructions
 
