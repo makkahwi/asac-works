@@ -3,7 +3,7 @@ import { useState } from "react";
 import Footer from "../components/Footer";
 import CreateForm from "../components/Form";
 import Header from "../components/Header";
-import ReportTable from "../components/List";
+import ReportTable from "../components/Table";
 
 export default function Home() {
   const [list, setList] = useState([]);
