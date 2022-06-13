@@ -1,11 +1,6 @@
-export default function Header() {
-  const links = [
-    {
-      title: "Home",
-      link: "/"
-    }
-  ];
+import links from "../../Routes/_nav";
 
+export default function Header() {
   return (
     <header className="bg-orange-500">
       <div className="py-6 lg:mx-4 xl:mx-12">
