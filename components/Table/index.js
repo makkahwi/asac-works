@@ -2,7 +2,7 @@ import { faCopy, faEdit, faEye, faTrash } from "@fortawesome/free-solid-svg-icon
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { hourly_sales, hours } from "../../data"
 
-export default function List({ data, onAction }) {
+export default function List({ data, onActionClick }) {
   return (
     <div className="py-4">
       <table className="table-auto w-full text-center">
@@ -18,7 +18,7 @@ export default function List({ data, onAction }) {
           </tr>
 
           <tr className="py-2 bg-orange-500">
-            {hours.map(hour => (<th>{hour}</th>))}
+            {hours.map((hour,i) => (<th key={i}>{hour}</th>))}
             <th>Total Location Sale</th>
           </tr>
         </thead>
@@ -31,18 +31,18 @@ export default function List({ data, onAction }) {
               <td>{item.minCustomers}</td>
               <td>{item.maxCustomers}</td>
               <td>{item.avgCookies}</td>
-              {hourly_sales.map(sales => (<td>{sales}</td>))}
+              {hourly_sales.map((sales, i) => (<td key={i}>{sales}</td>))}
               <td>{hourly_sales.reduce((total, sales) => total += sales, 0)}</td>
               <td>
                 <div className="inline-flex rounded-md shadow-sm" role="group">
                   <div className="grid grid-cols-2 p-2 text-sm ">
-                    <FontAwesomeIcon type="button" onClick={() => onAction(item.id || i, "duplicate")} className="m-3 text-green-500" icon={faCopy} />
+                    <FontAwesomeIcon type="button" onClick={() => onActionClick(item.id, "duplicate")} className="m-3 text-green-500" icon={faCopy} />
 
-                    <FontAwesomeIcon type="button" onClick={() => onAction(item.id || i, "view")} className="m-3 text-blue-500" icon={faEye} />
+                    <FontAwesomeIcon type="button" onClick={() => onActionClick(item.id, "view")} className="m-3 text-blue-500" icon={faEye} />
 
-                    <FontAwesomeIcon type="button" onClick={() => onAction(item.id || i, "update")} className="m-3 text-orange-500" icon={faEdit} />
+                    <FontAwesomeIcon type="button" onClick={() => onActionClick(item.id, "update")} className="m-3 text-orange-500" icon={faEdit} />
 
-                    <FontAwesomeIcon type="button" onClick={() => onAction(item.id || i, "delete")} className="m-3 text-red-500" icon={faTrash} />
+                    <FontAwesomeIcon type="button" onClick={() => onActionClick(item.id, "delete")} className="m-3 text-red-500" icon={faTrash} />
                   </div>
                 </div>
               </td>
@@ -55,7 +55,7 @@ export default function List({ data, onAction }) {
             <th colSpan={5}>
               Totals
             </th>
-            {hourly_sales.map(sales => (<th>{sales * data.length}</th>))}
+            {hourly_sales.map((sales, i) => (<th key={i}>{sales * data.length}</th>))}
             <th>{hourly_sales.reduce((total, sales) => total += (sales * data.length), 0)}</th>
             <th></th>
           </tr>

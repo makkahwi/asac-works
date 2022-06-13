@@ -12,32 +12,50 @@ export default function Home() {
 
   const [formData, setFormData] = useState({})
 
-  const onAction = (id, action) => {
+  const onActionClick = (id, action) => {
+    const data = list.find(data => data.id === id);
+
     action === "duplicate" ? (
-      setFormData(list[id]),
-      setAction("duplicate"),
-      console.log("duplicate")
+      setFormData(data),
+      setAction("duplicate")
     ) : action === "view" ? (
-      setFormData(list[id]),
-      setAction("view"),
-      console.log("view")
+      setFormData(data),
+      setAction("view")
     ) : action === "update" ? (
-      setFormData(list[id]),
-      setAction("update"),
-      console.log("update")
+      setFormData(data),
+      setAction("update")
     ) : action === "delete" && (
-      setFormData(list[id]),
-      setAction("delete"),
-      console.log("delete")
+      setFormData(data),
+      setAction("delete")
+    )
+  };
+
+  const onActionSubmit = (data) => {
+    (action === "duplicate" || action === "create") ? (
+      setList(current => [...current, { ...data, id: list.length + 1 }]),
+      setFormData({}),
+      setAction("create")
+    ) : action === "update" ? (
+      setList(current => current.map(item => item.id !== formData.id ? item : { ...formData, id: list.length + 1 })),
+      setFormData({}),
+        setAction("create")
+    ) : action === "delete" && (
+      setList(current => current.filter(item => item.id !== formData.id)),
+      setFormData({}),
+          setAction("create")
     )
   };
 
   const onReset = () => {
     setFormData({})
     setAction("create")
-  }
+  };
 
-  const addToList = formData => setList(current => [...current, formData]);
+  const onFormDataChange = (key, value) => {
+    let newFormData = { ...formData }
+    newFormData[key] = value
+    setFormData(newFormData)
+  };
 
   return (
     <>
@@ -48,8 +66,8 @@ export default function Home() {
       <Header />
 
       <main className="py-10 px-10">
-        <CreateForm onSubmit={addToList} action={action} data={formData} reset={onReset} />
-        {list.length ? (<ReportTable data={list} onAction={onAction} />) : <h2 className="text-center pt-5">No Cookie Stands Available</h2>}
+        <CreateForm onSubmit={onActionSubmit} action={action} data={formData} onChange={onFormDataChange} reset={onReset} length={list.length} />
+        {list.length ? (<ReportTable data={list} onActionClick={onActionClick} />) : <h2 className="text-center pt-5">No Cookie Stands Available</h2>}
       </main>
 
       <Footer count={list.length} />
