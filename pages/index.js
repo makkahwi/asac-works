@@ -1,19 +1,12 @@
 import Head from "next/head";
 import { useState } from "react";
 import Footer from "../components/Footer";
-import Form from "../components/Form";
+import CreateForm from "../components/Form";
 import Header from "../components/Header";
-import List from "../components/List";
+import ReportTable from "../components/List";
 
 export default function Home() {
-  const [list, setList] = useState([
-    {
-      location: "Amman",
-      minCustomers: 1,
-      maxCustomers: 2,
-      avgCookies: 3
-    }
-  ]);
+  const [list, setList] = useState([]);
 
   const [action, setAction] = useState("create")
 
@@ -55,11 +48,11 @@ export default function Home() {
       <Header />
 
       <main className="py-10 px-10">
-        <Form onSubmit={addToList} action={action} data={formData} reset={onReset} />
-        <List data={list} onAction={onAction} />
+        <CreateForm onSubmit={addToList} action={action} data={formData} reset={onReset} />
+        {list.length ? (<ReportTable data={list} onAction={onAction} />) : <h2 className="text-center pt-5">No Cookie Stands Available</h2>}
       </main>
 
-      <Footer />
+      <Footer count={list.length} />
     </>
 
 
