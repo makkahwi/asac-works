@@ -17,16 +17,20 @@ export default function Home() {
 
     action === "duplicate" ? (
       setFormData(data),
-      setAction("duplicate")
+      setAction("duplicate"),
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
     ) : action === "view" ? (
       setFormData(data),
-      setAction("view")
+      setAction("view"),
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
     ) : action === "update" ? (
       setFormData(data),
-      setAction("update")
+      setAction("update"),
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
     ) : action === "delete" && (
       setFormData(data),
-      setAction("delete")
+      setAction("delete"),
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
     )
   };
 
@@ -36,9 +40,9 @@ export default function Home() {
       setFormData({}),
       setAction("create")
     ) : action === "update" ? (
-      setList(current => current.map(item => item.id !== formData.id ? item : formData )),
+      setList(current => current.map(item => item.id !== formData.id ? item : formData)),
       setFormData({}),
-        setAction("create")
+      setAction("create")
     ) : action === "delete" && (
       setList(current => current.filter(item => item.id !== formData.id)),
       setFormData({}),
