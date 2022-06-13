@@ -18,7 +18,7 @@ export default function List({ data, onActionClick }) {
           </tr>
 
           <tr className="py-2 bg-orange-500">
-            {hours.map((hour,i) => (<th key={i}>{hour}</th>))}
+            {hours.map((hour, i) => (<th key={i}>{hour}</th>))}
             <th>Total Location Sale</th>
           </tr>
         </thead>
