@@ -1,11 +1,6 @@
+import { locations } from "../../data";
+
 export default function Form({ onSubmit, action, data, reset }) {
-  const locations = [
-    { title: "Please Pick One...", value: "" },
-    { title: "Amman", value: "Amman" },
-    { title: "Irbid", value: "Irbid" },
-    { title: "Aqaba", value: "Aqaba" },
-    { title: "Ma'an", value: "Ma'an" }
-  ];
 
   const onFormSubmit = e => {
     e.preventDefault();
