@@ -1,5 +1,6 @@
 import { faCopy, faEdit, faEye, faTrash } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { hourly_sales, hours } from "../../data"
 
 export default function List({ data, onAction }) {
   return (
@@ -7,12 +8,18 @@ export default function List({ data, onAction }) {
       <table className="table-auto w-full text-center">
         <thead>
           <tr className="py-2 bg-orange-500">
-            <th>#</th>
-            <th>Location</th>
-            <th>Min Customers per Hour</th>
-            <th>Max Customers per Hour</th>
-            <th>Average Cookies Count per Sale</th>
-            <th>Actions</th>
+            <th rowSpan={2}>#</th>
+            <th rowSpan={2}>Location</th>
+            <th rowSpan={2}>Min Customers per Hour</th>
+            <th rowSpan={2}>Max Customers per Hour</th>
+            <th rowSpan={2}>Average Cookies Count per Sale</th>
+            <th colSpan={hours.length+1}>Hourly Sales</th>
+            <th rowSpan={2}>Actions</th>
+          </tr>
+
+          <tr className="py-2 bg-orange-500">
+            {hours.map(hour => (<th>{hour}</th>))}
+            <th>Total Location Sale</th>
           </tr>
         </thead>
 
@@ -24,6 +31,8 @@ export default function List({ data, onAction }) {
               <td>{item.minCustomers}</td>
               <td>{item.maxCustomers}</td>
               <td>{item.avgCookies}</td>
+              {hourly_sales.map(sales => (<td>{sales}</td>))}
+              <td>{ hourly_sales.reduce((total, sales) => total += sales, 0) }</td>
               <td>
                 <div className="inline-flex rounded-md shadow-sm" role="group">
                   <button type="button" onClick={() => onAction(item.id || i, "duplicate")} className="py-2 px-4 text-xs font-medium text-white bg-green-500 rounded-l-lg border border-green-200 hover:bg-green-700 focus:z-10 focus:ring-2 focus:ring-green-700 focus:bg-green-700 dark:bg-green-700 dark:border-green-600 dark:text-white dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-500 dark:focus:text-white">
@@ -46,6 +55,17 @@ export default function List({ data, onAction }) {
             </tr>
           ))}
         </tbody>
+
+        <tfoot>
+          <tr className="py-3 bg-orange-500">
+            <th colSpan={5}>
+              Totals
+            </th>
+            {hourly_sales.map(sales => (<th>{sales * data.length}</th>))}
+            <th>{hourly_sales.reduce((total, sales) => total += (sales * data.length), 0)}</th>
+            <th></th>
+          </tr>
+        </tfoot>
       </table>
     </div>
   )
