@@ -69,7 +69,7 @@ export default function Cookies() {
         {list.length ? (<ReportTable data={list} onActionClick={onActionClick} />) : <h2 className="text-center pt-5">No Cookie Stands Available</h2>}
       </main>
 
-      <Footer count={list.length} unique={list.reduce((final, item) => final.find(it => it.location === item.location) ? final : final = [...final, item], []).length} />
+      <Footer count={list.length} unique={list.reduce((locations, item) => locations.find(loc => loc === item.location) ? locations : locations = [...locations, item.location], []).length} />
     </>
 
 
