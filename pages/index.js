@@ -38,15 +38,18 @@ export default function Home() {
     (action === "duplicate" || action === "create") ? (
       setList(current => [...current, { ...data, id: list.length + 1 }]),
       setFormData({}),
-      setAction("create")
+      setAction("create"),
+      document.getElementById(`data${list.length}`)?.scrollIntoView({ behavior: 'smooth' })
     ) : action === "update" ? (
       setList(current => current.map(item => item.id !== formData.id ? item : formData)),
       setFormData({}),
-      setAction("create")
+      setAction("create"),
+      document.getElementById(`data${formData.id}`).scrollIntoView({ behavior: 'smooth' })
     ) : action === "delete" && (
       setList(current => current.filter(item => item.id !== formData.id)),
       setFormData({}),
-      setAction("create")
+      setAction("create"),
+      document.getElementById(`data${formData.id - 1}`).scrollIntoView({ behavior: 'smooth' })
     )
   };
 
