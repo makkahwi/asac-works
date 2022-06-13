@@ -27,7 +27,7 @@ export default function List({ data, onAction }) {
           {data?.map((item, i) => (
             <tr className={`h-20 ${i % 2 === 0 ? "bg-gray-100 hover:bg-white" : "hover:bg-gray-100"}`} key={i}>
               <td>{i + 1}</td>
-              <td>{item.location}</td>
+              <td><a href={`https://www.google.com/maps/search/${item.location.replace(" ", "+")}`} target="_blank" className="text-orange-500 underline">{item.location}</a></td>
               <td>{item.minCustomers}</td>
               <td>{item.maxCustomers}</td>
               <td>{item.avgCookies}</td>
