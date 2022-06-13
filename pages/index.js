@@ -38,11 +38,11 @@ export default function Home() {
     ) : action === "update" ? (
       setList(current => current.map(item => item.id !== formData.id ? item : { ...formData, id: list.length + 1 })),
       setFormData({}),
-        setAction("create")
+      setAction("create")
     ) : action === "delete" && (
       setList(current => current.filter(item => item.id !== formData.id)),
       setFormData({}),
-          setAction("create")
+      setAction("create")
     )
   };
 
@@ -70,7 +70,7 @@ export default function Home() {
         {list.length ? (<ReportTable data={list} onActionClick={onActionClick} />) : <h2 className="text-center pt-5">No Cookie Stands Available</h2>}
       </main>
 
-      <Footer count={list.length} />
+      <Footer count={list.length} unique={list.reduce((final, item) => final.find(it => it.location === item.location) ? final : final = [...final, item], []).length} />
     </>
 
 

@@ -1,11 +1,11 @@
 
-export default function Footer({ count }) {
+export default function Footer({ count, unique }) {
   return (
     <footer className="bg-orange-500">
       <div className="grid grid-cols-2 p-6 text-white">
         <div className="text-left">
           <p>
-            {`${count} Locations Worldwide`}
+            {`${unique} Unique Locations Out of Total ${count} Locations Worldwide `}
           </p>
         </div>
 
