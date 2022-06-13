@@ -36,9 +36,9 @@ export default function Home() {
       setFormData({}),
       setAction("create")
     ) : action === "update" ? (
-      setList(current => current.map(item => item.id !== formData.id ? item : { ...formData, id: list.length + 1 })),
+      setList(current => current.map(item => item.id !== formData.id ? item : formData )),
       setFormData({}),
-      setAction("create")
+        setAction("create")
     ) : action === "delete" && (
       setList(current => current.filter(item => item.id !== formData.id)),
       setFormData({}),
