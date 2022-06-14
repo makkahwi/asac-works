@@ -24,30 +24,38 @@ export default function List({ data, onActionClick }) {
         </thead>
 
         <tbody>
-          {data?.map((item, i) => (
-            <tr className={`h-20 ${i % 2 === 0 ? "bg-gray-100 hover:bg-white" : "hover:bg-gray-100"}`} key={i} id={`data${item.id}`}>
-              <td>{i + 1}</td>
-              <td><a href={`https://www.google.com/maps/search/${item.location.replace(" ", "+")}`} target="_blank" className="text-orange-500 underline">{item.location}</a></td>
-              <td>{item.minimum_customers_per_hour}</td>
-              <td>{item.maximum_customers_per_hour}</td>
-              <td>{item.average_cookies_per_sale}</td>
-              {hourly_sales.map((sales, i) => (<td key={i}>{sales}</td>))}
-              <td>{hourly_sales.reduce((total, sales) => total += sales, 0)}</td>
-              <td>
-                <div className="inline-flex rounded-md shadow-sm" role="group">
-                  <div className="grid grid-cols-2 p-2 text-sm ">
-                    <FontAwesomeIcon type="button" onClick={() => onActionClick(item.id, "duplicate")} className="m-3 text-green-500" icon={faCopy} />
+          {data.length ?
+            data?.map((item, i) => (
+              <tr className={`h-20 ${i % 2 === 0 ? "bg-gray-100 hover:bg-white" : "hover:bg-gray-100"}`} key={i} id={`data${item.id}`}>
+                <td>{i + 1}</td>
+                <td><a href={`https://www.google.com/maps/search/${item.location.replace(" ", "+")}`} target="_blank" className="text-orange-500 underline">{item.location}</a></td>
+                <td>{item.minimum_customers_per_hour}</td>
+                <td>{item.maximum_customers_per_hour}</td>
+                <td>{item.average_cookies_per_sale}</td>
+                {hourly_sales.map((sales, i) => (<td key={i}>{sales}</td>))}
+                <td>{hourly_sales.reduce((total, sales) => total += sales, 0)}</td>
+                <td>
+                  <div className="inline-flex rounded-md shadow-sm" role="group">
+                    <div className="grid grid-cols-2 p-2 text-sm ">
+                      <FontAwesomeIcon type="button" onClick={() => onActionClick(item.id, "duplicate")} className="m-3 text-green-500" icon={faCopy} />
 
-                    <FontAwesomeIcon type="button" onClick={() => onActionClick(item.id, "view")} className="m-3 text-blue-500" icon={faEye} />
+                      <FontAwesomeIcon type="button" onClick={() => onActionClick(item.id, "view")} className="m-3 text-blue-500" icon={faEye} />
 
-                    <FontAwesomeIcon type="button" onClick={() => onActionClick(item.id, "update")} className="m-3 text-orange-500" icon={faEdit} />
+                      <FontAwesomeIcon type="button" onClick={() => onActionClick(item.id, "update")} className="m-3 text-orange-500" icon={faEdit} />
 
-                    <FontAwesomeIcon type="button" onClick={() => onActionClick(item.id, "delete")} className="m-3 text-red-500" icon={faTrash} />
+                      <FontAwesomeIcon type="button" onClick={() => onActionClick(item.id, "delete")} className="m-3 text-red-500" icon={faTrash} />
+                    </div>
                   </div>
-                </div>
-              </td>
-            </tr>
-          ))}
+                </td>
+              </tr>
+            )
+            ) : (
+              <tr>
+                <td colSpan={"100%"}>
+                  <h2 className="text-center py-5">No Cookie Stands Available</h2>
+                </td>
+              </tr>
+            )}
         </tbody>
 
         <tfoot>
