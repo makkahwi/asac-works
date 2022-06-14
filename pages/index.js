@@ -1,8 +1,11 @@
 import Head from "next/head";
 import Header from "../components/Header";
 import Cookies from "./Cookies";
+import Landing from "./Landing";
 
-export default function Landing() {
+export default function Home() {
+  const JWT = "";
+
   return (
     <>
       <Head>
@@ -11,7 +14,12 @@ export default function Landing() {
 
       <Header />
 
-      <Cookies />
+      {JWT.length ? (
+        <Cookies />
+      ) : (
+        <Landing />
+      )}
+
     </>
 
 
