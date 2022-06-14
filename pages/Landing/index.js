@@ -3,7 +3,7 @@ import Login from "../../components/Login"
 import Registration from "../../components/Registration"
 import Welcoming from "../../components/Welcoming"
 
-export default function Landing() {
+export default function Landing({ setToken }) {
 
   const [reg, setReg] = useState(false)
 
@@ -28,7 +28,7 @@ export default function Landing() {
           {reg ? (
             <Registration setReg={setReg} />
           ) : (
-            <Login setReg={setReg} />
+            <Login setReg={setReg} setToken={setToken} />
           )}
 
 
