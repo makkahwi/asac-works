@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Footer from "../../components/Footer";
 import CreateForm from "../../components/Form";
 import ReportTable from "../../components/Table";
+import { hourly_sales } from "../../data";
 
 export default function Cookies({ token }) {
   const [list, setList] = useState([]);
@@ -10,14 +11,12 @@ export default function Cookies({ token }) {
   const [formData, setFormData] = useState({});
 
   const getData = async () => {
-    const config = {
-      header: { "Authoziation": `Bearer ${token}` }
-    };
+    const config = { headers: { "Authorization": `Bearer ${token}` } };
 
     await axios.get("https://cookie-stand-api-suhaib.herokuapp.com/api/v1/cookie_stands/", config)
       .then(res => {
-        setList(res)
-        console.log("res", res)
+        setList(res.data)
+        console.log("res", res.data)
       })
       .catch(e => {
         console.log("GetAll error", e)
@@ -33,11 +32,9 @@ export default function Cookies({ token }) {
   };
 
   const createData = async (data) => {
-    const config = {
-      header: { "Authoziation": `Bearer ${token}` }
-    };
+    const config = { headers: { "Authorization": `Bearer ${token}`, } };
 
-    await axios.post("https://cookie-stand-api-suhaib.herokuapp.com/api/v1/cookie_stands/", config, data)
+    await axios.post("https://cookie-stand-api-suhaib.herokuapp.com/api/v1/cookie_stands/", data, config)
       .then(res => {
         onSuccess();
         console.log("res", res)
@@ -48,11 +45,9 @@ export default function Cookies({ token }) {
   };
 
   const updateData = async (id, data) => {
-    const config = {
-      header: { "Authoziation": `Bearer ${token}` }
-    };
+    const config = { headers: { "Authorization": `Bearer ${token}` } };
 
-    await axios.put("https://cookie-stand-api-suhaib.herokuapp.com/api/v1/cookie_stands/", config, id, data)
+    await axios.put(`https://cookie-stand-api-suhaib.herokuapp.com/api/v1/cookie_stands/${id}`, data, config)
       .then(res => {
         onSuccess();
         console.log("res", res)
@@ -63,11 +58,9 @@ export default function Cookies({ token }) {
   };
 
   const deleteData = async (data) => {
-    const config = {
-      header: { "Authoziation": `Bearer ${token}` }
-    };
+    const config = { headers: { "Authorization": `Bearer ${token}` } };
 
-    await axios.delete("https://cookie-stand-api-suhaib.herokuapp.com/api/v1/cookie_stands/", config, data)
+    await axios.delete(`https://cookie-stand-api-suhaib.herokuapp.com/api/v1/cookie_stands/${data}`, config)
       .then(res => {
         onSuccess();
         console.log("res", res)
@@ -85,7 +78,7 @@ export default function Cookies({ token }) {
     const data = list.find(data => data.id === id);
 
     action === "duplicate" ? (
-      setFormData(data),
+      setFormData({ ...data, hourly_sales: hourly_sales, description: "Descriping" }),
       setAction("duplicate"),
       window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
     ) : action === "view" ? (
@@ -103,11 +96,11 @@ export default function Cookies({ token }) {
     )
   };
 
-  const onActionSubmit = (data) => {
+  const onActionSubmit = () => {
     (action === "duplicate" || action === "create") ? (
-      createData(data)
+      createData(formData)
     ) : action === "update" ? (
-      updateData(formData)
+      updateData(formData.id, formData)
     ) : action === "delete" && (
       deleteData(formData.id)
     )
@@ -133,7 +126,5 @@ export default function Cookies({ token }) {
 
       <Footer count={list.length} unique={list.reduce((locations, item) => locations.find(loc => loc === item.location) ? locations : locations = [...locations, item.location], []).length} />
     </>
-
-
   )
 }
