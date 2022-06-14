@@ -7,9 +7,9 @@ export default function Form({ onSubmit, action, onChange, data, reset }) {
 
     const data = {
       location: e.target.location.value,
-      minCustomers: e.target.minCustomers.value,
-      maxCustomers: e.target.maxCustomers.value,
-      avgCookies: e.target.avgCookies.value,
+      minimum_customers_per_hour: e.target.minimum_customers_per_hour.value,
+      maximum_customers_per_hour: e.target.maximum_customers_per_hour.value,
+      average_cookies_per_sale: e.target.average_cookies_per_sale.value,
     };
 
     onSubmit(data);
@@ -35,17 +35,17 @@ export default function Form({ onSubmit, action, onChange, data, reset }) {
                 <div className="grid grid-cols-3 sm:col-span-12 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700">Min Customers per Hour</label>
-                    <input required type="number" disabled={action === "view" || action === "delete"} min={0} value={data?.minCustomers || 0} onChange={e => onChange("minCustomers", e.target.value)} name="minCustomers" className="mt-1 py-3 px-2 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
+                    <input required type="number" disabled={action === "view" || action === "delete"} min={0} value={data?.minimum_customers_per_hour || 0} onChange={e => onChange("minimum_customers_per_hour", e.target.value)} name="minimum_customers_per_hour" className="mt-1 py-3 px-2 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700">Max Customers per Hour</label>
-                    <input required type="number" disabled={action === "view" || action === "delete"} min={0} value={data?.maxCustomers || 0} onChange={e => onChange("maxCustomers", e.target.value)} name="maxCustomers" className="mt-1 py-3 px-2 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
+                    <input required type="number" disabled={action === "view" || action === "delete"} min={0} value={data?.maximum_customers_per_hour || 0} onChange={e => onChange("maximum_customers_per_hour", e.target.value)} name="maximum_customers_per_hour" className="mt-1 py-3 px-2 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700">Average Cookies Count per Sale</label>
-                    <input required type="number" disabled={action === "view" || action === "delete"} min={0} value={data?.avgCookies || 0} onChange={e => onChange("avgCookies", e.target.value)} step={0.01} name="avgCookies" className="mt-1 py-3 px-2 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
+                    <input required type="number" disabled={action === "view" || action === "delete"} min={0} value={data?.average_cookies_per_sale || 0} onChange={e => onChange("average_cookies_per_sale", e.target.value)} step={0.01} name="average_cookies_per_sale" className="mt-1 py-3 px-2 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
                   </div>
                 </div>
 
