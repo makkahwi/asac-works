@@ -19,7 +19,7 @@ export default function Login({ setReg, setToken }) {
       .then(res => {
         setToken(res.data.access)
         localStorage.setItem("jwt", res.data.access)
-        console.log("res", res.data.access)
+        console.log("token", res.data.access)
       })
       .catch(e => {
         console.log("login error", e)

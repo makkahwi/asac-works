@@ -18,7 +18,7 @@ export default function Cookies({ token }) {
     await axios.get("https://cookie-stand-api-suhaib.herokuapp.com/api/v1/cookie_stands/", config)
       .then(res => {
         setList(res.data)
-        console.log("res", res.data)
+        console.log("Data", res.data)
       })
       .catch(e => {
         console.log("GetAll error", e)
@@ -32,7 +32,6 @@ export default function Cookies({ token }) {
     getData();
     setFormData({});
     setAction("create");
-    console.log("res", res);
     document.getElementById(`data${list.length}`)?.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -43,7 +42,7 @@ export default function Cookies({ token }) {
     await axios.post("https://cookie-stand-api-suhaib.herokuapp.com/api/v1/cookie_stands/", data, config)
       .then(res => {
         onSuccess();
-        console.log("res", res)
+        console.log("Created", res)
       })
       .catch(e => {
         console.log("Create error", e)
@@ -60,7 +59,7 @@ export default function Cookies({ token }) {
     await axios.put(`https://cookie-stand-api-suhaib.herokuapp.com/api/v1/cookie_stands/${id}`, data, config)
       .then(res => {
         onSuccess();
-        console.log("res", res)
+        console.log("Updated", res)
       })
       .catch(e => {
         console.log("Update error", e)
@@ -77,7 +76,7 @@ export default function Cookies({ token }) {
     await axios.delete(`https://cookie-stand-api-suhaib.herokuapp.com/api/v1/cookie_stands/${data}`, config)
       .then(res => {
         onSuccess();
-        console.log("res", res)
+        console.log("Deleted", res)
       })
       .catch(e => {
         console.log("Delete error", e)
