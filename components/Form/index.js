@@ -1,4 +1,4 @@
-import { locations } from "../../data";
+import { locations, countries } from "../../data";
 
 export default function Form({ onSubmit, action, onChange, data, reset }) {
 
@@ -23,13 +23,30 @@ export default function Form({ onSubmit, action, onChange, data, reset }) {
             <div className="shadow sm:rounded-md sm:overflow-hidden">
               <div className="px-4 py-5 bg-orange-500 space-y-6 sm:p-6">
                 <h1 className="text-white text-xl text-center uppercase">{`${action} Data`}</h1>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">Location</label>
-                  <select required name="location" value={data?.location || ""} onChange={e => onChange("location", e.target.value)} disabled={action === "view" || action === "delete"} className="mt-1 py-3 px-2 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm">
-                    {locations.map((location, i) => (
-                      <option value={location.value} key={i}>{location.title}</option>
-                    ))}
-                  </select>
+                <div className="grid grid-cols-2 sm:col-span-12 gap-6">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">Country</label>
+                    <select required name="country" value={data?.country ? data?.country : data?.location ? countries.find(country => country.value === data?.location.split(", ")[1]).value : ""} onChange={e => onChange("country", e.target.value)} disabled={action === "view" || action === "delete"} className="mt-1 py-3 px-2 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm">
+                      <option value={""}>{"Please Pick One..."}</option>
+
+                      {countries.map((country, i) => (
+                        <option value={country.value} key={i}>{country.title}</option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">Location</label>
+                    <select required name="location" value={data?.location || ""} onChange={e => onChange("location", e.target.value)} disabled={action === "view" || action === "delete"} className="mt-1 py-3 px-2 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm">
+                      <option value={""}>{"Please Pick One..."}</option>
+
+                      {data.country ? (locations.filter(location => location.country === data.country).map((location, i) => (
+                        <option value={location.value} key={i}>{location.title}</option>
+                      ))) : (locations.map((location, i) => (
+                        <option value={location.value} key={i}>{location.title}</option>
+                      )))}
+                    </select>
+                  </div>
                 </div>
 
                 <div className="grid grid-cols-3 sm:col-span-12 gap-6">
