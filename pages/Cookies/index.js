@@ -78,7 +78,7 @@ export default function Cookies({ token }) {
     const data = list.find(data => data.id === id);
 
     action === "duplicate" ? (
-      setFormData({ ...data, hourly_sales: hourly_sales, description: "Descriping" }),
+      setFormData({ ...data, hourly_sales: hourly_sales, description: "Descriping", owner: 1 }),
       setAction("duplicate"),
       window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
     ) : action === "view" ? (
