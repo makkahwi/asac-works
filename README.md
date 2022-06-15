@@ -1,6 +1,7 @@
 # Cookie Stand Admin
 
 [Deployed App](https://cookie-stand-admin-chi-two.vercel.app/)
+[Deployed Branch](https://cookie-stand-admin-git-reactiii-makkahwi.vercel.app/)
 
 ## How to develop
 
@@ -12,4 +13,5 @@
 
 ## Features
 
-- FE only data creation
+- Restrict Access To Authorized Only (Auth System)
+- Call "Cookie Stands" Data

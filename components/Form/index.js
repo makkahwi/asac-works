@@ -1,4 +1,4 @@
-import { locations } from "../../data";
+import { locations, countries } from "../../data";
 
 export default function Form({ onSubmit, action, onChange, data, reset }) {
 
@@ -7,9 +7,9 @@ export default function Form({ onSubmit, action, onChange, data, reset }) {
 
     const data = {
       location: e.target.location.value,
-      minCustomers: e.target.minCustomers.value,
-      maxCustomers: e.target.maxCustomers.value,
-      avgCookies: e.target.avgCookies.value,
+      minimum_customers_per_hour: e.target.minimum_customers_per_hour.value,
+      maximum_customers_per_hour: e.target.maximum_customers_per_hour.value,
+      average_cookies_per_sale: e.target.average_cookies_per_sale.value,
     };
 
     onSubmit(data);
@@ -23,29 +23,46 @@ export default function Form({ onSubmit, action, onChange, data, reset }) {
             <div className="shadow sm:rounded-md sm:overflow-hidden">
               <div className="px-4 py-5 bg-orange-500 space-y-6 sm:p-6">
                 <h1 className="text-white text-xl text-center uppercase">{`${action} Data`}</h1>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">Location</label>
-                  <select required name="location" value={data?.location || ""} onChange={e => onChange("location", e.target.value)} disabled={action === "view" || action === "delete"} className="mt-1 py-3 px-2 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm">
-                    {locations.map((location, i) => (
-                      <option value={location.value} key={i}>{location.title}</option>
-                    ))}
-                  </select>
+                <div className="grid grid-cols-2 sm:col-span-12 gap-6">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">Country</label>
+                    <select required name="country" value={data?.country ? data?.country : data?.location ? countries.find(country => country.value === data?.location.split(", ")[1]).value : ""} onChange={e => onChange("country", e.target.value)} disabled={action === "view" || action === "delete"} className="mt-1 py-3 px-2 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm">
+                      <option value={""}>{"Please Pick One..."}</option>
+
+                      {countries.map((country, i) => (
+                        <option value={country.value} key={i}>{country.title}</option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">Location</label>
+                    <select required name="location" value={data?.location || ""} onChange={e => onChange("location", e.target.value)} disabled={action === "view" || action === "delete"} className="mt-1 py-3 px-2 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm">
+                      <option value={""}>{"Please Pick One..."}</option>
+
+                      {data.country ? (locations.filter(location => location.country === data.country).map((location, i) => (
+                        <option value={location.value} key={i}>{location.title}</option>
+                      ))) : (locations.map((location, i) => (
+                        <option value={location.value} key={i}>{location.title}</option>
+                      )))}
+                    </select>
+                  </div>
                 </div>
 
                 <div className="grid grid-cols-3 sm:col-span-12 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700">Min Customers per Hour</label>
-                    <input required type="number" disabled={action === "view" || action === "delete"} min={0} value={data?.minCustomers || 0} onChange={e => onChange("minCustomers", e.target.value)} name="minCustomers" className="mt-1 py-3 px-2 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
+                    <input required type="number" disabled={action === "view" || action === "delete"} min={0} value={data?.minimum_customers_per_hour || 0} onChange={e => onChange("minimum_customers_per_hour", e.target.value)} name="minimum_customers_per_hour" className="mt-1 py-3 px-2 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700">Max Customers per Hour</label>
-                    <input required type="number" disabled={action === "view" || action === "delete"} min={0} value={data?.maxCustomers || 0} onChange={e => onChange("maxCustomers", e.target.value)} name="maxCustomers" className="mt-1 py-3 px-2 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
+                    <input required type="number" disabled={action === "view" || action === "delete"} min={0} value={data?.maximum_customers_per_hour || 0} onChange={e => onChange("maximum_customers_per_hour", e.target.value)} name="maximum_customers_per_hour" className="mt-1 py-3 px-2 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700">Average Cookies Count per Sale</label>
-                    <input required type="number" disabled={action === "view" || action === "delete"} min={0} value={data?.avgCookies || 0} onChange={e => onChange("avgCookies", e.target.value)} step={0.01} name="avgCookies" className="mt-1 py-3 px-2 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
+                    <input required type="number" disabled={action === "view" || action === "delete"} min={0} value={data?.average_cookies_per_sale || 0} onChange={e => onChange("average_cookies_per_sale", e.target.value)} step={0.01} name="average_cookies_per_sale" className="mt-1 py-3 px-2 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
                   </div>
                 </div>
 
