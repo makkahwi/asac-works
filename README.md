@@ -1,7 +1,6 @@
 # Cookie Stand Admin
 
 [Deployed App](https://cookie-stand-admin-chi-two.vercel.app/)
-[Deployed Branch](https://cookie-stand-admin-git-reactiii-makkahwi.vercel.app/)
 
 ## How to develop
 
