@@ -13,9 +13,11 @@ export default function Footer({ count, unique }) {
           <p>
             All rights reserved for
             {" "}
-            <a href="https://Suhaib.dev" target="_blank">
-              Suhaib Ahmad
-            </a>
+            <u>
+              <a href="https://Suhaib.dev" target="_blank">
+                Suhaib Ahmad
+              </a>
+            </u>
             {" "}
             &copy; {new Date().getFullYear()}
           </p>

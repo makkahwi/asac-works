@@ -33,7 +33,7 @@ export default function Landing({ setToken }) {
 
 
           <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:max-w-xl sm:mx-auto md:mt-5 lg:mx-0 absolute bottom-5">
-            By <a href="https://Suhaib.dev" target="_blank">Suhaib Ahmad</a>
+            By <u><a href="https://Suhaib.dev" target="_blank">Suhaib Ahmad</a></u>
           </p>
         </main>
       </div>
