@@ -31,9 +31,10 @@ LTUC Advanced DSA Tasks
 |      30     | Hashtable                    | [Challenge Details](/Challenges/30/README.md)|
 |      31     | Hashmap Repeated Word        | [Challenge Details](/Challenges/31/README.md)|
 |      32     | Tree Intersection            | [Challenge Details](/Challenges/32/README.md)|
-| TA Inter.   | Compare Two Trees            | [Interview Details](/Interviews/Mock/README.md)|
 |      33     | Hashmap Left Join            | [Challenge Details](/Challenges/33/README.md)|
+| TA Inter.   | Compare Two Trees            | [Interview Details](/Interviews/Mock/README.md)|
 |      35     | Graph Implementation         | [Challenge Details](/Challenges/35/README.md)|
+| Final Inter | Mirror A Binary Tree         | [Interview Details](/Interviews/final/README.md)|
 
 ## New Challenge Building Instructions
 
