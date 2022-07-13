@@ -1,0 +1,27 @@
+{
+  "name": "movies-library",
+  "version": "1.0.0",
+  "description": "LTUC Days 11 &amp; Onward Tasks",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/makkahwi/movies-Library.git"
+  },
+  "keywords": [],
+  "author": "Suhaib Ahmad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/makkahwi/movies-Library/issues"
+  },
+  "homepage": "https://github.com/makkahwi/movies-Library#readme",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "cors": "^2.8.5",
+    "dotenv": "^15.0.0",
+    "express": "^4.17.2",
+    "pg": "^8.7.1"
+  }
+}
