@@ -1,0 +1,41 @@
+{% extends "_base.html" %}
+
+{% block pagetitle %}
+Delete
+{% endblock %}
+
+{% block title %}
+Delete
+{% endblock %}
+
+{% block itemtitle %}
+{{snack.title}}
+{% endblock %}
+
+{% block breadcrumbs %}
+{{snack.get_absolute_url}}
+{% endblock %}
+
+{% block main %}
+
+<div class="jumbotron jumbotron-fluid bg-danger text-light rounded">
+  <div class="container">
+    <h3>
+      Are you sure you wanna DELETE <u>{{snack.title}}</u> ???
+    </h3>
+
+    <form action="" method="POST">
+      {% csrf_token %}
+      <div class="btn-group float-right" role="group" aria-label="update">
+        <a type="button" class="btn btn-outline-light" href="/">
+          <i class="fa fa-rotate-left"></i> Cancel
+        </a>
+
+        <button type="submit" class="btn btn-light">
+          <i class="fa fa-trash"></i> Delete
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
