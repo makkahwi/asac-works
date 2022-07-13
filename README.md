@@ -10,7 +10,7 @@ LTUC's Django First Project
 - poetry install
 - poetry shell
 - poetry add django
-- django-admin start project [snacks_project]
+- django-admin startproject [snacks_project] OR [snack_tracker_project]
 - python manage.py migrate
 - python manage.py createsuperuser
 - python manage.py startapp [snacks]
@@ -28,5 +28,6 @@ LTUC's Django First Project
 
 ## APIs
 
-- "/" | Home Page
+- "/" | Snacks List (Home Page)
+- "/:id" | Snack Details
 - "/about" | About Page

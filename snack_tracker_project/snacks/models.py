@@ -6,7 +6,7 @@ from django.db import models
 class Snack(models.Model):
     name = models.CharField(max_length=64)
     purchaser = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
+        get_user_model(),
         on_delete=models.CASCADE,
     )
     desc = models.TextField()
