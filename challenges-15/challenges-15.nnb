@@ -1,0 +1,67 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "## Hacker Rank\n\nFor Thursdays you will be solving some selected challenges on HackerRank, please create an account if you don't have then\nFollow the links below:\nread them carefully and solve them then copy-paste your solution below in Code Block"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Required**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Equality In An Array](https://www.hackerrank.com/challenges/equality-in-a-array/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const counts = arr.reduce((final, int) => final[int] ? { ...final, [int]: final[int] += 1 } : { ...final, [int]: 1 }, {});\n    \nconst maxAccurance = Object.values(counts).reduce((final, count) => count > final ?  count : final);\n    \nreturn arr.length - maxAccurance;"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Optional**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Halloween Sale](https://www.hackerrank.com/challenges/halloween-sale/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let budget = s;\nlet currentPrice = p;\nlet purchase = 0;\n\nwhile (budget >= currentPrice) {\n  purchase++;\n  budget -= currentPrice;\n\n  if ((currentPrice - d) > m) {\n    currentPrice -= d\n  } else if (currentPrice >= m) {\n    currentPrice = m\n  };\n}\n\nreturn purchase;"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Sherlock And Squares](https://www.hackerrank.com/challenges/sherlock-and-squares/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let x = Math.floor(Math.sqrt(a));\nlet y = Math.floor(Math.sqrt(b));\nlet arr = [];\n\nfor(x; x<=y; x++) {\n  arr.push(x);\n};\n    \narr = arr.map(num => num*num);\narr = arr.filter(num => num >= a && num <= b);\n    \nreturn arr.length;"
+            ],
+            "outputs": []
+        }
+    ]
+}
